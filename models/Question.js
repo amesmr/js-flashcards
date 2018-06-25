@@ -7,7 +7,11 @@ const QuestionSchema = new Schema({
     answer: Number,
     tags: [String],
     lesson: String,
-    goal: String
+    goal: String,
+    cpNum: {
+        type: Schema.Types.ObjectId,
+        ref: "Checkpoint"
+    }
 });
 
 const Question = mongoose.model("Question", QuestionSchema);
