@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongod://localhost/checkPoint";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/checkPoint";
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI);
