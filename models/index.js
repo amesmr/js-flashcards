@@ -1,3 +1,4 @@
 module.exports = {
-    Flashcard: require('./Flashcard')
+    Question: require('./Question'),
+    Checkpoint: require('./Checkpoint')
 }
