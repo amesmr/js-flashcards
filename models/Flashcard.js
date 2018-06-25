@@ -1,14 +1,17 @@
 import mongoose from 'mongoose';
 const Schema = mongoose.Schema;
 
-const FlashcardSchema = new Schema({
-    subject: String,
-    question: String,
-    answerArray: [Number],
-    correctAnswerIndex: Number,
-    checkpointNumber: Number
+const CheckpointSchema = new Schema({
+    cpName: String,
+    cpNum: Number,
+    questions: [
+        {
+            type: Schema.Types.ObjectId,
+            ref: "Question"
+        }
+    ]
 });
 
-const Flashcard = mongoose.model("Flashcard", FlashcardSchema);
+const Checkpoint = mongoose.model("Checkpoint", CheckpointSchema);
 
-module.exports = Flashcard;
+module.exports = Checkpoint;
