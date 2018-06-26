@@ -1,0 +1,43 @@
+/* entire container, keeps perspective */
+.flashCard-container {
+    -webkit-perspective: 1000;
+    background: #ccc;
+    margin: 100px auto;
+  }
+  
+  /* flip the pane when clicked */
+  .flashCard-container:hover .flipper, .flashCard-container.hover .flipper {
+    -webkit-transform: rotateY(180deg);
+  }
+  
+  .flashCard-container, .front, .back {
+      width: 320px;
+      height: 480px;
+  }
+  
+  /* flip speed goes here */
+  .flipper {
+      -webkit-transition: 0.6s;
+      -webkit-transform-style: preserve-3d;
+      position: relative;
+  }
+  
+  /* hide back of pane during swap */
+  .front, .back {
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  
+  /* front pane, placed above back */
+  .front {
+    z-index: 2;
+    background: yellow;
+  }
+  
+  /* back, initially hidden pane */
+  .back {
+    -webkit-transform: rotateY(180deg);
+    background: brown;
+  }
