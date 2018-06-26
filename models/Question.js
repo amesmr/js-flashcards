@@ -2,8 +2,9 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const QuestionSchema = new Schema({
+    qNum: Number,
     question: String,
-    choices: [String],
+    resp: [String],
     answer: Number,
     tags: [String],
     lesson: String,
