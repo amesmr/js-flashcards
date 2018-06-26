@@ -1,7 +1,6 @@
 /* entire container, keeps perspective */
 .flashCard-container {
     -webkit-perspective: 1000;
-    background: #ccc;
     margin: 100px auto;
   }
   
@@ -11,8 +10,8 @@
   }
   
   .flashCard-container, .front, .back {
-      width: 320px;
-      height: 480px;
+      width: 400px;
+      height: 400px;
   }
   
   /* flip speed goes here */
@@ -33,11 +32,13 @@
   /* front pane, placed above back */
   .front {
     z-index: 2;
-    background: yellow;
+    background: lightblue;
+    box-shadow: 20px 20px 50px grey
   }
   
   /* back, initially hidden pane */
   .back {
     -webkit-transform: rotateY(180deg);
-    background: brown;
+    background: lightcoral;
+    box-shadow: 20px 20px 50px grey
   }
