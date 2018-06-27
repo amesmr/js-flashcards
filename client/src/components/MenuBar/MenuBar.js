@@ -13,7 +13,21 @@ class MenuBar extends Component {
 
     render() {
         return (
-            <div>WOW A MENU BAR</div>
+            <nav className="row">
+                <div className="col s1 flow-text">
+                    <a class="waves-effect waves-light btn">
+                        <i class="material-icons right">
+                            cloud
+                        </i>
+                        Reset
+                    </a>
+                </div>
+                <div className="col s1 flow-text">Shuffle</div>
+                <div className="col s1 flow-text">FlashCards</div>
+                <div className="col s1 flow-text">QuizCards</div>
+                <div className="col s2 offset-s4 flow-text">Module Drodivdown</div>
+                <div className="col s2 flow-text">Tag Drodivdown</div>
+            </nav>
         )
     }
 }
