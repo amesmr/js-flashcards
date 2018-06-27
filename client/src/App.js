@@ -26,6 +26,7 @@ class App extends Component {
           lesson="This is the lesson"
           goal="This is the goal"
           cpName="Checkpoint 5000"
+          hoverSwitch="on"
           />
       </div>
     );

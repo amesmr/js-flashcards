@@ -13,17 +13,23 @@ class FlashCard extends Component {
     
         this.checkAnswer = this.checkAnswer.bind(this)
       }
+      
+      componentDidMount(){
+          if (this.props.hoverSwitch === "off") {
+            this.refs.flipCardContainer.removeAttribute("id","hoverSwitch")
+          } 
+      }
     
       checkAnswer(event) {
         event.preventDefault();
         if(!this.state.flipped) {
-          document.getElementById("flipCardContainer").classList.add("hover")
+            this.refs.flipCardContainer.classList.add("hover")
           this.setState({
             flipped: true
           })
           console.log("Flip to back")
         } else {
-          document.getElementById("flipCardContainer").classList.remove("hover")
+            this.refs.flipCardContainer.classList.remove("hover")
           this.setState({
             flipped: false
           })
@@ -35,7 +41,7 @@ class FlashCard extends Component {
 
     render() {
         return (
-        <div id="flipCardContainer" className="flashCard-container">
+        <div ref="flipCardContainer" className="flashCard-container">
             <div className="flipper">
                 <div className="front">
                     <h6>{this.props.question}</h6>
