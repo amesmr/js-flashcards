@@ -18,6 +18,8 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
 
+        <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+
         <FlashCard
           question="This is a crazy question, holy shit"
           answers ={["Answer A", "Answer B","Answer C","Answer D"]}
