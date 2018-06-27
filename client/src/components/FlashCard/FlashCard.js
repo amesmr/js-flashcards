@@ -25,7 +25,13 @@ const FlashCard = (props) => (
                 </form>
             </div>
             <div className="back">
-                Back of card.
+                <p>You were correct!</p>
+                <h6>The answer was {props.answer}</h6>
+
+                <p><i>{props.lesson}</i></p>
+                <p><i>{props.goal}</i></p>
+
+                <p>{props.cpName}</p>
                 <input type="reset" onClick={props.checkAnswer} />
             </div>
         </div>
