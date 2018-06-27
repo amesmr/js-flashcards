@@ -6,6 +6,7 @@ class FlashCardContainer extends Component {
     render() {
         return (
             <div className = "fcContainer">
+            <h1>NAV BAR GOES HERE</h1>
                 <FlashCard 
                     question="This is a crazy question, holy shit"
                     answers ={["Answer A", "Answer B","Answer C","Answer D"]}
