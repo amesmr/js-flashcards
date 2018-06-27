@@ -5,32 +5,7 @@ import FlashCard from './components/FlashCard'
 
 class App extends Component {
 
-  constructor() {
-    super()
-
-    this.state = {
-      flipped: false
-    }
-
-    this.checkAnswer = this.checkAnswer.bind(this)
-  }
-
-  checkAnswer(event) {
-    event.preventDefault();
-    if(!this.state.flipped) {
-      document.getElementById("flipCardContainer").classList.add("hover")
-      this.setState({
-        flipped: true
-      })
-      console.log("Flip to back")
-    } else {
-      document.getElementById("flipCardContainer").classList.remove("hover")
-      this.setState({
-        flipped: false
-      })
-      console.log("Flip to front")
-    }
-  }
+  
 
   render() {
     return (
@@ -51,8 +26,6 @@ class App extends Component {
           lesson="This is the lesson"
           goal="This is the goal"
           cpName="Checkpoint 5000"
-          checkAnswer={this.checkAnswer}
-          cardSide={this.state.flipped}
           />
       </div>
     );
