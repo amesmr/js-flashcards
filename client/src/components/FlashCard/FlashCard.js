@@ -82,14 +82,16 @@ class FlashCard extends Component {
                     </form>
                 </div>
                 <div className="back">
-                    <p>{this.props.answer === this.state.selected ? "You were correct!" : "Sorry, that is incorrect!"}</p>
+                    <p>{ this.props.hoverSwitch === "off" && (this.props.answer === this.state.selected ? "You were correct!" : "Sorry, that is incorrect!"
+                    )}</p>
                     <h6>The answer was {this.props.answer}</h6>
 
                     <p><i>{this.props.lesson}</i></p>
                     <p><i>{this.props.goal}</i></p>
 
                     <p>{this.props.cpName}</p>
-                    <input type="reset" onClick={this.checkAnswer} />
+                    {this.props.hoverSwitch === "off" && <input type="reset" onClick={this.checkAnswer} />}
+                    
                 </div>
             </div>
         </div>)
