@@ -3,7 +3,7 @@ import './FlashCard.css';
 
 
 const FlashCard = (props) => (
-    <div className="flashCard-container">
+    <div id="flipCardContainer" className="flashCard-container">
         <div className="flipper">
             <div className="front">
                 <h6>{props.question}</h6>
@@ -18,11 +18,15 @@ const FlashCard = (props) => (
                         </p>
                     )
                 })}
-                <input type="submit" onClick={props.checkAnswer} />
+                
+                <input type="submit" onClick={props.checkAnswer} /> 
+                
+                
                 </form>
             </div>
             <div className="back">
                 Back of card.
+                <input type="reset" onClick={props.checkAnswer} />
             </div>
         </div>
     </div>

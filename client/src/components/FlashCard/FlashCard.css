@@ -1,11 +1,11 @@
-/* entire container, keeps perspective */
+/* The CSS from 3 to 41 allows the card to flip on hover */
+
 .flashCard-container {
     -webkit-perspective: 1000;
     margin: 100px auto;
   }
-  
-  /* flip the pane when clicked */
-  .flashCard-container:hover .flipper, .flashCard-container.hover .flipper {
+  /*Switch the commentted text to switch between on click vs. on hover*/
+  /*.flashCard-container:hover .flipper, */.flashCard-container.hover .flipper {
     -webkit-transform: rotateY(180deg);
   }
   
@@ -14,14 +14,12 @@
       height: 400px;
   }
   
-  /* flip speed goes here */
   .flipper {
       -webkit-transition: 0.6s;
       -webkit-transform-style: preserve-3d;
       position: relative;
   }
   
-  /* hide back of pane during swap */
   .front, .back {
       -webkit-backface-visibility: hidden;
       position: absolute;
@@ -29,16 +27,16 @@
       left: 0;
   }
   
-  /* front pane, placed above back */
   .front {
     z-index: 2;
     background: lightblue;
     box-shadow: 20px 20px 50px grey
   }
   
-  /* back, initially hidden pane */
   .back {
     -webkit-transform: rotateY(180deg);
     background: lightcoral;
     box-shadow: 20px 20px 50px grey
   }
+
+
