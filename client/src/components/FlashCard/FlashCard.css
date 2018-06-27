@@ -1,0 +1,42 @@
+/* The CSS from 3 to 41 allows the card to flip on hover */
+
+.flashCard-container {
+    -webkit-perspective: 1000;
+    margin: 100px auto;
+  }
+  /*Switch the commentted text to switch between on click vs. on hover*/
+  /*.flashCard-container:hover .flipper, */.flashCard-container.hover .flipper {
+    -webkit-transform: rotateY(180deg);
+  }
+  
+  .flashCard-container, .front, .back {
+      width: 400px;
+      height: 400px;
+  }
+  
+  .flipper {
+      -webkit-transition: 0.6s;
+      -webkit-transform-style: preserve-3d;
+      position: relative;
+  }
+  
+  .front, .back {
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+  }
+  
+  .front {
+    z-index: 2;
+    background: lightblue;
+    box-shadow: 20px 20px 50px grey
+  }
+  
+  .back {
+    -webkit-transform: rotateY(180deg);
+    background: lightcoral;
+    box-shadow: 20px 20px 50px grey
+  }
+
+
