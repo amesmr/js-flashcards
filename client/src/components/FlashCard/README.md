@@ -13,5 +13,6 @@
         lesson=<The lesson this is associated with? (I am unclear on this)>
         goal=<(Also unclear on this)>
         cpName=<The checkpoint name associated>
+        hoverSwitch=<String on or off that determines whether it flips on hover or button click>
     />```
 

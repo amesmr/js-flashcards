@@ -4,6 +4,7 @@
   "private": true,
   "proxy": "http://localhost:8080/",
   "dependencies": {
+    "materialize-css": "^1.0.0-rc.2",
     "mongoose": "^5.1.6",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -14,7 +15,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "storybook": "start-storybook -p 9001 -c .storybook"
+    "storybook": "start-storybook -p 9009 -c .storybook"
   },
   "devDependencies": {
     "@storybook/addon-actions": "^3.4.8",
