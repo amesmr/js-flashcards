@@ -2,7 +2,7 @@
 
 .flashCard-container {
     -webkit-perspective: 1000;
-    margin: 100px auto;
+    margin: 180px auto;
   }
   /*Switch the commentted text to switch between on click vs. on hover*/
 #hoverSwitch:hover .flipper, .flashCard-container.hover .flipper { 
@@ -10,8 +10,8 @@
   }
   
   .flashCard-container, .front, .back {
-      width: 400px;
-      height: 400px;
+      width: 500px;
+      height: 300px;
   }
   
   .flipper {

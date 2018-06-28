@@ -2,6 +2,7 @@
     background-color: purple;
     display: flex;
     max-height: 90px;
+    z-index: 4;
 }
 
 .menubar > .menuitem {
@@ -14,20 +15,17 @@
 }
 
 .dropdown-items {
-    
     opacity: 0;
-    
     border: 1px black solid;
     padding: 0 auto;
     box-shadow: 20px 20px 50px grey;
     transition: opacity 1500ms;
-    max-height: 300px;
+    max-height: 150px;
     overflow-y: scroll;
 }
 
 .dropdown-items.active {
     opacity: 1;
-    z-index: 1000;
 }
 
 

@@ -9,7 +9,9 @@ class MenuBar extends Component {
 
         this.state = {
             tagdropdown: false,
-            tags: ["Item"]
+            tags: ["Tag1","Tag2","Tag3","Tag4","Tag5"],
+            cpdropdown: false,
+            checkpoints
         }
 
         this.openDropdown = this.openDropdown.bind(this)
@@ -27,6 +29,20 @@ class MenuBar extends Component {
                 this.refs.dropdownmenu.classList.add('active')
                 this.setState({
                     tagdropdown: true
+                })
+            }
+        }
+
+        if(filter === "checkpoint") {
+            if(this.state.cpdropdown) {
+                this.refs.dropdownmenu.classList.remove('active')
+                this.setState({
+                    cpdropdown: false
+                })
+            } else {
+                this.refs.dropdownmenu.classList.add('active')
+                this.setState({
+                    cpdropdowm: true
                 })
             }
         }
@@ -55,26 +71,19 @@ class MenuBar extends Component {
                     </p>
                 </div>
                 <div className="menuitem">
-                    <button className="dropbtn" onClick={() => this.openDropdown("tag")}>Drop me!</button>
+                    <button className="dropbtn" onClick={() => this.openDropdown("tag")}>Sort by Tag</button>
                     <form className="dropdown-items" ref="dropdownmenu">
-                        <p>
-                            <label>
-                                <input type="checkbox" />
-                                <span>Red</span>
-                            </label>
-                            <label>
-                                <input type="checkbox" />
-                                <span>Red</span>
-                            </label>
-                            <label>
-                                <input type="checkbox" />
-                                <span>Red</span>
-                            </label>
-                            <label>
-                                <input type="checkbox" />
-                                <span>Red</span>
-                            </label>
-                        </p>
+                        {this.state.tags.map((tag,iterator) => {
+                            return (
+                                <p key={iterator}>
+                                    <label>
+                                        <input type="checkbox" value={tag}/>
+                                        <span>{tag}</span>
+                                    </label>
+                                </p>
+                            )
+                        })}
+                        
                     </form>
 
                 </div>

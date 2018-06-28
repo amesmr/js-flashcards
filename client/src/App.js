@@ -10,7 +10,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <MenuBar />
+        <MenuBar className="menunav"/>
         <div className="container">
           <FlashCard
           question="This is a crazy question, holy shit"
