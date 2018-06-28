@@ -8,7 +8,8 @@ class FlashCardContainer extends Component {
         super(props)
     
         this.state = {
-          hoverSwitch: "on"
+          hoverSwitch: "on",
+          
         }
     
         this.hoverSwitchChange = this.hoverSwitchChange.bind(this)
@@ -16,6 +17,7 @@ class FlashCardContainer extends Component {
      
     
       hoverSwitchChange(dataFromMenu) {
+        console.log(dataFromMenu)
         this.setState({
           hoverSwitch: dataFromMenu
         })

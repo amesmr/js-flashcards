@@ -23,6 +23,15 @@ class FlashCard extends Component {
             this.refs.flipCardContainer.removeAttribute("id","hoverSwitch")
           } 
       }
+
+      componentDidUpdate(){
+        if (this.props.hoverSwitch === "off") {
+            console.log("This is working")
+          this.refs.flipCardContainer.removeAttribute("id","hoverSwitch")
+        } else {
+            this.refs.flipCardContainer.setAttribute("id","hoverSwitch")
+        }
+      }
     
       checkAnswer(event) {
         event.preventDefault();
