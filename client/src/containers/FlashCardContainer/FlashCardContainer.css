@@ -1,6 +1,6 @@
 .fcContainer {
-    background-color:white;
-    height: 100vh;
+    background: radial-gradient(rgb(242,242,242), rgb(17,200,231), rgb(53,53,53));
+    height: 100%;
     width: 100%;
 }
 

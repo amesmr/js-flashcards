@@ -1,5 +1,5 @@
 .menubar {
-    background-color: purple;
+    background-color: rgb(53,53,53);
     display: flex;
     max-height: 90px;
     z-index: 4;
