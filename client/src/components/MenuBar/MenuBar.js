@@ -62,6 +62,18 @@ class MenuBar extends Component {
                                 <input type="checkbox" />
                                 <span>Red</span>
                             </label>
+                            <label>
+                                <input type="checkbox" />
+                                <span>Red</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" />
+                                <span>Red</span>
+                            </label>
+                            <label>
+                                <input type="checkbox" />
+                                <span>Red</span>
+                            </label>
                         </p>
                     </form>
 
