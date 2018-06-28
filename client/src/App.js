@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
+import FlashCard from './components/FlashCard'
+import MenuBar from './components/MenuBar';
 import FlashCardContainer from './containers/FlashCardContainer';
 
-class App extends Component {
 
+class App extends Component {
+ 
   render() {
     return (
       <div className="App">
@@ -11,6 +14,7 @@ class App extends Component {
         <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>Click to Start Studying!</a>
 
         <FlashCardContainer />
+
       </div>
     );
   }
