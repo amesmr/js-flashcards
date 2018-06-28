@@ -11,10 +11,11 @@ class MenuBar extends Component {
             tagdropdown: false,
             tags: ["Tag1","Tag2","Tag3","Tag4","Tag5"],
             cpdropdown: false,
-            checkpoints: ["CP1","CP2","CP3","CP4","CP5","CP6"]
+            checkpoints: ["CP1","CP2","CP3","CP4","CP5","CP6"],
         }
 
         this.openDropdown = this.openDropdown.bind(this)
+        this.onCardTypeSelected = this.onCardTypeSelected.bind(this)
     }
 
     openDropdown(filter) {
@@ -50,6 +51,10 @@ class MenuBar extends Component {
             
     }
 
+    onCardTypeSelected(event) {
+        this.props.hoverGrab(event.currentTarget.value)
+    }
+
 
     render() {
         return (
@@ -59,13 +64,13 @@ class MenuBar extends Component {
                 <div className="menuitem">
                     <p>
                         <label>
-                            <input className="with-gap" name="cardtype" type="radio" checked />
+                            <input className="with-gap" name="cardtype" type="radio" value="on" onChange={this.onCardTypeSelected} />
                             <span>FlashCards</span>
                         </label>
                     </p>
                     <p>
                         <label>
-                            <input className="with-gap" name="cardtype" type="radio" />
+                            <input className="with-gap" name="cardtype" type="radio" value="off"  onChange={this.onCardTypeSelected}/>
                             <span>QuizCards</span>
                         </label>
                     </p>

@@ -4,13 +4,29 @@ import FlashCard from './components/FlashCard'
 import MenuBar from './components/MenuBar';
 
 class App extends Component {
+  constructor(props) {
+    super(props)
 
-  
+    this.state = {
+      hoverSwitch: "on"
+    }
+
+    this.hoverSwitchChange = this.hoverSwitchChange.bind(this)
+  }
+ 
+
+  hoverSwitchChange(dataFromMenu) {
+    this.setState({
+      hoverSwitch: dataFromMenu
+    })
+  }
 
   render() {
     return (
       <div className="App">
-        <MenuBar className="menunav"/>
+        <MenuBar 
+          hoverGrab={this.hoverSwitchChange}
+        />
         <div className="container">
           <FlashCard
           question="This is a crazy question, holy shit"
@@ -20,7 +36,7 @@ class App extends Component {
           lesson="This is the lesson"
           goal="This is the goal"
           cpName="Checkpoint 5000"
-          hoverSwitch="off"
+          hoverSwitch={this.state.hoverSwitch}
           />
         </div>
         
