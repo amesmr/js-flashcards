@@ -11,7 +11,7 @@ class MenuBar extends Component {
             tagdropdown: false,
             tags: ["Tag1","Tag2","Tag3","Tag4","Tag5"],
             cpdropdown: false,
-            checkpoints
+            checkpoints: ["CP1","CP2","CP3","CP4","CP5","CP6"]
         }
 
         this.openDropdown = this.openDropdown.bind(this)
@@ -35,14 +35,14 @@ class MenuBar extends Component {
 
         if(filter === "checkpoint") {
             if(this.state.cpdropdown) {
-                this.refs.dropdownmenu.classList.remove('active')
+                this.refs.dropdownmenuc.classList.remove('active')
                 this.setState({
                     cpdropdown: false
                 })
             } else {
-                this.refs.dropdownmenu.classList.add('active')
+                this.refs.dropdownmenuc.classList.add('active')
                 this.setState({
-                    cpdropdowm: true
+                    cpdropdown: true
                 })
             }
         }
@@ -85,15 +85,21 @@ class MenuBar extends Component {
                         })}
                         
                     </form>
-
                 </div>
                 <div className="menuitem">
-                    <Dropdown trigger={<button className="dropbtn">Drop me!</button>}>
-                        <NavItem>Something</NavItem>
-                        <NavItem>Something</NavItem>
-                        <NavItem>Something</NavItem>
-                        <NavItem>Something</NavItem>
-                    </Dropdown>
+                    <button className="dropbtn" onClick={() => this.openDropdown("checkpoint")}>Sort by Checkpoint</button>
+                    <form className="dropdown-items" ref="dropdownmenuc">
+                        {this.state.checkpoints.map((cp,iterator) => {
+                            return (
+                                <p key={iterator + 100}>
+                                    <label>
+                                        <input type="checkbox" value={cp}/>
+                                        <span>{cp}</span>
+                                    </label>
+                                </p>
+                            )
+                        })}  
+                    </form>
                 </div>
             </div>
         )
