@@ -2,44 +2,19 @@ import React, { Component } from 'react';
 import './App.css';
 import FlashCard from './components/FlashCard'
 import MenuBar from './components/MenuBar';
+import FlashCardContainer from './containers/FlashCardContainer';
+
 
 class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      hoverSwitch: "on"
-    }
-
-    this.hoverSwitchChange = this.hoverSwitchChange.bind(this)
-  }
  
-
-  hoverSwitchChange(dataFromMenu) {
-    this.setState({
-      hoverSwitch: dataFromMenu
-    })
-  }
-
   render() {
     return (
       <div className="App">
-        <MenuBar 
-          hoverGrab={this.hoverSwitchChange}
-        />
-        <div className="container">
-          <FlashCard
-          question="This is a crazy question, holy shit"
-          answers ={["Answer A", "Answer B","Answer C","Answer D"]}
-          numberInSet={1}
-          answer="Answer B"
-          lesson="This is the lesson"
-          goal="This is the goal"
-          cpName="Checkpoint 5000"
-          hoverSwitch={this.state.hoverSwitch}
-          />
-        </div>
-        
+        <h1>Welcome to Trilogy Study Buddy</h1>
+        <a class="waves-effect waves-light btn-large"><i class="material-icons left">cloud</i>Click to Start Studying!</a>
+
+        <FlashCardContainer />
+
       </div>
     );
   }
