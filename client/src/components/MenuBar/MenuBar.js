@@ -65,13 +65,13 @@ class MenuBar extends Component {
                     <p>
                         <label>
                             <input className="with-gap" name="cardtype" type="radio" value="on" onChange={this.onCardTypeSelected} />
-                            <span>FlashCards</span>
+                            <span className="checkboxStyle">FlashCards</span>
                         </label>
                     </p>
                     <p>
                         <label>
                             <input className="with-gap" name="cardtype" type="radio" value="off"  onChange={this.onCardTypeSelected}/>
-                            <span>QuizCards</span>
+                            <span className="checkboxStyle">QuizCards</span>
                         </label>
                     </p>
                 </div>
