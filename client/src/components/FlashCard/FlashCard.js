@@ -65,7 +65,7 @@ class FlashCard extends Component {
         <div ref="flipCardContainer" id="hoverSwitch" className="flashCard-container">
             <div className="flipper">
                 <div className="front">
-                    <h6>{this.props.question}</h6>
+                    <h6 className="question">{this.props.question}</h6>
                     <form>
                     {this.props.answers.map((answer, iterator) => {
                         return (
@@ -73,7 +73,7 @@ class FlashCard extends Component {
                             <p key={iterator}>
                                 <label>
                                     <input className="with-gap" name="group1" type="radio" value={answer} checked={this.state.selected === answer} onChange={this.onAnswerSelected}  />
-                                    <span>{answer}</span>
+                                    <span className="answerChoice">{answer}</span>
                                 </label>
                             </p> 
                             :
@@ -93,12 +93,12 @@ class FlashCard extends Component {
                 <div className="back">
                     <p>{ this.props.hoverSwitch === "off" && (this.props.answer === this.state.selected ? "You were correct!" : "Sorry, that is incorrect!"
                     )}</p>
-                    <h6>The answer was {this.props.answer}</h6>
+                    <h6 className="answerReveal">The answer was {this.props.answer}</h6>
 
-                    <p><i>{this.props.lesson}</i></p>
-                    <p><i>{this.props.goal}</i></p>
+                    <p className="lesson"><i>{this.props.lesson}</i></p>
+                    <p className="goal"><i>{this.props.goal}</i></p>
 
-                    <p>{this.props.cpName}</p>
+                    <p className="cpName">{this.props.cpName}</p>
                     {this.props.hoverSwitch === "off" && <input type="reset" onClick={this.checkAnswer} />}
                     
                 </div>
