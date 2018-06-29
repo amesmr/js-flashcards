@@ -22,10 +22,36 @@
     transition: opacity 1500ms;
     max-height: 150px;
     overflow-y: scroll;
+    background-color: white;
+    display: none
 }
 
 .dropdown-items.active {
     opacity: 1;
+    background-color: white;
+    display: inherit
 }
+
+.menubtn {
+    overflow: hidden;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    margin:0 auto;
+    text-decoration: none;
+    font-size: 14px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    background-image: linear-gradient(to right, #fff 50%, #000 50%);
+    background-size: 200% 100%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    transition: all 0.25s ease-out;
+  }
+   
+  .menubtn:hover {
+    transition: all 0.25s ease-out;
+    background-position: bottom right;
+    color: #fff;
+  }
 
 

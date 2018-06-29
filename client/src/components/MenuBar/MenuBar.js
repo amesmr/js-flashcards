@@ -59,8 +59,8 @@ class MenuBar extends Component {
     render() {
         return (
             <div className="menubar">
-                <button className="menuitem">Shuffle</button>
-                <button className="menuitem">Reset</button>
+                <button className="menuitem menubtn">Shuffle</button>
+                <button className="menuitem menubtn">Reset</button>
                 <div className="menuitem">
                     <p>
                         <label>
@@ -76,7 +76,7 @@ class MenuBar extends Component {
                     </p>
                 </div>
                 <div className="menuitem">
-                    <button className="dropbtn" onClick={() => this.openDropdown("tag")}>Sort by Tag</button>
+                    <button className="dropbtn menubtn" onClick={() => this.openDropdown("tag")}>Sort by Tag</button>
                     <form className="dropdown-items" ref="dropdownmenu">
                         {this.state.tags.map((tag,iterator) => {
                             return (
@@ -92,7 +92,7 @@ class MenuBar extends Component {
                     </form>
                 </div>
                 <div className="menuitem">
-                    <button className="dropbtn" onClick={() => this.openDropdown("checkpoint")}>Sort by Checkpoint</button>
+                    <button className="dropbtn menubtn" onClick={() => this.openDropdown("checkpoint")}>Sort by Checkpoint</button>
                     <form className="dropdown-items" ref="dropdownmenuc">
                         {this.state.checkpoints.map((cp,iterator) => {
                             return (
