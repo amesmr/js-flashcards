@@ -1,17 +1,23 @@
 const fs = require('fs');
 const join = require('path').join;
+const path = require("path");
 
 const getPath = (fromRoot) => join(__dirname, '..', fromRoot);
-const getMCPath = (subFolder) => getPath("js-flashcards/mdFromCPs" + (subFolder
-  ? `/${subFolder}`
-  : ''));
+const getMCPath = (subFolder) => getPath("js-flashcards/mdFromCPs" + (subFolder ? `/${subFolder}` : ''));
 
 // if this wasn't a one-off script, I'd promisify these and use async / await
 const readDir = (path) => fs.readdirSync(path);
-const read = (path) => fs.readFileSync(path, {encoding: 'utf8'});
-const write = (path, contents) => fs.appendFileSync(path, contents, {encoding: 'utf8'});
+const read = (path) => fs.readFileSync(path, {
+  encoding: 'utf8'
+});
+const write = (path, contents) => fs.appendFileSync(path, contents, {
+  encoding: 'utf8'
+});
 
-let quizes = 2;
+// remove the old file first
+fs.unlink(join(__dirname + "/tmpfile.json"), function (err) {
+  if (err) console.log(err);
+});
 
 const getPaths = () => {
   const folders = readDir(getMCPath());
@@ -42,63 +48,117 @@ const getPaths = () => {
 
 let questionCount = 0;
 let optionCount = 0;
+let allCheckpoints = [];
 let quiz = [{}];
 let question = {};
+let fileCount = 0;
+let printingCode = false;
+let lastQuestion = 0;
+let firstOnce = true;
+let newFile = true;
+let quizes = 2;
+let code = "";
 
 const insertHeadings = filePath => {
   // strip out previous headings and re-insert
   let fileContents = read(filePath).replace(/[\n\r]### [0-9]+[\t ]*[\n\r]+/gm, '');
-  fileContents = fileContents.replace(/-/g, "\n")
+  // fileContents = fileContents.replace(/-/g, "\n")
   const lines = fileContents.split('\n');
   let headingNumber = 0;
   let tmpLine = ""
   const transformLines = lines.map((line) => {
-    if ((questionCount === 0) && (typeof(quiz.title) === "undefined")) {
+    line = line.replace(/\t/g, "  ");  // get rid of the tabs
+    if (newFile) {
+      questionCount = 0;
+      fileCount++;
+      printingCode = false;
+      quiz = {};
       quiz.title = line.slice(3).trim();
+      newFile = false
     }
-    tmpLine = line.match(/\w+/);
-    if (tmpLine != null) {
-      tmpLine = tmpLine.input; // match returns an array
+    tmpLine = line
+    if (tmpLine) {
+      // tmpLine = tmpLine.input; // match returns an array
       tmpLine = tmpLine.toString();
       tmpLine.indexOf("#") >= 0 ? tmpLine = tmpLine.replace(/#/g, "") : null;
-      tmpLine = tmpLine.replace(/\r/g, ""); //I can't believe trim doesn't do this
+      // tmpLine = tmpLine.replace(/\r/g, ""); //I can't believe trim doesn't do this
       tmpLine = tmpLine.replace(/\t/g, "");
       tmpLine = tmpLine.trim();
     }
     if (!line.match(/^[0-9]+/)) {
+      if (!tmpLine) {
+        //do nuthin
+      } else if ((tmpLine.indexOf(":question:") >= 0) && !printingCode) {
+        question.question = tmpLine.slice(11);
 
-      if (tmpLine === null) {
-        // do nothing
-      } else if (tmpLine.indexOf("`") >= 0) {
-        tmpLine = tmpLine.replace(/`/g, "")
-        let tmpAry = tmpLine.split(" ");
-        question.subjects = [];
-        for (let i = 0; i < tmpAry.length; i++) {
-          question.subjects.push(tmpAry[i])
-        }
-
-      } else if (tmpLine.indexOf(":") === 0) {
-        question.question = tmpLine.slice(2);
-      } else if (tmpLine.charAt(0) === "*") { // this is an option (a,b,c,etc.)
-        tmpLine = tmpLine.slice(2);
-        typeof (question.options) === "undefined" ? question.options = [] : null;
-        optionCount === 4 ? optionCount = 0 : null;
-        if (tmpLine.indexOf(":white_check_mark:") >= 0) {
-          question.answer = optionCount;
-        }
-        question.options.push(tmpLine.slice(0, tmpLine.indexOf(":white_check_mark:")));
-        optionCount++;
-      } else if (tmpLine.match(/[0-9]+./)) {
-        if (questionCount > 0) {// starting a new question
+      } else if ((tmpLine.indexOf("Tags:") >= 0) && !printingCode) {
+        let subjects = splice(tmpLine.slice(tmpLine.indexOf("Tags:")), " ")
+        question.subjects = subjects;
+      } else if (tmpLine.match(/^[0-9]+./) && !printingCode) {
+        if (questionCount > 0) { // starting a new question
+          (typeof (quiz.questions) === "undefined") ? quiz.questions = []: null;
           quiz.questions.push(question);
           question = {};
-          console.log(quiz);
+          // console.log(quiz);
         } else {
           quiz.questions = [];
         }
         questionCount++;
-        question.goal = questionCount + ") " + tmpLine.slice(3);
+        if (tmpLine.indexOf("-") >= 0) {
+          let subjects = tmpLine.slice(tmpLine.indexOf("-")).split(" ");
+          subjects.shift();
+          (typeof (quiz.questions) === "undefined") ? quiz.questions = [{}]: null;
+          question.subjects = subjects;
+          tmpLine = tmpLine.slice(0, tmpLine.indexOf("-") - 1);
+        }
+        question.objective = questionCount + ") " + tmpLine.slice(2 + questionCount.toString().length - 1);
+      } else if (((tmpLine.charAt(0) === "*") || (tmpLine.indexOf(":white_check_mark:") >= 0) && !printingCode)) { // this is an option (a,b,c,etc.)
+        if (tmpLine.charAt(0) === "*") {
+          tmpLine = tmpLine.slice(2);
+        }
+        typeof (question.options) === "undefined" ? question.options = [] : null;
+        if (optionCount === 4) {
+          optionCount = 0;
+          question.options = [];
+        }
+        if (tmpLine.indexOf(":white_check_mark:") >= 0) {
+          question.answer = optionCount;
+          question.options.push(tmpLine.slice(0, tmpLine.indexOf(":white_check_mark:")).trim());
+        } else {
+          question.options.push(tmpLine);
+        }
+        optionCount++;
+      // } else if (!(tmpLine.match(/^[*]+/) && (tmpLine.indexOf("`") >= 0) && !(tmpLine.indexOf("```") >= 0) && !printingCode) {
+      //   tmpLine = tmpLine.replace(/`/g, "")
+      //   let tmpAry = tmpLine.split(" ");
+      //   question.subjects = [];
+      //   tmpAry.forEach(element => {
+      //     question.subjects.push(element);
+      //   });
+      } else {
+
+        if (tmpLine.indexOf("```") >= 0 || printingCode) {
+          if (printingCode) {
+            if (line.indexOf("```") >= 0) {
+              printingCode = false;
+              question.question = question.question + line;
+              (typeof (quiz.questions) === "undefined") ? quiz.questions = []: null;
+              quiz.questions.push(question);
+              question = {};
+            } else {
+              question.question = question.question + line;
+            }
+          } else {
+            if (!printingCode && !(line.match(/```/g) === 1)) {
+              printingCode = true;
+            }
+            question.question = question.question + line;
+          }
+          // question.question = question.question + (tmpLine ? " \n " + tmpLine : line );
+          code = code + " \n " + line;
+        }
       }
+      // logOutput("---------------\nprintingCode=" + printingCode + "\nline=" + line + "tmpLine=" + tmpLine + "\n---------------\n\n");
       return line;
     }
 
@@ -106,15 +166,26 @@ const insertHeadings = filePath => {
 
     return `\n### ${headingNumber} \n\n${line}`;
   }).join('\n');
-  return transformLines;
+  return quiz;
 }
 
-getPaths().forEach((filePath) => {
-  const withPaths = insertHeadings(filePath);
-  write(filePath, withPaths);
-  write("/tmpfile.json", JSON.stringify(quiz));
-});
+function logOutput(msg) {
+  console.log(msg);
+}
 
-// function quizCheck(thisQuiz) {
-//   if (thisQuiz.)
-// }
+getPaths().forEach((filePath, idx, arr) => {
+  const quizObj = insertHeadings(filePath);
+  // write(filePath, withPaths); console.log(filePath);
+  var cp = {
+    "checkpoint": fileCount,
+    "welcome": "Welcome to checkpoint " + fileCount,
+    "quiz": quizObj
+  }
+  allCheckpoints.push(cp);
+  console.log(code);
+  console.log(fileCount);
+  if (idx === arr.length - 1) { // last quiz.  Write the file
+    write(__dirname + "/checkpoints.json", JSON.stringify(allCheckpoints, null, 4));
+  }
+  newFile = true;
+});
