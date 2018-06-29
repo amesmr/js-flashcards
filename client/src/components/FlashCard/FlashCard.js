@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './FlashCard.css';
 
-
+// Need to fix bug for when you are using quiz cards and you submit your answer, if you try to switch back to flash cards when on the back the card freezes up
 class FlashCard extends Component {
 
     constructor(props) {
