@@ -1,22 +1,17 @@
 const fs = require('fs');
 const join = require('path').join;
-const path = require("path");
+const GenerateSchema = require("generate-schema");
+
 
 const getPath = (fromRoot) => join(__dirname, '..', fromRoot);
-const getMCPath = (subFolder) => getPath("js-flashcards/mdFromCPs" + (subFolder ? `/${subFolder}` : ''));
-
+const getMCPath = (subFolder) => getPath("/dbPrework/mdFromCPs" + (subFolder ? `/${subFolder}` : ''));
 // if this wasn't a one-off script, I'd promisify these and use async / await
 const readDir = (path) => fs.readdirSync(path);
 const read = (path) => fs.readFileSync(path, {
   encoding: 'utf8'
 });
-const write = (path, contents) => fs.appendFileSync(path, contents, {
+const write = (path, contents) => fs.writeFileSync(path, contents, {
   encoding: 'utf8'
-});
-
-// remove the old file first
-fs.unlink(join(__dirname + "/tmpfile.json"), function (err) {
-  if (err) console.log(err);
 });
 
 const getPaths = () => {
@@ -67,7 +62,7 @@ const insertHeadings = filePath => {
   let headingNumber = 0;
   let tmpLine = ""
   const transformLines = lines.map((line) => {
-    line = line.replace(/\t/g, "  ");  // get rid of the tabs
+    line = line.replace(/\t/g, "  "); // get rid of the tabs
     if (newFile) {
       questionCount = 0;
       fileCount++;
@@ -111,40 +106,33 @@ const insertHeadings = filePath => {
           question.subjects = subjects;
           tmpLine = tmpLine.slice(0, tmpLine.indexOf("-") - 1);
         }
-        question.objective = questionCount + ") " + tmpLine.slice(2 + questionCount.toString().length - 1);
+        question.number = questionCount;
+        question.objective = tmpLine.slice(2 + questionCount.toString().length - 1).trim();
       } else if (((tmpLine.charAt(0) === "*") || (tmpLine.indexOf(":white_check_mark:") >= 0) && !printingCode)) { // this is an option (a,b,c,etc.)
         if (tmpLine.charAt(0) === "*") {
           tmpLine = tmpLine.slice(2);
         }
-        typeof (question.options) === "undefined" ? question.options = [] : null;
+        typeof (question.answers) === "undefined" ? question.answers = []: null;
         if (optionCount === 4) {
           optionCount = 0;
-          question.options = [];
+          question.answers = [];
         }
         if (tmpLine.indexOf(":white_check_mark:") >= 0) {
           question.answer = optionCount;
-          question.options.push(tmpLine.slice(0, tmpLine.indexOf(":white_check_mark:")).trim());
+          question.answers.push(tmpLine.slice(0, tmpLine.indexOf(":white_check_mark:")).trim());
         } else {
-          question.options.push(tmpLine);
+          question.answers.push(tmpLine);
         }
         optionCount++;
-      // } else if (!(tmpLine.match(/^[*]+/) && (tmpLine.indexOf("`") >= 0) && !(tmpLine.indexOf("```") >= 0) && !printingCode) {
-      //   tmpLine = tmpLine.replace(/`/g, "")
-      //   let tmpAry = tmpLine.split(" ");
-      //   question.subjects = [];
-      //   tmpAry.forEach(element => {
-      //     question.subjects.push(element);
-      //   });
       } else {
-
         if (tmpLine.indexOf("```") >= 0 || printingCode) {
           if (printingCode) {
             if (line.indexOf("```") >= 0) {
               printingCode = false;
               question.question = question.question + line;
               (typeof (quiz.questions) === "undefined") ? quiz.questions = []: null;
-              quiz.questions.push(question);
-              question = {};
+              // quiz.questions.push(question);
+              // question = {};
             } else {
               question.question = question.question + line;
             }
@@ -154,11 +142,9 @@ const insertHeadings = filePath => {
             }
             question.question = question.question + line;
           }
-          // question.question = question.question + (tmpLine ? " \n " + tmpLine : line );
           code = code + " \n " + line;
         }
       }
-      // logOutput("---------------\nprintingCode=" + printingCode + "\nline=" + line + "tmpLine=" + tmpLine + "\n---------------\n\n");
       return line;
     }
 
@@ -185,6 +171,7 @@ getPaths().forEach((filePath, idx, arr) => {
   console.log(code);
   console.log(fileCount);
   if (idx === arr.length - 1) { // last quiz.  Write the file
+    write(__dirname + "/checkpoints.json", "");
     write(__dirname + "/checkpoints.json", JSON.stringify(allCheckpoints, null, 4));
   }
   newFile = true;

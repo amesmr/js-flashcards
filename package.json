@@ -11,8 +11,7 @@
     "seed": "node scripts/seedDB.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "installDeps": "yarn && cd client && yarn",
-    "heroku-postbuild":
-      "cd client/ && npm install --only=dev && npm install && npm run build"
+    "heroku-postbuild": "cd client/ && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
     "type": "git",
@@ -27,7 +26,10 @@
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
-    "mongoose": "^5.1.6",
+    "generate-schema": "^2.6.0",
+    "mongodb": "^3.1.0",
+    "mongoose": "^5.1.7",
+    "mongoose-gen": "^2.1.1",
     "morgan": "^1.9.0"
   },
   "devDependencies": {
