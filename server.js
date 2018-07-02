@@ -7,10 +7,13 @@ const PORT = process.env.PORT || 8080;
 const app = express();
 
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/checkPoint";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/checkpoints";
 
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI, function (err) {
+  if (err) throw err;
+  console.log("Connected to mongo");
+});
 
 
 app.use(logger('dev'));
