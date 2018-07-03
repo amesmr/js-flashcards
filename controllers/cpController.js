@@ -39,7 +39,9 @@ module.exports = {
                     console.log(question.subjects)
                 })
                 let results = questionArray.filter(question => 
-                        question.subjects.includes("`arrays`") || question.subjects.includes("`sql`")
+                        question.subjects.includes("arrays") || 
+                        question.subjects.includes("sql")   ||
+                        question.subjects.includes("react")
                 )
 
                 res.json(results)
