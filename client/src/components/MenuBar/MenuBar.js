@@ -2,7 +2,8 @@ import React , { Component } from 'react';
 import './MenuBar.css'
 
 
-const checkpoints = ["CP1","CP2","CP3","CP4","CP5","CP6"];
+const checkpoints = ["Bash","HTML/CSS/Git","JavaScript","JavaScript/jQuery","Timers/API","Node"];
+const tags = ["React","Vocab","SQL","Arrays","Mongo","JavaScript"]
 
 class MenuBar extends Component {
     constructor(props) {
@@ -10,32 +11,30 @@ class MenuBar extends Component {
 
         this.state = {
             tagdropdown: false,
-            tags: ["Tag1","Tag2","Tag3","Tag4","Tag5"],
             cpdropdown: false,
-            selectedTags: []
+            selectedTags: [],
+            selectedCP: []
             
         }
 
         this.openDropdown = this.openDropdown.bind(this)
         this.onCardTypeSelected = this.onCardTypeSelected.bind(this)
         this.handleTagSelection = this.handleTagSelection.bind(this)
+        this.handleCPSelection = this.handleCPSelection.bind(this)
+        this.sendTheFilters = this.sendTheFilters.bind(this)
     }
 
-
-    componentDidUpdate() {
-        if(!this.props.initialRound) {
-            console.log("You have stopped the flashcards")
-        } else {
-            const cpValues = []
-            for (var i = 0; i<checkpoints.length;i++){
-                console.log(this.refs.droptags + i)
-            }
+    sendTheFilters() {
+        const tag = this.state.selectedTags.join('+').toLowerCase()
+        this.props.sessionFilters(tag)
+        const cp = this.state.selectedCP.join('+').toLowerCase()
+        this.props.sessionCP(cp)
+    }
+    
             
         
-            this.props.sessionFilters("This is happening")
         
-        }
-    }
+    
 
     handleTagSelection(e) {
 		const newSelection = e.target.value;
@@ -46,6 +45,17 @@ class MenuBar extends Component {
 			newSelectionArray = [...this.state.selectedTags, newSelection];
 		}
 		this.setState({ selectedTags: newSelectionArray }, () => console.log('tag selection', this.state.selectedTags));
+    }
+    
+    handleCPSelection(e) {
+		const newSelection = e.target.value;
+		let newSelectionArray;
+		if(this.state.selectedCP.indexOf(newSelection) > -1) {
+			newSelectionArray = this.state.selectedCP.filter(s => s !== newSelection)
+		} else {
+			newSelectionArray = [...this.state.selectedCP, newSelection];
+		}
+		this.setState({ selectedCP: newSelectionArray }, () => console.log('CP selection', this.state.selectedCP));
 	}
 
     openDropdown(filter) {
@@ -90,7 +100,14 @@ class MenuBar extends Component {
     render() {
         return (
             <div className="menubar">
-                <button className="menuitem menubtn" onClick={this.props.startFunc}>{this.props.initialRound ? "Stop" : "Start"}</button>
+                <button className="menuitem menubtn" onClick={() => {
+                    if(!this.props.initialRound) {
+                        this.props.startFunc()
+                        this.sendTheFilters()
+                    } else {
+                        this.props.startFunc()
+                    }
+                }}>{this.props.initialRound ? "Stop" : "Start"}</button>
                 <button className="menuitem menubtn">Shuffle</button>
                 <div className="menuitem">
                     <p>
@@ -109,7 +126,7 @@ class MenuBar extends Component {
                 <div className="menuitem">
                     <button className="dropbtn menubtn" onClick={() => this.openDropdown("tag")}>Sort by Tag</button>
                     <form className="dropdown-items" ref="dropdownmenu">
-                        {this.state.tags.map((tag,iterator) => {
+                        {tags.map((tag,iterator) => {
                             return (
                                 <p key={iterator}>
                                     <label>
@@ -136,7 +153,13 @@ class MenuBar extends Component {
                             return (
                                 <p key={iterator + 100}>
                                     <label>
-                                        <input type="checkbox" name={`dropcp${iterator}`} value={cp}/>
+                                        <input 
+                                        type="checkbox" 
+                                        name={`dropcp${iterator}`} 
+                                        value={iterator}
+                                        checked={this.state.selectedCP.indexOf(cp) > -1} 
+                                        onChange={this.handleCPSelection}
+                                        />
                                         <span>{cp}</span>
                                     </label>
                                 </p>

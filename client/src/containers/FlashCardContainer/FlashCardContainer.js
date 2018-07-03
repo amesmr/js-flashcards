@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import FlashCard from '../../components/FlashCard';
 import MenuBar from '../../components/MenuBar';
 import './FlashCardContainer.css';
+import API from '../../utils/API'
 
 class FlashCardContainer extends Component {
     constructor(props) {
@@ -9,13 +10,16 @@ class FlashCardContainer extends Component {
     
         this.state = {
           hoverSwitch: "on",
-          started: false
+          started: false,
+          tagsSelected: null,
+          cpSelected: null
           
         }
     
         this.hoverSwitchChange = this.hoverSwitchChange.bind(this)
         this.startButtonFlip = this.startButtonFlip.bind(this)
-        this.grabStudySessionFilters = this.grabStudySessionFilters.bind(this)
+        this.grabStudySessionTags = this.grabStudySessionTags.bind(this)
+        this.grabStudySessionCheckPoints = this.grabStudySessionCheckPoints.bind(this)
       }
      
     
@@ -29,6 +33,35 @@ class FlashCardContainer extends Component {
       startButtonFlip() {
         if(this.state.started) {
           // Perform an API call with the bounds taking from menu bar
+          if(this.state.tagsSelected !== null && this.state.cpSelected !== null ) {
+            API.getQuestionsByCpNumAndSubject()
+              .then(res => {
+                console.log(res)
+              }).catch(err => {
+                console.log(err)
+              })
+          } else if (this.state.cpSelected !== null) {
+            API.getQuestionsByCpNumber()
+              .then(res => {
+                console.log(res)
+              }).catch(err => {
+                console.log(err)
+              })
+          } else if (this.state.tagsSelected !== null) {
+            API.getQuestionsBySubject()
+              .then(res => {
+                console.log(res)
+              }).catch(err => {
+                console.log(err)
+              })
+          } else {
+            API.getCheckpoints()
+              .then(res => {
+                console.log(res)
+              }).catch(err => {
+                console.log(err)
+              })
+          }
         } else {
           // Do nothing. Or Potentially create a message on the Flashcards that says something along
           // the lines of YOU ARE CHANGING FLASHCARD SETTINGS
@@ -38,10 +71,20 @@ class FlashCardContainer extends Component {
         })
       }
 
-      grabStudySessionFilters(sessionFilters) {
-        console.log(sessionFilters)
+      grabStudySessionTags(sessionFilters) {
+        console.log("These are tags", sessionFilters)
+        this.setState({
+          tagsSelected: sessionFilters
+        })
       }
     
+      grabStudySessionCheckPoints(sessionCheckpoints) {
+        console.log("These are the selected checkpoints", sessionCheckpoints)
+        this.setState({
+          cpSelected: sessionCheckpoints
+        })
+      }
+
       render() {
         return (
         <div className="fcContainer">
@@ -49,7 +92,8 @@ class FlashCardContainer extends Component {
               hoverGrab={this.hoverSwitchChange}
               startFunc={this.startButtonFlip}
               initialRound={this.state.started}
-              sessionFilters={this.grabStudySessionFilters}
+              sessionFilters={this.grabStudySessionTags}
+              sessionCP={this.grabStudySessionCheckPoints}
             />
             <div className="container">
             
