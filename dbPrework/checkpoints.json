@@ -7,9 +7,9 @@
             "questions": [
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`touch`",
-                        "`bash`"
+                        "vocab",
+                        "touch",
+                        "bash"
                     ],
                     "number": 1,
                     "objective": "File Creation",
@@ -24,9 +24,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`ls`",
-                        "`bash`"
+                        "vocab",
+                        "ls",
+                        "bash"
                     ],
                     "number": 2,
                     "objective": "Listing Files",
@@ -41,9 +41,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`cd`",
-                        "`bash`"
+                        "vocab",
+                        "cd",
+                        "bash"
                     ],
                     "number": 3,
                     "objective": "Chaging Directories",
@@ -58,10 +58,10 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`syntax`",
-                        "`rm`",
-                        "`bash`"
+                        "vocab",
+                        "syntax",
+                        "rm",
+                        "bash"
                     ],
                     "number": 4,
                     "objective": "Folder Deletion",
@@ -76,9 +76,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`mkdir`",
-                        "`bash`"
+                        "vocab",
+                        "mkdir",
+                        "bash"
                     ],
                     "number": 5,
                     "objective": "Creating a Directory",
@@ -93,9 +93,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`pwd`",
-                        "`bash`"
+                        "vocab",
+                        "pwd",
+                        "bash"
                     ],
                     "number": 6,
                     "objective": "Seeing Current Directory",
@@ -110,9 +110,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`rm`",
-                        "`bash`"
+                        "vocab",
+                        "rm",
+                        "bash"
                     ],
                     "number": 7,
                     "objective": "Deleting Files",
@@ -127,9 +127,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`tab`",
-                        "`bash`"
+                        "vocab",
+                        "tab",
+                        "bash"
                     ],
                     "number": 8,
                     "objective": "Autocomplete",
@@ -144,9 +144,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`cd`",
-                        "`bash`"
+                        "vocab",
+                        "cd",
+                        "bash"
                     ],
                     "number": 9,
                     "objective": "More cd",
@@ -161,9 +161,9 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`touch`",
-                        "`bash`"
+                        "syntax",
+                        "touch",
+                        "bash"
                     ],
                     "number": 10,
                     "objective": "Touch Options",
@@ -178,10 +178,10 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`open`",
-                        "`bash`",
-                        "`mac`"
+                        "vocab",
+                        "open",
+                        "bash",
+                        "mac"
                     ],
                     "number": 11,
                     "objective": "Opening a File (mac)",
@@ -196,10 +196,10 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`explorer`",
-                        "`bash`",
-                        "`pc`"
+                        "vocab",
+                        "explorer",
+                        "bash",
+                        "pc"
                     ],
                     "number": 12,
                     "objective": "Opening a File (pc)",
@@ -214,9 +214,9 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`cd`",
-                        "`bash`"
+                        "syntax",
+                        "cd",
+                        "bash"
                     ],
                     "number": 13,
                     "objective": "Even More cd",
@@ -231,10 +231,10 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`explorer`",
-                        "`bash`",
-                        "`pc`"
+                        "syntax",
+                        "explorer",
+                        "bash",
+                        "pc"
                     ],
                     "number": 14,
                     "objective": "Opening a Folder (pc)",
@@ -249,10 +249,10 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`open`",
-                        "`bash`",
-                        "`mac`"
+                        "syntax",
+                        "open",
+                        "bash",
+                        "mac"
                     ],
                     "number": 15,
                     "objective": "Opening a Folder (mac)",
@@ -267,9 +267,9 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`ls`",
-                        "`bash`"
+                        "syntax",
+                        "ls",
+                        "bash"
                     ],
                     "number": 16,
                     "objective": "Files in One Folder Up",
@@ -284,9 +284,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`mv`",
-                        "`bash`"
+                        "vocab",
+                        "mv",
+                        "bash"
                     ],
                     "number": 17,
                     "objective": "Renaming Files",
@@ -301,9 +301,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`cp`",
-                        "`bash`"
+                        "vocab",
+                        "cp",
+                        "bash"
                     ],
                     "number": 18,
                     "objective": "Copying Files",
@@ -318,9 +318,9 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`rm`",
-                        "`bash`"
+                        "syntax",
+                        "rm",
+                        "bash"
                     ],
                     "number": 19,
                     "objective": "Deleting Files Elsewhere",
@@ -344,8 +344,8 @@
             "questions": [
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`HTML`"
+                        "vocab",
+                        "HTML"
                     ],
                     "number": 1,
                     "objective": "HTML",
@@ -360,9 +360,9 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`<a>`",
-                        "`HTML`"
+                        "syntax",
+                        "<a>",
+                        "HTML"
                     ],
                     "number": 2,
                     "objective": "HTML Links",
@@ -377,9 +377,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`<h1>`",
-                        "`HTML`"
+                        "vocab",
+                        "<h1>",
+                        "HTML"
                     ],
                     "number": 3,
                     "objective": "Header Sizes",
@@ -394,9 +394,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`<img>`",
-                        "`HTML`"
+                        "vocab",
+                        "<img>",
+                        "HTML"
                     ],
                     "number": 4,
                     "objective": "Image elements",
@@ -411,8 +411,8 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`CSS`"
+                        "vocab",
+                        "CSS"
                     ],
                     "number": 5,
                     "objective": "CSS",
@@ -427,9 +427,9 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`<link>`",
-                        "`HTML`"
+                        "syntax",
+                        "<link>",
+                        "HTML"
                     ],
                     "number": 6,
                     "objective": "HTML CSS Linking",
@@ -444,9 +444,9 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`<p>`",
-                        "`CSS`"
+                        "syntax",
+                        "<p>",
+                        "CSS"
                     ],
                     "number": 7,
                     "objective": "CSS Syntax",
@@ -461,9 +461,9 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`class`",
-                        "`CSS`"
+                        "syntax",
+                        "class",
+                        "CSS"
                     ],
                     "number": 8,
                     "objective": "CSS Classes",
@@ -478,9 +478,9 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`ID`",
-                        "`CSS`"
+                        "syntax",
+                        "ID",
+                        "CSS"
                     ],
                     "number": 9,
                     "objective": "CSS IDs",
@@ -495,11 +495,11 @@
                 },
                 {
                     "subjects": [
-                        "`box",
-                        "model`",
-                        "`pattern",
-                        "recognition`",
-                        "`CSS`"
+                        "box",
+                        "model",
+                        "pattern",
+                        "recognition",
+                        "CSS"
                     ],
                     "number": 10,
                     "objective": "Element Size Calculations",
@@ -514,8 +514,8 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`HTML`"
+                        "vocab",
+                        "HTML"
                     ],
                     "number": 11,
                     "objective": "Block Elements",
@@ -530,9 +530,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`CSS`",
-                        "`float`"
+                        "vocab",
+                        "CSS",
+                        "float"
                     ],
                     "number": 12,
                     "objective": "Block Element Alignment",
@@ -547,9 +547,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`CSS`",
-                        "`relative`"
+                        "vocab",
+                        "CSS",
+                        "relative"
                     ],
                     "number": 13,
                     "objective": "Moving Elements in Relation",
@@ -564,9 +564,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`CSS`",
-                        "`z-index`"
+                        "vocab",
+                        "CSS",
+                        "z-index"
                     ],
                     "number": 14,
                     "objective": "Layering Elements",
@@ -581,9 +581,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`CSS`",
-                        "`absolute`"
+                        "vocab",
+                        "CSS",
+                        "absolute"
                     ],
                     "number": 15,
                     "objective": "Moving Elements Relatively",
@@ -598,9 +598,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`CSS`",
-                        "`display`"
+                        "vocab",
+                        "CSS",
+                        "display"
                     ],
                     "number": 16,
                     "objective": "Display: none Property",
@@ -615,8 +615,8 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`CSS`"
+                        "vocab",
+                        "CSS"
                     ],
                     "number": 17,
                     "objective": "CSS Precedence",
@@ -631,9 +631,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`reset`",
-                        "`CSS`"
+                        "vocab",
+                        "reset",
+                        "CSS"
                     ],
                     "number": 18,
                     "objective": "CSS Resets",
@@ -648,10 +648,10 @@
                 },
                 {
                     "subjects": [
-                        "`CSS`",
-                        "`class`",
-                        "`ID`",
-                        "`vocab`"
+                        "CSS",
+                        "class",
+                        "ID",
+                        "vocab"
                     ],
                     "number": 19,
                     "objective": "Class and ID Stacking",
@@ -666,9 +666,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`pseudo-class`",
-                        "`CSS`"
+                        "vocab",
+                        "pseudo-class",
+                        "CSS"
                     ],
                     "number": 20,
                     "objective": "Special State Keywords",
@@ -683,9 +683,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`CSS`",
-                        "`bootstrap`"
+                        "vocab",
+                        "CSS",
+                        "bootstrap"
                     ],
                     "number": 21,
                     "objective": "CSS Frameworks Purpose",
@@ -700,9 +700,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`bootstrap`",
-                        "`container`"
+                        "vocab",
+                        "bootstrap",
+                        "container"
                     ],
                     "number": 22,
                     "objective": "Bootstrap Grid",
@@ -717,9 +717,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`bootstrap`",
-                        "`grid`"
+                        "vocab",
+                        "bootstrap",
+                        "grid"
                     ],
                     "number": 23,
                     "objective": "Bootstrap Grid Columns",
@@ -734,9 +734,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`grid`",
-                        "`bootstrap`"
+                        "vocab",
+                        "grid",
+                        "bootstrap"
                     ],
                     "number": 24,
                     "objective": "Bootstrap Grid Classes",
@@ -751,9 +751,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`CSS`",
-                        "`media-queries`"
+                        "vocab",
+                        "CSS",
+                        "media-queries"
                     ],
                     "number": 25,
                     "objective": "Mobile Responsiveness",
@@ -768,9 +768,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`viewport`",
-                        "`HTML`"
+                        "vocab",
+                        "viewport",
+                        "HTML"
                     ],
                     "number": 26,
                     "objective": "Website Display",
@@ -785,8 +785,8 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`Git/GitHub`"
+                        "vocab",
+                        "Git/GitHub"
                     ],
                     "number": 27,
                     "objective": "Git Benefits",
@@ -801,9 +801,9 @@
                 },
                 {
                     "subjects": [
-                        "`pattern",
-                        "recognition`",
-                        "`Git/GitHub`"
+                        "pattern",
+                        "recognition",
+                        "Git/GitHub"
                     ],
                     "number": 28,
                     "objective": "GitHub Workflow",
@@ -818,8 +818,8 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`Git/GitHub`"
+                        "vocab",
+                        "Git/GitHub"
                     ],
                     "number": 29,
                     "objective": "GitHub Pages Deployment",
@@ -834,8 +834,8 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`Git/GitHub`"
+                        "syntax",
+                        "Git/GitHub"
                     ],
                     "number": 30,
                     "objective": "GitHub Pages URL",
@@ -859,9 +859,9 @@
             "questions": [
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`var`",
-                        "`vocab`"
+                        "javascript",
+                        "var",
+                        "vocab"
                     ],
                     "number": 1,
                     "objective": "Declaring",
@@ -876,12 +876,12 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`var`",
-                        "`boolean`",
-                        "`string`",
-                        "`number`",
-                        "`vocab`"
+                        "javascript",
+                        "var",
+                        "boolean",
+                        "string",
+                        "number",
+                        "vocab"
                     ],
                     "number": 2,
                     "objective": "Variable Types",
@@ -896,9 +896,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`string`",
-                        "`vocab`"
+                        "javascript",
+                        "string",
+                        "vocab"
                     ],
                     "number": 3,
                     "objective": "Strings",
@@ -913,9 +913,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`console.log`",
-                        "`vocab`"
+                        "javascript",
+                        "console.log",
+                        "vocab"
                     ],
                     "number": 4,
                     "objective": "Debugging",
@@ -930,9 +930,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`var`",
-                        "`adding`"
+                        "javascript",
+                        "var",
+                        "adding"
                     ],
                     "number": 5,
                     "objective": "Adding variables",
@@ -947,9 +947,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`prompt`",
-                        "`vocab`"
+                        "javascript",
+                        "prompt",
+                        "vocab"
                     ],
                     "number": 6,
                     "objective": "User Input",
@@ -964,9 +964,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`vocab`",
-                        "`document.write`"
+                        "javascript",
+                        "vocab",
+                        "document.write"
                     ],
                     "number": 7,
                     "objective": "Writing to a Page",
@@ -981,9 +981,9 @@
                 },
                 {
                     "subjects": [
-                        "`if/else`",
-                        "`javascript`",
-                        "`vocab`"
+                        "if/else",
+                        "javascript",
+                        "vocab"
                     ],
                     "number": 8,
                     "objective": "If / Else Statements",
@@ -998,9 +998,9 @@
                 },
                 {
                     "subjects": [
-                        "`if/else`",
-                        "`javascript`",
-                        "`syntax`"
+                        "if/else",
+                        "javascript",
+                        "syntax"
                     ],
                     "number": 9,
                     "objective": "If / Else Syntax",
@@ -1015,9 +1015,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`arrays`",
-                        "`vocab`"
+                        "javascript",
+                        "arrays",
+                        "vocab"
                     ],
                     "number": 10,
                     "objective": "Arrays",
@@ -1032,10 +1032,10 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`arrays`",
-                        "`index`",
-                        "`vocab`"
+                        "javascript",
+                        "arrays",
+                        "index",
+                        "vocab"
                     ],
                     "number": 11,
                     "objective": "Array elements",
@@ -1050,10 +1050,10 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`arrays`",
-                        "`index`",
-                        "`syntax`"
+                        "javascript",
+                        "arrays",
+                        "index",
+                        "syntax"
                     ],
                     "number": 12,
                     "objective": "Getting Arrray Values",
@@ -1068,10 +1068,10 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`arrays`",
-                        "`array.length`",
-                        "`vocab`"
+                        "javascript",
+                        "arrays",
+                        "array.length",
+                        "vocab"
                     ],
                     "number": 13,
                     "objective": "Total Array Elements",
@@ -1086,10 +1086,10 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`for",
-                        "loops`",
-                        "`vocab`"
+                        "javascript",
+                        "for",
+                        "loops",
+                        "vocab"
                     ],
                     "number": 14,
                     "objective": "Repeating Code",
@@ -1104,9 +1104,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`comparison`",
-                        "`vocab`"
+                        "javascript",
+                        "comparison",
+                        "vocab"
                     ],
                     "number": 15,
                     "objective": "Comparing Variables",
@@ -1121,11 +1121,11 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`for",
-                        "loops`",
-                        "`iterators`",
-                        "`vocab`"
+                        "javascript",
+                        "for",
+                        "loops",
+                        "iterators",
+                        "vocab"
                     ],
                     "number": 16,
                     "objective": "For Loop Counter Variables",
@@ -1140,12 +1140,12 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`arrays`",
-                        "`for",
-                        "loops`",
-                        "`array.length`",
-                        "`index`"
+                        "javascript",
+                        "arrays",
+                        "for",
+                        "loops",
+                        "array.length",
+                        "index"
                     ],
                     "number": 17,
                     "objective": "Looping Through Arrays",
@@ -1160,9 +1160,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`vocab`",
-                        "`document.onkeyup`"
+                        "javascript",
+                        "vocab",
+                        "document.onkeyup"
                     ],
                     "number": 18,
                     "objective": "Hooking onto Events",
@@ -1177,9 +1177,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`vocab`",
-                        "`event.key`"
+                        "javascript",
+                        "vocab",
+                        "event.key"
                     ],
                     "number": 19,
                     "objective": "Getting Key Presses",
@@ -1194,9 +1194,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`document.getElementByID`",
-                        "`vocab`"
+                        "javascript",
+                        "document.getElementByID",
+                        "vocab"
                     ],
                     "number": 20,
                     "objective": "ID Element Targetting",
@@ -1211,10 +1211,10 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`vocab`",
-                        "`arrays`",
-                        "`push`"
+                        "javascript",
+                        "vocab",
+                        "arrays",
+                        "push"
                     ],
                     "number": 21,
                     "objective": "Adding to Arrays",
@@ -1229,9 +1229,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`vocab`",
-                        "`functions`"
+                        "javascript",
+                        "vocab",
+                        "functions"
                     ],
                     "number": 22,
                     "objective": "Bundling Repetitive Code",
@@ -1246,10 +1246,10 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`vocab`",
-                        "`functions`",
-                        "`arguments`"
+                        "javascript",
+                        "vocab",
+                        "functions",
+                        "arguments"
                     ],
                     "number": 23,
                     "objective": "Variables Passed to Functions",
@@ -1264,10 +1264,10 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`vocab`",
-                        "`syntax`",
-                        "`charAt`"
+                        "javascript",
+                        "vocab",
+                        "syntax",
+                        "charAt"
                     ],
                     "number": 24,
                     "objective": "String Manipulation",
@@ -1282,10 +1282,10 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`arrays`",
-                        "`push`",
-                        "`modulus`"
+                        "javascript",
+                        "arrays",
+                        "push",
+                        "modulus"
                     ],
                     "number": 25,
                     "objective": "Building Arrays",
@@ -1300,9 +1300,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`vocab`",
-                        "`functions`"
+                        "javascript",
+                        "vocab",
+                        "functions"
                     ],
                     "number": 26,
                     "objective": "Executing Functions",
@@ -1317,9 +1317,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`vocab`",
-                        "`toLowerCase()`"
+                        "javascript",
+                        "vocab",
+                        "toLowerCase()"
                     ],
                     "number": 27,
                     "objective": "Converting Strings",
@@ -1334,10 +1334,10 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`vocab`",
-                        "`Math.floor`",
-                        "`Math.random`"
+                        "javascript",
+                        "vocab",
+                        "Math.floor",
+                        "Math.random"
                     ],
                     "number": 28,
                     "objective": "Random Number Generation",
@@ -1352,9 +1352,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`functions`",
-                        "`scope`"
+                        "javascript",
+                        "functions",
+                        "scope"
                     ],
                     "number": 29,
                     "objective": "Function Scope 1",
@@ -1378,9 +1378,9 @@
             "questions": [
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`syntax`",
-                        "`object`"
+                        "javascript",
+                        "syntax",
+                        "object"
                     ],
                     "number": 1,
                     "objective": "Object Syntax",
@@ -1395,11 +1395,11 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`syntax`",
-                        "`object`",
-                        "`bracket",
-                        "notation`"
+                        "javascript",
+                        "syntax",
+                        "object",
+                        "bracket",
+                        "notation"
                     ],
                     "number": 2,
                     "objective": "Object Bracket Notation",
@@ -1414,11 +1414,11 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`syntax`",
-                        "`object`",
-                        "`dot",
-                        "notation`"
+                        "javascript",
+                        "syntax",
+                        "object",
+                        "dot",
+                        "notation"
                     ],
                     "number": 3,
                     "objective": "Object Dot Notation",
@@ -1433,10 +1433,10 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`object`",
-                        "`this`",
-                        "`vocab`"
+                        "javascript",
+                        "object",
+                        "this",
+                        "vocab"
                     ],
                     "number": 4,
                     "objective": "Object Self Referencing",
@@ -1451,10 +1451,10 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`object`",
-                        "`method`",
-                        "`vocab`"
+                        "javascript",
+                        "object",
+                        "method",
+                        "vocab"
                     ],
                     "number": 5,
                     "objective": "Object Functions",
@@ -1469,9 +1469,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`object`",
-                        "`method`"
+                        "javascript",
+                        "object",
+                        "method"
                     ],
                     "number": 6,
                     "objective": "Objects Example",
@@ -1486,9 +1486,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`scope`",
-                        "`vocab`"
+                        "javascript",
+                        "scope",
+                        "vocab"
                     ],
                     "number": 7,
                     "objective": "Variable Scope",
@@ -1503,10 +1503,10 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`functions`",
-                        "`syntax`",
-                        "`scope`"
+                        "javascript",
+                        "functions",
+                        "syntax",
+                        "scope"
                     ],
                     "number": 8,
                     "objective": "Function Arguments",
@@ -1521,12 +1521,12 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`forEach`",
-                        "`vocab`",
-                        "`JS",
+                        "javascript",
+                        "forEach",
+                        "vocab",
+                        "JS",
                         "vs",
-                        "jQuery`"
+                        "jQuery"
                     ],
                     "number": 9,
                     "objective": "Alternative to For Loops",
@@ -1541,9 +1541,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`DOM`",
-                        "`vocab`"
+                        "javascript",
+                        "DOM",
+                        "vocab"
                     ],
                     "number": 10,
                     "objective": "Browser Interpretation",
@@ -1558,12 +1558,12 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`innerHTML`",
-                        "`vocab`",
-                        "`JS",
+                        "javascript",
+                        "innerHTML",
+                        "vocab",
+                        "JS",
                         "vs",
-                        "jQuery`"
+                        "jQuery"
                     ],
                     "number": 11,
                     "objective": "Populating Elements",
@@ -1578,12 +1578,12 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`createElement`",
-                        "`vocab`",
-                        "`JS",
+                        "javascript",
+                        "createElement",
+                        "vocab",
+                        "JS",
                         "vs",
-                        "jQuery`"
+                        "jQuery"
                     ],
                     "number": 12,
                     "objective": "Coding a New Div",
@@ -1598,9 +1598,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`appendChild`",
-                        "`vocab`"
+                        "javascript",
+                        "appendChild",
+                        "vocab"
                     ],
                     "number": 13,
                     "objective": "Attaching to an Element",
@@ -1615,12 +1615,12 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`setAttribute`",
-                        "`vocab`",
-                        "`JS",
+                        "javascript",
+                        "setAttribute",
+                        "vocab",
+                        "JS",
                         "vs",
-                        "jQuery`"
+                        "jQuery"
                     ],
                     "number": 14,
                     "objective": "Changing Element CSS Styling",
@@ -1635,8 +1635,8 @@
                 },
                 {
                     "subjects": [
-                        "`jQuery`",
-                        "`vocab`"
+                        "jQuery",
+                        "vocab"
                     ],
                     "number": 15,
                     "objective": "What is jQuery?",
@@ -1651,8 +1651,8 @@
                 },
                 {
                     "subjects": [
-                        "`jQuery`",
-                        "`vocab`"
+                        "jQuery",
+                        "vocab"
                     ],
                     "number": 16,
                     "objective": "jQuery Purposes",
@@ -1667,8 +1667,8 @@
                 },
                 {
                     "subjects": [
-                        "`jQuery`",
-                        "`syntax`"
+                        "jQuery",
+                        "syntax"
                     ],
                     "number": 17,
                     "objective": "jQuery Selectors",
@@ -1683,9 +1683,9 @@
                 },
                 {
                     "subjects": [
-                        "`jQuery`",
-                        "`syntax`",
-                        "`button`"
+                        "jQuery",
+                        "syntax",
+                        "button"
                     ],
                     "number": 18,
                     "objective": "jQuery Button Creation",
@@ -1700,9 +1700,9 @@
                 },
                 {
                     "subjects": [
-                        "`jQuery`",
-                        "`syntax`",
-                        "`append`"
+                        "jQuery",
+                        "syntax",
+                        "append"
                     ],
                     "number": 19,
                     "objective": "Attaching divs with jQuery",
@@ -1717,9 +1717,9 @@
                 },
                 {
                     "subjects": [
-                        "`jQuery`",
-                        "`each`",
-                        "`vocab`"
+                        "jQuery",
+                        "each",
+                        "vocab"
                     ],
                     "number": 20,
                     "objective": "Iterating with jQuery",
@@ -1734,9 +1734,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`vocab`",
-                        "`document.ready`"
+                        "javascript",
+                        "vocab",
+                        "document.ready"
                     ],
                     "number": 21,
                     "objective": "HTML Loading Delay",
@@ -1751,9 +1751,9 @@
                 },
                 {
                     "subjects": [
-                        "`jQuery`",
-                        "`on-click`",
-                        "`syntax`"
+                        "jQuery",
+                        "on-click",
+                        "syntax"
                     ],
                     "number": 22,
                     "objective": "jQuery Listeners",
@@ -1768,9 +1768,9 @@
                 },
                 {
                     "subjects": [
-                        "`jQuery`",
-                        "`prepend`",
-                        "`vocab`"
+                        "jQuery",
+                        "prepend",
+                        "vocab"
                     ],
                     "number": 23,
                     "objective": "jQuery Attaching to Top of Element",
@@ -1785,8 +1785,8 @@
                 },
                 {
                     "subjects": [
-                        "`jQuery`",
-                        "`syntax`"
+                        "jQuery",
+                        "syntax"
                     ],
                     "number": 24,
                     "objective": "jQuery Options",
@@ -1801,9 +1801,9 @@
                 },
                 {
                     "subjects": [
-                        "`jQuery`",
-                        "`attr`",
-                        "`vocab`"
+                        "jQuery",
+                        "attr",
+                        "vocab"
                     ],
                     "number": 25,
                     "objective": "jQuery Data Attributes",
@@ -1818,9 +1818,9 @@
                 },
                 {
                     "subjects": [
-                        "`jQuery`",
-                        "`vocab`",
-                        "`addClass`"
+                        "jQuery",
+                        "vocab",
+                        "addClass"
                     ],
                     "number": 26,
                     "objective": "jQuery Element Classes",
@@ -1835,9 +1835,9 @@
                 },
                 {
                     "subjects": [
-                        "`jquery`",
-                        "`text`",
-                        "`vocab`"
+                        "jquery",
+                        "text",
+                        "vocab"
                     ],
                     "number": 27,
                     "objective": "Button Displayed Name with jQuery",
@@ -1852,9 +1852,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`scope`",
-                        "`vocab`"
+                        "javascript",
+                        "scope",
+                        "vocab"
                     ],
                     "number": 28,
                     "objective": "More JavaScript Scoping",
@@ -1869,9 +1869,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`this`",
-                        "`Window`"
+                        "javascript",
+                        "this",
+                        "Window"
                     ],
                     "number": 29,
                     "objective": "What is this?",
@@ -1895,9 +1895,9 @@
             "questions": [
                 {
                     "subjects": [
-                        "`setTimeout`",
-                        "`javascript`",
-                        "`vocab`"
+                        "setTimeout",
+                        "javascript",
+                        "vocab"
                     ],
                     "number": 1,
                     "objective": "setTimeout method",
@@ -1912,9 +1912,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`setInterval`",
-                        "`vocab`"
+                        "javascript",
+                        "setInterval",
+                        "vocab"
                     ],
                     "number": 2,
                     "objective": "Timed repeated code",
@@ -1929,9 +1929,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`vocab`",
-                        "`clearTimeout`"
+                        "javascript",
+                        "vocab",
+                        "clearTimeout"
                     ],
                     "number": 3,
                     "objective": "Ending timers",
@@ -1946,8 +1946,8 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`setInterval`"
+                        "javascript",
+                        "setInterval"
                     ],
                     "number": 4,
                     "objective": "setInterval method",
@@ -1962,9 +1962,9 @@
                 },
                 {
                     "subjects": [
-                        "`javascript`",
-                        "`callback`",
-                        "`vocab`"
+                        "javascript",
+                        "callback",
+                        "vocab"
                     ],
                     "number": 5,
                     "objective": "setTimeout and setInterval functions",
@@ -1979,8 +1979,8 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`algorithm`"
+                        "vocab",
+                        "algorithm"
                     ],
                     "number": 6,
                     "objective": "Steps a computer can take",
@@ -1995,8 +1995,8 @@
                 },
                 {
                     "subjects": [
-                        "`API`",
-                        "`vocab`"
+                        "API",
+                        "vocab"
                     ],
                     "number": 7,
                     "objective": "API acronym",
@@ -2011,8 +2011,8 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`AJAX`"
+                        "vocab",
+                        "AJAX"
                     ],
                     "number": 8,
                     "objective": "AJAX acronym",
@@ -2027,8 +2027,8 @@
                 },
                 {
                     "subjects": [
-                        "`AJAX`",
-                        "`syntax`"
+                        "AJAX",
+                        "syntax"
                     ],
                     "number": 9,
                     "objective": "AJAX requests",
@@ -2043,8 +2043,8 @@
                 },
                 {
                     "subjects": [
-                        "`JSON`",
-                        "`vocab`"
+                        "JSON",
+                        "vocab"
                     ],
                     "number": 10,
                     "objective": "JSON acronym",
@@ -2059,8 +2059,8 @@
                 },
                 {
                     "subjects": [
-                        "`API`",
-                        "`vocab`"
+                        "API",
+                        "vocab"
                     ],
                     "number": 11,
                     "objective": "API purpose",
@@ -2075,8 +2075,8 @@
                 },
                 {
                     "subjects": [
-                        "`API`",
-                        "`vocab`"
+                        "API",
+                        "vocab"
                     ],
                     "number": 12,
                     "objective": "API usage",
@@ -2091,9 +2091,9 @@
                 },
                 {
                     "subjects": [
-                        "`JSON`",
-                        "`vocab`",
-                        "`API`"
+                        "JSON",
+                        "vocab",
+                        "API"
                     ],
                     "number": 13,
                     "objective": "Data between APIs",
@@ -2108,9 +2108,9 @@
                 },
                 {
                     "subjects": [
-                        "`parameter`",
-                        "`API`",
-                        "`vocab`"
+                        "parameter",
+                        "API",
+                        "vocab"
                     ],
                     "number": 14,
                     "objective": "Building API URLs",
@@ -2125,10 +2125,10 @@
                 },
                 {
                     "subjects": [
-                        "`API`",
-                        "`vocab`",
-                        "`API",
-                        "documentation`"
+                        "API",
+                        "vocab",
+                        "API",
+                        "documentation"
                     ],
                     "number": 15,
                     "objective": "Correctly building API URLs",
@@ -2143,10 +2143,10 @@
                 },
                 {
                     "subjects": [
-                        "`API`",
-                        "`AJAX`",
-                        "`response`",
-                        "`syntax`"
+                        "API",
+                        "AJAX",
+                        "response",
+                        "syntax"
                     ],
                     "number": 16,
                     "objective": "API data",
@@ -2161,8 +2161,8 @@
                 },
                 {
                     "subjects": [
-                        "`.done`",
-                        "`vocab`"
+                        ".done",
+                        "vocab"
                     ],
                     "number": 17,
                     "objective": ".done function purpose",
@@ -2177,9 +2177,9 @@
                 },
                 {
                     "subjects": [
-                        "`JavaScript`",
-                        "`synchronous`",
-                        "`vocab`"
+                        "JavaScript",
+                        "synchronous",
+                        "vocab"
                     ],
                     "number": 18,
                     "objective": "Nature of JavaScript",
@@ -2203,9 +2203,9 @@
             "questions": [
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`client`",
-                        "`server`"
+                        "vocab",
+                        "client",
+                        "server"
                     ],
                     "number": 1,
                     "objective": "Web workflow",
@@ -2220,9 +2220,9 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`client`",
-                        "`server`"
+                        "vocab",
+                        "client",
+                        "server"
                     ],
                     "number": 2,
                     "objective": "More web workflow",
@@ -2237,8 +2237,8 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`Node`"
+                        "vocab",
+                        "Node"
                     ],
                     "number": 3,
                     "objective": "Server side development",
@@ -2253,8 +2253,8 @@
                 },
                 {
                     "subjects": [
-                        "`vocab`",
-                        "`Node`"
+                        "vocab",
+                        "Node"
                     ],
                     "number": 4,
                     "objective": "Node server advantages",
@@ -2269,8 +2269,8 @@
                 },
                 {
                     "subjects": [
-                        "`asynchronous`",
-                        "`vocab`"
+                        "asynchronous",
+                        "vocab"
                     ],
                     "number": 5,
                     "objective": "Node server model",
@@ -2285,8 +2285,8 @@
                 },
                 {
                     "subjects": [
-                        "`syntax`",
-                        "`Node`"
+                        "syntax",
+                        "Node"
                     ],
                     "number": 6,
                     "objective": "Executing JS files outside the browser",
@@ -2301,8 +2301,8 @@
                 },
                 {
                     "subjects": [
-                        "`Node`",
-                        "`tech-knowledge`"
+                        "Node",
+                        "tech-knowledge"
                     ],
                     "number": 7,
                     "objective": "Console logging from Node",
@@ -2317,8 +2317,8 @@
                 },
                 {
                     "subjects": [
-                        "`process.argv`",
-                        "`vocab`"
+                        "process.argv",
+                        "vocab"
                     ],
                     "number": 8,
                     "objective": "Purpose of process.argv",
@@ -2333,9 +2333,9 @@
                 },
                 {
                     "subjects": [
-                        "`process.argv`",
-                        "`tech-knowledge`",
-                        "`syntax`"
+                        "process.argv",
+                        "tech-knowledge",
+                        "syntax"
                     ],
                     "number": 9,
                     "objective": "Adding with process.argv",
@@ -2350,9 +2350,9 @@
                 },
                 {
                     "subjects": [
-                        "`parseFloat`",
-                        "`parseInt`",
-                        "`vocab`"
+                        "parseFloat",
+                        "parseInt",
+                        "vocab"
                     ],
                     "number": 10,
                     "objective": "parseFloat and parseInt",
@@ -2367,8 +2367,8 @@
                 },
                 {
                     "subjects": [
-                        "`require`",
-                        "`vocab`"
+                        "require",
+                        "vocab"
                     ],
                     "number": 11,
                     "objective": "Basics of modularization",
@@ -2383,9 +2383,9 @@
                 },
                 {
                     "subjects": [
-                        "`require`",
-                        "`syntax`",
-                        "`dot-notation`"
+                        "require",
+                        "syntax",
+                        "dot-notation"
                     ],
                     "number": 12,
                     "objective": "Modularization example",
@@ -2400,9 +2400,9 @@
                 },
                 {
                     "subjects": [
-                        "`fs`",
-                        "`Node`",
-                        "`vocab`"
+                        "fs",
+                        "Node",
+                        "vocab"
                     ],
                     "number": 13,
                     "objective": "Node FS package",
@@ -2417,9 +2417,9 @@
                 },
                 {
                     "subjects": [
-                        "`fs`",
-                        "`data.split`",
-                        "`syntax`"
+                        "fs",
+                        "data.split",
+                        "syntax"
                     ],
                     "number": 14,
                     "objective": "Reading file data",
@@ -2434,8 +2434,8 @@
                 },
                 {
                     "subjects": [
-                        "`fs`",
-                        "`tech-knowledge`"
+                        "fs",
+                        "tech-knowledge"
                     ],
                     "number": 15,
                     "objective": "Adding to files",
@@ -2455,8 +2455,8 @@
                         "Node",
                         "apps",
                         "-",
-                        "`npm`",
-                        "`vocab`"
+                        "npm",
+                        "vocab"
                     ],
                     "number": 16,
                     "objective": "Adding pr",
@@ -2471,8 +2471,8 @@
                 },
                 {
                     "subjects": [
-                        "`npm`",
-                        "`syntax`"
+                        "npm",
+                        "syntax"
                     ],
                     "number": 17,
                     "objective": "Installing external packages",
@@ -2487,8 +2487,8 @@
                 },
                 {
                     "subjects": [
-                        "`request`",
-                        "`syntax`"
+                        "request",
+                        "syntax"
                     ],
                     "number": 18,
                     "objective": "Using the request NPM package",
@@ -2503,8 +2503,8 @@
                 },
                 {
                     "subjects": [
-                        "`JSON.parse`",
-                        "`vocab`"
+                        "JSON.parse",
+                        "vocab"
                     ],
                     "number": 19,
                     "objective": "Purpose of JSON.parse",
@@ -2519,9 +2519,9 @@
                 },
                 {
                     "subjects": [
-                        "`npm`",
-                        "`syntax`",
-                        "`package.json`"
+                        "npm",
+                        "syntax",
+                        "package.json"
                     ],
                     "number": 20,
                     "objective": "Package management",
@@ -2536,9 +2536,9 @@
                 },
                 {
                     "subjects": [
-                        "`npm`",
-                        "`syntax`",
-                        "`package.json`"
+                        "npm",
+                        "syntax",
+                        "package.json"
                     ],
                     "number": 21,
                     "objective": "Adding dependencies",
@@ -2562,8 +2562,8 @@
             "questions": [
                 {
                     "subjects": [
-                        "`back-end`",
-                        "`vocab`"
+                        "back-end",
+                        "vocab"
                     ],
                     "number": 1,
                     "objective": "Request handling and responding",
@@ -2578,8 +2578,8 @@
                 },
                 {
                     "subjects": [
-                        "`client`",
-                        "`vocab`"
+                        "client",
+                        "vocab"
                     ],
                     "number": 2,
                     "objective": "Making requests",
@@ -2594,8 +2594,8 @@
                 },
                 {
                     "subjects": [
-                        "`back-end`",
-                        "`vocab`"
+                        "back-end",
+                        "vocab"
                     ],
                     "number": 3,
                     "objective": "Server Data and Logic",
@@ -2610,9 +2610,9 @@
                 },
                 {
                     "subjects": [
-                        "`request`",
-                        "`response`",
-                        "`vocab`"
+                        "request",
+                        "response",
+                        "vocab"
                     ],
                     "number": 4,
                     "objective": "Communication flow",
@@ -2627,8 +2627,8 @@
                 },
                 {
                     "subjects": [
-                        "`back-end`",
-                        "`tech-knowledge`"
+                        "back-end",
+                        "tech-knowledge"
                     ],
                     "number": 5,
                     "objective": "Server functions",
@@ -2645,9 +2645,9 @@
                     "subjects": [
                         "communication",
                         "-",
-                        "`client`",
-                        "`back-end`",
-                        "`http`"
+                        "client",
+                        "back-end",
+                        "http"
                     ],
                     "number": 6,
                     "objective": "Clien",
@@ -2662,8 +2662,8 @@
                 },
                 {
                     "subjects": [
-                        "`back-end`",
-                        "`tech-knowledge`"
+                        "back-end",
+                        "tech-knowledge"
                     ],
                     "number": 7,
                     "objective": "Server code parts",
@@ -2678,8 +2678,8 @@
                 },
                 {
                     "subjects": [
-                        "`port`",
-                        "`vocab`"
+                        "port",
+                        "vocab"
                     ],
                     "number": 8,
                     "objective": "Communication portal",
@@ -2694,8 +2694,8 @@
                 },
                 {
                     "subjects": [
-                        "`get`",
-                        "`vocab`"
+                        "get",
+                        "vocab"
                     ],
                     "number": 9,
                     "objective": "Request types",
@@ -2710,8 +2710,8 @@
                 },
                 {
                     "subjects": [
-                        "`post`",
-                        "`vocab`"
+                        "post",
+                        "vocab"
                     ],
                     "number": 10,
                     "objective": "More request types",
@@ -2726,8 +2726,8 @@
                 },
                 {
                     "subjects": [
-                        "`express`",
-                        "`vocab`"
+                        "express",
+                        "vocab"
                     ],
                     "number": 11,
                     "objective": "Creating a server",
@@ -2742,8 +2742,8 @@
                 },
                 {
                     "subjects": [
-                        "`express`",
-                        "`npm-package`"
+                        "express",
+                        "npm-package"
                     ],
                     "number": 12,
                     "objective": "Including Express",
@@ -2758,9 +2758,9 @@
                 },
                 {
                     "subjects": [
-                        "`express`",
-                        "`require`",
-                        "`syntax`"
+                        "express",
+                        "require",
+                        "syntax"
                     ],
                     "number": 13,
                     "objective": "Using Express",
@@ -2775,9 +2775,9 @@
                 },
                 {
                     "subjects": [
-                        "`express`",
-                        "`app`",
-                        "`vocab`"
+                        "express",
+                        "app",
+                        "vocab"
                     ],
                     "number": 14,
                     "objective": "Express app object creation",
@@ -2792,8 +2792,8 @@
                 },
                 {
                     "subjects": [
-                        "`listen`",
-                        "`vocab`"
+                        "listen",
+                        "vocab"
                     ],
                     "number": 15,
                     "objective": "Express app methods",
@@ -2808,8 +2808,8 @@
                 },
                 {
                     "subjects": [
-                        "`app.get`",
-                        "`syntax`"
+                        "app.get",
+                        "syntax"
                     ],
                     "number": 16,
                     "objective": "Express routing",
@@ -2824,8 +2824,8 @@
                 },
                 {
                     "subjects": [
-                        "`res.send`",
-                        "`syntax`"
+                        "res.send",
+                        "syntax"
                     ],
                     "number": 17,
                     "objective": "Route to browser display",
@@ -2840,8 +2840,8 @@
                 },
                 {
                     "subjects": [
-                        "`req.params`",
-                        "`vocab`"
+                        "req.params",
+                        "vocab"
                     ],
                     "number": 18,
                     "objective": "Parsing the URL",
@@ -2856,8 +2856,8 @@
                 },
                 {
                     "subjects": [
-                        "`parameters`",
-                        "`syntax`"
+                        "parameters",
+                        "syntax"
                     ],
                     "number": 19,
                     "objective": "Parameter modification",
@@ -2873,8 +2873,8 @@
                 {
                     "subjects": [
                         "-",
-                        "`body-parser`",
-                        "`vocab`"
+                        "body-parser",
+                        "vocab"
                     ],
                     "number": 20,
                     "objective": "bod",
@@ -2889,8 +2889,8 @@
                 },
                 {
                     "subjects": [
-                        "`__directory`",
-                        "`vocab`"
+                        "__directory",
+                        "vocab"
                     ],
                     "number": 21,
                     "objective": "Directory path",
@@ -2914,8 +2914,8 @@
             "questions": [
                 {
                     "subjects": [
-                        "`sql`",
-                        "`vocab`"
+                        "sql",
+                        "vocab"
                     ],
                     "number": 1,
                     "objective": "SQL acronym",
@@ -2930,10 +2930,10 @@
                 },
                 {
                     "subjects": [
-                        "`mysql`",
-                        "`mysql-workbench`",
-                        "`sequel-pro`",
-                        "`vocab`"
+                        "mysql",
+                        "mysql-workbench",
+                        "sequel-pro",
+                        "vocab"
                     ],
                     "number": 2,
                     "objective": "MySQL and MySQL Workbench / Sequel Pro relationship",
@@ -2948,9 +2948,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`create-database`",
-                        "`syntax`"
+                        "sql",
+                        "create-database",
+                        "syntax"
                     ],
                     "number": 3,
                     "objective": "Creating databases",
@@ -2965,10 +2965,10 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`tables`",
-                        "`columns`",
-                        "`vocab`"
+                        "sql",
+                        "tables",
+                        "columns",
+                        "vocab"
                     ],
                     "number": 4,
                     "objective": "SQL Data Storage",
@@ -2983,9 +2983,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`use`",
-                        "`vocab`"
+                        "sql",
+                        "use",
+                        "vocab"
                     ],
                     "number": 5,
                     "objective": "Selecting a database",
@@ -3000,9 +3000,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`create-table`",
-                        "`syntax`"
+                        "sql",
+                        "create-table",
+                        "syntax"
                     ],
                     "number": 6,
                     "objective": "Creating tables",
@@ -3017,9 +3017,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`not-null`",
-                        "`vocab`"
+                        "sql",
+                        "not-null",
+                        "vocab"
                     ],
                     "number": 7,
                     "objective": "Preventing empty fields",
@@ -3034,9 +3034,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`varchar`",
-                        "`vocab`"
+                        "sql",
+                        "varchar",
+                        "vocab"
                     ],
                     "number": 8,
                     "objective": "Data type to hold variable length strings",
@@ -3051,9 +3051,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`integer`",
-                        "`vocab`"
+                        "sql",
+                        "integer",
+                        "vocab"
                     ],
                     "number": 9,
                     "objective": "Data type to hold whole numbers",
@@ -3068,9 +3068,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`default`",
-                        "`vocab`"
+                        "sql",
+                        "default",
+                        "vocab"
                     ],
                     "number": 10,
                     "objective": "Setting value when none specified",
@@ -3085,9 +3085,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`insert-into`",
-                        "`vocab`"
+                        "sql",
+                        "insert-into",
+                        "vocab"
                     ],
                     "number": 11,
                     "objective": "Adding data to tables",
@@ -3102,9 +3102,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`values`",
-                        "`vocab`"
+                        "sql",
+                        "values",
+                        "vocab"
                     ],
                     "number": 12,
                     "objective": "Adding data to tables 2",
@@ -3119,7 +3119,7 @@
                 },
                 {
                     "subjects": [
-                        "`tech-knowledge`"
+                        "tech-knowledge"
                     ],
                     "number": 13,
                     "objective": "Duplicated code",
@@ -3134,9 +3134,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`update`",
-                        "`vocab`"
+                        "sql",
+                        "update",
+                        "vocab"
                     ],
                     "number": 14,
                     "objective": "Changing data",
@@ -3151,9 +3151,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`set`",
-                        "`vocab`"
+                        "sql",
+                        "set",
+                        "vocab"
                     ],
                     "number": 15,
                     "objective": "Specifying data to change",
@@ -3168,9 +3168,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`where`",
-                        "`tech-knowledge`"
+                        "sql",
+                        "where",
+                        "tech-knowledge"
                     ],
                     "number": 16,
                     "objective": "Use of WHERE",
@@ -3185,9 +3185,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`delete-from`",
-                        "`vocab`"
+                        "sql",
+                        "delete-from",
+                        "vocab"
                     ],
                     "number": 17,
                     "objective": "Removing data from tables",
@@ -3202,9 +3202,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`group-by`",
-                        "`vocab`"
+                        "sql",
+                        "group-by",
+                        "vocab"
                     ],
                     "number": 18,
                     "objective": "Elements with shared values",
@@ -3219,9 +3219,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`between`",
-                        "`vocab`"
+                        "sql",
+                        "between",
+                        "vocab"
                     ],
                     "number": 19,
                     "objective": "Selecting ranges of values",
@@ -3236,8 +3236,8 @@
                 },
                 {
                     "subjects": [
-                        "`primary-key`",
-                        "`tech-knowledge`"
+                        "primary-key",
+                        "tech-knowledge"
                     ],
                     "number": 20,
                     "objective": "Unique row identifier",
@@ -3252,9 +3252,9 @@
                 },
                 {
                     "subjects": [
-                        "`sql`",
-                        "`auto-increment`",
-                        "`vocab`"
+                        "sql",
+                        "auto-increment",
+                        "vocab"
                     ],
                     "number": 21,
                     "objective": "Generating new values",
@@ -3269,8 +3269,8 @@
                 },
                 {
                     "subjects": [
-                        "`join`",
-                        "`tech-knowledge`"
+                        "join",
+                        "tech-knowledge"
                     ],
                     "number": 22,
                     "objective": "Combining tables data",
@@ -3285,9 +3285,9 @@
                 },
                 {
                     "subjects": [
-                        "`create-connection`",
-                        "`mysql`",
-                        "`vocab`"
+                        "create-connection",
+                        "mysql",
+                        "vocab"
                     ],
                     "number": 23,
                     "objective": "NPM mysql's createConnection method",
@@ -3302,8 +3302,8 @@
                 },
                 {
                     "subjects": [
-                        "`mysql`",
-                        "`tech-knowledge`"
+                        "mysql",
+                        "tech-knowledge"
                     ],
                     "number": 24,
                     "objective": "Requirements to connect",
@@ -3318,9 +3318,9 @@
                 },
                 {
                     "subjects": [
-                        "`mysql`",
-                        "`connection.query`",
-                        "`syntax`"
+                        "mysql",
+                        "connection.query",
+                        "syntax"
                     ],
                     "number": 25,
                     "objective": "More connections",
@@ -3335,9 +3335,9 @@
                 },
                 {
                     "subjects": [
-                        "`mysql`",
-                        "`connection.connect`",
-                        "`tech-knowledge`"
+                        "mysql",
+                        "connection.connect",
+                        "tech-knowledge"
                     ],
                     "number": 26,
                     "objective": "Purpose of connection.connect callback function",
@@ -3352,8 +3352,8 @@
                 },
                 {
                     "subjects": [
-                        "`mysql`",
-                        "`tech-knowledge`"
+                        "mysql",
+                        "tech-knowledge"
                     ],
                     "number": 27,
                     "objective": "Data returned from database",
@@ -3368,8 +3368,8 @@
                 },
                 {
                     "subjects": [
-                        "`crud`",
-                        "`vocab`"
+                        "crud",
+                        "vocab"
                     ],
                     "number": 28,
                     "objective": "CRUD acronym",
@@ -3384,10 +3384,10 @@
                 },
                 {
                     "subjects": [
-                        "`mysql`",
-                        "`schema.sql`",
-                        "`seeds.sql`",
-                        "`vocab`"
+                        "mysql",
+                        "schema.sql",
+                        "seeds.sql",
+                        "vocab"
                     ],
                     "number": 29,
                     "objective": "Database and Table creation code",
@@ -3411,9 +3411,9 @@
             "questions": [
                 {
                     "subjects": [
-                        "`noSQL`,",
-                        "`MongoDB`,",
-                        "`vocab`"
+                        "noSQL,",
+                        "MongoDB,",
+                        "vocab"
                     ],
                     "number": 1,
                     "objective": "What is MongoDB",
@@ -3428,8 +3428,8 @@
                 },
                 {
                     "subjects": [
-                        "`bson`,",
-                        "`vocab`"
+                        "bson,",
+                        "vocab"
                     ],
                     "number": 2,
                     "objective": "MongoDB storage format",
@@ -3444,9 +3444,9 @@
                 },
                 {
                     "subjects": [
-                        "`collection`,",
-                        "`document`,",
-                        "`vocab`"
+                        "collection,",
+                        "document,",
+                        "vocab"
                     ],
                     "number": 3,
                     "objective": "MongoDB storage terminology",
@@ -3461,8 +3461,8 @@
                 },
                 {
                     "subjects": [
-                        "`mongod`,",
-                        "`tech-knowledge`"
+                        "mongod,",
+                        "tech-knowledge"
                     ],
                     "number": 4,
                     "objective": "Running MongoDB",
@@ -3477,8 +3477,8 @@
                 },
                 {
                     "subjects": [
-                        "`use`,",
-                        "`vocab`"
+                        "use,",
+                        "vocab"
                     ],
                     "number": 5,
                     "objective": "Selecting databases",
@@ -3493,8 +3493,8 @@
                 },
                 {
                     "subjects": [
-                        "`db`,",
-                        "`vocab`"
+                        "db,",
+                        "vocab"
                     ],
                     "number": 6,
                     "objective": "Checking selected database",
@@ -3509,8 +3509,8 @@
                 },
                 {
                     "subjects": [
-                        "`insert`,",
-                        "`vocab`"
+                        "insert,",
+                        "vocab"
                     ],
                     "number": 7,
                     "objective": "Adding data",
@@ -3525,8 +3525,8 @@
                 },
                 {
                     "subjects": [
-                        "`find`,",
-                        "`vocab`"
+                        "find,",
+                        "vocab"
                     ],
                     "number": 8,
                     "objective": "Locating data",
@@ -3541,8 +3541,8 @@
                 },
                 {
                     "subjects": [
-                        "`update`,",
-                        "`vocab`"
+                        "update,",
+                        "vocab"
                     ],
                     "number": 9,
                     "objective": "Modifying data",
@@ -3557,8 +3557,8 @@
                 },
                 {
                     "subjects": [
-                        "`remove`,",
-                        "`vocab`"
+                        "remove,",
+                        "vocab"
                     ],
                     "number": 10,
                     "objective": "Deleting data",
@@ -3573,8 +3573,8 @@
                 },
                 {
                     "subjects": [
-                        "`drop`,",
-                        "`vocab`"
+                        "drop,",
+                        "vocab"
                     ],
                     "number": 11,
                     "objective": "Removing collections",
@@ -3589,8 +3589,8 @@
                 },
                 {
                     "subjects": [
-                        "`dropDatabase`,",
-                        "`vocab`"
+                        "dropDatabase,",
+                        "vocab"
                     ],
                     "number": 12,
                     "objective": "Removing databases",
@@ -3605,9 +3605,9 @@
                 },
                 {
                     "subjects": [
-                        "`_id`,",
-                        "`ObjectId`,",
-                        "`vocab`"
+                        "_id,",
+                        "ObjectId,",
+                        "vocab"
                     ],
                     "number": 13,
                     "objective": "ObjectId details",
@@ -3622,8 +3622,8 @@
                 },
                 {
                     "subjects": [
-                        "`sort`,",
-                        "`vocab`"
+                        "sort,",
+                        "vocab"
                     ],
                     "number": 14,
                     "objective": "Query results ordering",
@@ -3638,8 +3638,8 @@
                 },
                 {
                     "subjects": [
-                        "`mongojs`,",
-                        "`tech-knowledge`"
+                        "mongojs,",
+                        "tech-knowledge"
                     ],
                     "number": 15,
                     "objective": "Connecting with MongoJS",
@@ -3654,9 +3654,9 @@
                 },
                 {
                     "subjects": [
-                        "`mongoose`,",
-                        "`models`,",
-                        "`tech-knowledge`"
+                        "mongoose,",
+                        "models,",
+                        "tech-knowledge"
                     ],
                     "number": 16,
                     "objective": "Mongoose",
@@ -3671,10 +3671,10 @@
                 },
                 {
                     "subjects": [
-                        "`mongoose`,",
-                        "`callback`,",
-                        "`promise`,",
-                        "`tech-knowledge`"
+                        "mongoose,",
+                        "callback,",
+                        "promise,",
+                        "tech-knowledge"
                     ],
                     "number": 17,
                     "objective": "Query response handling",
@@ -3689,9 +3689,9 @@
                 },
                 {
                     "subjects": [
-                        "`mongoose`,",
-                        "`schema`,",
-                        "`vocab`"
+                        "mongoose,",
+                        "schema,",
+                        "vocab"
                     ],
                     "number": 18,
                     "objective": "Defining the model",
@@ -3706,9 +3706,9 @@
                 },
                 {
                     "subjects": [
-                        "`mongoose`,",
-                        "`populate`,",
-                        "`vocab`"
+                        "mongoose,",
+                        "populate,",
+                        "vocab"
                     ],
                     "number": 19,
                     "objective": "Combining collections",
@@ -3732,10 +3732,10 @@
             "questions": [
                 {
                     "subjects": [
-                        "`ES6`,",
-                        "`ES2015`,",
-                        "`ECMAScript`,",
-                        "`vocab`"
+                        "ES6,",
+                        "ES2015,",
+                        "ECMAScript,",
+                        "vocab"
                     ],
                     "number": 1,
                     "objective": "What is ES6/ES2015?",
@@ -3750,12 +3750,12 @@
                 },
                 {
                     "subjects": [
-                        "`var`,",
-                        "`let`,",
-                        "`const`,",
-                        "`block-scope`,",
-                        "`functional-scope`,",
-                        "`vocab`"
+                        "var,",
+                        "let,",
+                        "const,",
+                        "block-scope,",
+                        "functional-scope,",
+                        "vocab"
                     ],
                     "number": 2,
                     "objective": "Scoping Definitions",
@@ -3770,8 +3770,8 @@
                 },
                 {
                     "subjects": [
-                        "`var`,",
-                        "`functional-scope`"
+                        "var,",
+                        "functional-scope"
                     ],
                     "number": 3,
                     "objective": "Scoping Example 1",
@@ -3786,8 +3786,8 @@
                 },
                 {
                     "subjects": [
-                        "`let`,",
-                        "`functional-scope`"
+                        "let,",
+                        "functional-scope"
                     ],
                     "number": 4,
                     "objective": "Scoping Example 2",
@@ -3802,9 +3802,9 @@
                 },
                 {
                     "subjects": [
-                        "`let`,",
-                        "`const`,",
-                        "`vocab`"
+                        "let,",
+                        "const,",
+                        "vocab"
                     ],
                     "number": 5,
                     "objective": "Const vs Let with Strings and Numbers",
@@ -3819,9 +3819,9 @@
                 },
                 {
                     "subjects": [
-                        "`let`,",
-                        "`const`,",
-                        "`vocab`"
+                        "let,",
+                        "const,",
+                        "vocab"
                     ],
                     "number": 6,
                     "objective": "Const vs Let with Arrays and Objects",
@@ -3836,8 +3836,8 @@
                 },
                 {
                     "subjects": [
-                        "`template-literals`,",
-                        "`syntax`"
+                        "template-literals,",
+                        "syntax"
                     ],
                     "number": 7,
                     "objective": "Template Literals",
@@ -3852,9 +3852,9 @@
                 },
                 {
                     "subjects": [
-                        "`objects`,",
-                        "`ES6`,",
-                        "`syntax`"
+                        "objects,",
+                        "ES6,",
+                        "syntax"
                     ],
                     "number": 8,
                     "objective": "ES6 Objects",
@@ -3869,11 +3869,11 @@
                 },
                 {
                     "subjects": [
-                        "`startsWith`,",
-                        "`endsWith`,",
-                        "`includes`,",
-                        "`ES6`,",
-                        "`vocab`"
+                        "startsWith,",
+                        "endsWith,",
+                        "includes,",
+                        "ES6,",
+                        "vocab"
                     ],
                     "number": 9,
                     "objective": "ES6 String Methods",
@@ -3888,9 +3888,9 @@
                 },
                 {
                     "subjects": [
-                        "`map`,",
-                        "`ES6`,",
-                        "`syntax`"
+                        "map,",
+                        "ES6,",
+                        "syntax"
                     ],
                     "number": 10,
                     "objective": "map Method",
@@ -3905,9 +3905,9 @@
                 },
                 {
                     "subjects": [
-                        "`filter`,",
-                        "`ES6`,",
-                        "`vocab`"
+                        "filter,",
+                        "ES6,",
+                        "vocab"
                     ],
                     "number": 11,
                     "objective": "Array Method",
@@ -3922,8 +3922,8 @@
                 },
                 {
                     "subjects": [
-                        "`arrow-functions`,",
-                        "`syntax`"
+                        "arrow-functions,",
+                        "syntax"
                     ],
                     "number": 12,
                     "objective": "Arrow Functions",
@@ -3938,10 +3938,10 @@
                 },
                 {
                     "subjects": [
-                        "`arrow-functions`,",
-                        "`lexical-binding`,",
-                        "`this`,",
-                        "`vocab`"
+                        "arrow-functions,",
+                        "lexical-binding,",
+                        "this,",
+                        "vocab"
                     ],
                     "number": 13,
                     "objective": "Lexical binding",
@@ -3956,8 +3956,8 @@
                 },
                 {
                     "subjects": [
-                        "`destructuring`,",
-                        "`syntax`"
+                        "destructuring,",
+                        "syntax"
                     ],
                     "number": 14,
                     "objective": "Destructuring Objects",
@@ -3972,9 +3972,9 @@
                 },
                 {
                     "subjects": [
-                        "`transpiling`,",
-                        "`babel`,",
-                        "`vocab`"
+                        "transpiling,",
+                        "babel,",
+                        "vocab"
                     ],
                     "number": 15,
                     "objective": "Purpose of Babel",
@@ -3989,8 +3989,8 @@
                 },
                 {
                     "subjects": [
-                        "`exports`,",
-                        "`vocab`"
+                        "exports,",
+                        "vocab"
                     ],
                     "number": 16,
                     "objective": "Exporting ES2015 modules",
@@ -4005,9 +4005,9 @@
                 },
                 {
                     "subjects": [
-                        "`class`,",
-                        "`vocab`,",
-                        "`syntax`"
+                        "class,",
+                        "vocab,",
+                        "syntax"
                     ],
                     "number": 17,
                     "objective": "Classes",
@@ -4022,8 +4022,8 @@
                 },
                 {
                     "subjects": [
-                        "`yarn`,",
-                        "`vocab`"
+                        "yarn,",
+                        "vocab"
                     ],
                     "number": 18,
                     "objective": "Alternative Package Manager",
@@ -4038,8 +4038,8 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "tech-knowledge"
                     ],
                     "number": 19,
                     "objective": "React benefits",
@@ -4054,8 +4054,8 @@
                 },
                 {
                     "subjects": [
-                        "`JSX`,",
-                        "`tech-knowledge`"
+                        "JSX,",
+                        "tech-knowledge"
                     ],
                     "number": 20,
                     "objective": "JS Syntax Extension",
@@ -4070,8 +4070,8 @@
                 },
                 {
                     "subjects": [
-                        "`create-react-app`,",
-                        "`syntax`"
+                        "create-react-app,",
+                        "syntax"
                     ],
                     "number": 21,
                     "objective": "Create React App",
@@ -4086,8 +4086,8 @@
                 },
                 {
                     "subjects": [
-                        "`create-react-app`,",
-                        "`tech-knowledge`"
+                        "create-react-app,",
+                        "tech-knowledge"
                     ],
                     "number": 22,
                     "objective": "React App Execution",
@@ -4102,8 +4102,8 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "tech-knowledge"
                     ],
                     "number": 23,
                     "objective": "React Static assets",
@@ -4118,9 +4118,9 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`components`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "components,",
+                        "tech-knowledge"
                     ],
                     "number": 24,
                     "objective": "Components placement",
@@ -4135,9 +4135,9 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`JSX`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "JSX,",
+                        "tech-knowledge"
                     ],
                     "number": 25,
                     "objective": "JSX Requirement",
@@ -4152,9 +4152,9 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`ReactDOM.render`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "ReactDOM.render,",
+                        "tech-knowledge"
                     ],
                     "number": 26,
                     "objective": "ReactDOM.render",
@@ -4169,9 +4169,9 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`JSX`,",
-                        "`syntax`"
+                        "react,",
+                        "JSX,",
+                        "syntax"
                     ],
                     "number": 27,
                     "objective": "Rendering multiple JSX elements",
@@ -4186,9 +4186,9 @@
                 },
                 {
                     "subjects": [
-                        "`JSX`,",
-                        "`class`,",
-                        "`syntax`"
+                        "JSX,",
+                        "class,",
+                        "syntax"
                     ],
                     "number": 28,
                     "objective": "JSX Class Exception",
@@ -4203,8 +4203,8 @@
                 },
                 {
                     "subjects": [
-                        "`JSX`,",
-                        "`syntax`"
+                        "JSX,",
+                        "syntax"
                     ],
                     "number": 29,
                     "objective": "Closing JSX Elements",
@@ -4219,8 +4219,8 @@
                 },
                 {
                     "subjects": [
-                        "`JSX`,",
-                        "`syntax`"
+                        "JSX,",
+                        "syntax"
                     ],
                     "number": 30,
                     "objective": "Commenting JSX",
@@ -4235,8 +4235,8 @@
                 },
                 {
                     "subjects": [
-                        "`JSX`,",
-                        "`syntax`"
+                        "JSX,",
+                        "syntax"
                     ],
                     "number": 31,
                     "objective": "JS Expresssions in JSX",
@@ -4251,8 +4251,8 @@
                 },
                 {
                     "subjects": [
-                        "`components`,",
-                        "`tech-knowledge`"
+                        "components,",
+                        "tech-knowledge"
                     ],
                     "number": 32,
                     "objective": "Component Styles",
@@ -4267,9 +4267,9 @@
                 },
                 {
                     "subjects": [
-                        "`JSX`,",
-                        "`props`,",
-                        "`tech-knowledge`"
+                        "JSX,",
+                        "props,",
+                        "tech-knowledge"
                     ],
                     "number": 33,
                     "objective": "JSX Style Properties",
@@ -4284,10 +4284,10 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`props`,",
-                        "`components`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "props,",
+                        "components,",
+                        "tech-knowledge"
                     ],
                     "number": 34,
                     "objective": "Passing Props",
@@ -4302,9 +4302,9 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`props`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "props,",
+                        "tech-knowledge"
                     ],
                     "number": 35,
                     "objective": "Prop Types",
@@ -4319,8 +4319,8 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "tech-knowledge"
                     ],
                     "number": 36,
                     "objective": "Data Flow",
@@ -4335,9 +4335,9 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`import`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "import,",
+                        "tech-knowledge"
                     ],
                     "number": 37,
                     "objective": "Importing Folders",
@@ -4352,9 +4352,9 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`state`,",
-                        "`vocab`"
+                        "react,",
+                        "state,",
+                        "vocab"
                     ],
                     "number": 38,
                     "objective": "Component Data",
@@ -4369,9 +4369,9 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`setState`,",
-                        "`vocab`"
+                        "react,",
+                        "setState,",
+                        "vocab"
                     ],
                     "number": 39,
                     "objective": "Updating Data",
@@ -4386,10 +4386,10 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`onClick`,",
-                        "`onSubmit`,",
-                        "`onChange`"
+                        "react,",
+                        "onClick,",
+                        "onSubmit,",
+                        "onChange"
                     ],
                     "number": 40,
                     "objective": "React Event Handlers",
@@ -4404,9 +4404,9 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`components`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "components,",
+                        "tech-knowledge"
                     ],
                     "number": 41,
                     "objective": "Child Component Update",
@@ -4421,9 +4421,9 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`render`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "render,",
+                        "tech-knowledge"
                     ],
                     "number": 42,
                     "objective": "Rendering JSX",
@@ -4438,9 +4438,9 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`componentDidMount`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "componentDidMount,",
+                        "tech-knowledge"
                     ],
                     "number": 43,
                     "objective": "Component Lifecycle Event",
@@ -4455,10 +4455,10 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`stateless`,",
-                        "`stateful`,",
-                        "`tech-knowledge`"
+                        "react,",
+                        "stateless,",
+                        "stateful,",
+                        "tech-knowledge"
                     ],
                     "number": 44,
                     "objective": "App Component Structure",
@@ -4473,9 +4473,9 @@
                 },
                 {
                     "subjects": [
-                        "`react`,",
-                        "`JSX`,",
-                        "`ternary`"
+                        "react,",
+                        "JSX,",
+                        "ternary"
                     ],
                     "number": 45,
                     "objective": "JSX Decisions",
@@ -4499,8 +4499,8 @@
             "questions": [
                 {
                     "subjects": [
-                        "`algorithm`,",
-                        "`vocab`"
+                        "algorithm,",
+                        "vocab"
                     ],
                     "number": 1,
                     "objective": "Solving a problem",
@@ -4515,8 +4515,8 @@
                 },
                 {
                     "subjects": [
-                        "`linear-search`,",
-                        "`vocab`"
+                        "linear-search,",
+                        "vocab"
                     ],
                     "number": 2,
                     "objective": "A Search",
@@ -4531,8 +4531,8 @@
                 },
                 {
                     "subjects": [
-                        "`binary-search`,",
-                        "`vocab`"
+                        "binary-search,",
+                        "vocab"
                     ],
                     "number": 3,
                     "objective": "Another search",
@@ -4547,8 +4547,8 @@
                 },
                 {
                     "subjects": [
-                        "`linear-search`,",
-                        "`vocab`"
+                        "linear-search,",
+                        "vocab"
                     ],
                     "number": 4,
                     "objective": "Linear Search",
@@ -4563,8 +4563,8 @@
                 },
                 {
                     "subjects": [
-                        "`selection-sort`,",
-                        "`vocab`"
+                        "selection-sort,",
+                        "vocab"
                     ],
                     "number": 5,
                     "objective": "Sorting Example",
@@ -4579,8 +4579,8 @@
                 },
                 {
                     "subjects": [
-                        "`insertion-sort`,",
-                        "`vocab`"
+                        "insertion-sort,",
+                        "vocab"
                     ],
                     "number": 6,
                     "objective": "Another Sorting Example",
@@ -4595,8 +4595,8 @@
                 },
                 {
                     "subjects": [
-                        "`quick-sort`,",
-                        "`vocab`"
+                        "quick-sort,",
+                        "vocab"
                     ],
                     "number": 7,
                     "objective": "More Sorting",
@@ -4611,8 +4611,8 @@
                 },
                 {
                     "subjects": [
-                        "`time-complexity`,",
-                        "`vocab`"
+                        "time-complexity,",
+                        "vocab"
                     ],
                     "number": 8,
                     "objective": "Algorithm Efficiency",
@@ -4629,8 +4629,8 @@
                     "subjects": [
                         "Notation",
                         "-",
-                        "`big-o-notation`,",
-                        "`tech-knowledge`"
+                        "big-o-notation,",
+                        "tech-knowledge"
                     ],
                     "number": 9,
                     "objective": "Bi",
@@ -4645,8 +4645,8 @@
                 },
                 {
                     "subjects": [
-                        "`big-o-notation`,",
-                        "`tech-knowledge`"
+                        "big-o-notation,",
+                        "tech-knowledge"
                     ],
                     "number": 10,
                     "objective": "Nested Loop Efficiency",
@@ -4661,8 +4661,8 @@
                 },
                 {
                     "subjects": [
-                        "`data-structure`,",
-                        "`vocab`"
+                        "data-structure,",
+                        "vocab"
                     ],
                     "number": 11,
                     "objective": "Data Storage",
@@ -4677,8 +4677,8 @@
                 },
                 {
                     "subjects": [
-                        "`stacks`,",
-                        "`vocab`"
+                        "stacks,",
+                        "vocab"
                     ],
                     "number": 12,
                     "objective": "LIFO structure",
@@ -4693,8 +4693,8 @@
                 },
                 {
                     "subjects": [
-                        "`queues`,",
-                        "`vocab`"
+                        "queues,",
+                        "vocab"
                     ],
                     "number": 13,
                     "objective": "FIFO structure",
@@ -4709,8 +4709,8 @@
                 },
                 {
                     "subjects": [
-                        "`linked-lists`,",
-                        "`vocab`"
+                        "linked-lists,",
+                        "vocab"
                     ],
                     "number": 14,
                     "objective": "Joined Data",
@@ -4727,8 +4727,8 @@
                     "subjects": [
                         "Hybrid",
                         "-",
-                        "`dictionaries`,",
-                        "`vocab`"
+                        "dictionaries,",
+                        "vocab"
                     ],
                     "number": 15,
                     "objective": "Objec",
@@ -4745,8 +4745,8 @@
                     "subjects": [
                         "Structure",
                         "-",
-                        "`trees`,",
-                        "`vocab`"
+                        "trees,",
+                        "vocab"
                     ],
                     "number": 16,
                     "objective": "Paren",
@@ -4770,8 +4770,8 @@
             "questions": [
                 {
                     "subjects": [
-                        "`compiled`,",
-                        "`tech-vocab`"
+                        "compiled,",
+                        "tech-vocab"
                     ],
                     "number": 1,
                     "objective": "Executing Java Code",
@@ -4786,8 +4786,8 @@
                 },
                 {
                     "subjects": [
-                        "`package`,",
-                        "`tech-knowledge`"
+                        "package,",
+                        "tech-knowledge"
                     ],
                     "number": 2,
                     "objective": "Packages and File Structure",
@@ -4802,8 +4802,8 @@
                 },
                 {
                     "subjects": [
-                        "`main`,",
-                        "`tech-knowledge`"
+                        "main,",
+                        "tech-knowledge"
                     ],
                     "number": 3,
                     "objective": "Java app entry point",
@@ -4818,8 +4818,8 @@
                 },
                 {
                     "subjects": [
-                        "`data-type`,",
-                        "`double`"
+                        "data-type,",
+                        "double"
                     ],
                     "number": 4,
                     "objective": "Data type for decimals",
@@ -4834,8 +4834,8 @@
                 },
                 {
                     "subjects": [
-                        "`arrays`,",
-                        "`tech-knowledge`"
+                        "arrays,",
+                        "tech-knowledge"
                     ],
                     "number": 5,
                     "objective": "Array data type in Java",
@@ -4850,8 +4850,8 @@
                 },
                 {
                     "subjects": [
-                        "`ArrayList`,",
-                        "`tech-knowledge`"
+                        "ArrayList,",
+                        "tech-knowledge"
                     ],
                     "number": 6,
                     "objective": "ArrayList data type in Java",
@@ -4866,9 +4866,9 @@
                 },
                 {
                     "subjects": [
-                        "`ArrayList`,",
-                        "`remove`,",
-                        "`tech-vocab`"
+                        "ArrayList,",
+                        "remove,",
+                        "tech-vocab"
                     ],
                     "number": 7,
                     "objective": "ArrayList manipulation",
@@ -4883,10 +4883,10 @@
                 },
                 {
                     "subjects": [
-                        "`HashMap`,",
-                        "`put`,",
-                        "`get`,",
-                        "`tech-vocab`"
+                        "HashMap,",
+                        "put,",
+                        "get,",
+                        "tech-vocab"
                     ],
                     "number": 8,
                     "objective": "HashMaps",
@@ -4901,9 +4901,9 @@
                 },
                 {
                     "subjects": [
-                        "`class`,",
-                        "`object`,",
-                        "`tech-knowledge`"
+                        "class,",
+                        "object,",
+                        "tech-knowledge"
                     ],
                     "number": 9,
                     "objective": "OOP",
@@ -4918,9 +4918,9 @@
                 },
                 {
                     "subjects": [
-                        "`public`,",
-                        "`private`,",
-                        "`tech-knowledge`"
+                        "public,",
+                        "private,",
+                        "tech-knowledge"
                     ],
                     "number": 10,
                     "objective": "OOP methods",
@@ -4935,9 +4935,9 @@
                 },
                 {
                     "subjects": [
-                        "`subclasses`,",
-                        "`extends`,",
-                        "`tech-vocab`"
+                        "subclasses,",
+                        "extends,",
+                        "tech-vocab"
                     ],
                     "number": 11,
                     "objective": "Inheritance",
@@ -4952,8 +4952,8 @@
                 },
                 {
                     "subjects": [
-                        "`polymorphism`,",
-                        "`tech-vocab`"
+                        "polymorphism,",
+                        "tech-vocab"
                     ],
                     "number": 12,
                     "objective": "Objects of many forms",
@@ -4968,9 +4968,9 @@
                 },
                 {
                     "subjects": [
-                        "`private`,",
-                        "`protected`,",
-                        "`tech-knowledge`"
+                        "private,",
+                        "protected,",
+                        "tech-knowledge"
                     ],
                     "number": 13,
                     "objective": "Subclass access",
@@ -4985,8 +4985,8 @@
                 },
                 {
                     "subjects": [
-                        "`interface`,",
-                        "`tech-knowledge`"
+                        "interface,",
+                        "tech-knowledge"
                     ],
                     "number": 14,
                     "objective": "Behavior and implementation",
@@ -5010,8 +5010,8 @@
             "questions": [
                 {
                     "subjects": [
-                        "`PHP`,",
-                        "`tech-knowledge`"
+                        "PHP,",
+                        "tech-knowledge"
                     ],
                     "number": 1,
                     "objective": "Purpose of PHP",
@@ -5026,8 +5026,8 @@
                 },
                 {
                     "subjects": [
-                        "`PHP`,",
-                        "`syntax`"
+                        "PHP,",
+                        "syntax"
                     ],
                     "number": 2,
                     "objective": "PHP files",
@@ -5042,8 +5042,8 @@
                 },
                 {
                     "subjects": [
-                        "`echo`,",
-                        "`syntax`"
+                        "echo,",
+                        "syntax"
                     ],
                     "number": 3,
                     "objective": "Printing variable values",
@@ -5058,8 +5058,8 @@
                 },
                 {
                     "subjects": [
-                        "`associative-arrays`,",
-                        "`tech-knowledge`"
+                        "associative-arrays,",
+                        "tech-knowledge"
                     ],
                     "number": 4,
                     "objective": "Associative Arrays",
@@ -5074,10 +5074,10 @@
                 },
                 {
                     "subjects": [
-                        "`classes`,",
-                        "`objects`,",
-                        "`instantiation`,",
-                        "`tech-vocab`"
+                        "classes,",
+                        "objects,",
+                        "instantiation,",
+                        "tech-vocab"
                     ],
                     "number": 5,
                     "objective": "Objects",
@@ -5092,9 +5092,9 @@
                 },
                 {
                     "subjects": [
-                        "`objects`,",
-                        "`public-properties`,",
-                        "`tech-knowledge`"
+                        "objects,",
+                        "public-properties,",
+                        "tech-knowledge"
                     ],
                     "number": 6,
                     "objective": "Object properties and methods",
@@ -5108,8 +5108,8 @@
                 },
                 {
                     "subjects": [
-                        "`new`,",
-                        "`tech-vocab`"
+                        "new,",
+                        "tech-vocab"
                     ],
                     "number": 7,
                     "objective": "Instantiation",
@@ -5124,8 +5124,8 @@
                 },
                 {
                     "subjects": [
-                        "`superglobals`,",
-                        "`tech-vocab`"
+                        "superglobals,",
+                        "tech-vocab"
                     ],
                     "number": 8,
                     "objective": "Built in variables",
@@ -5140,8 +5140,8 @@
                 },
                 {
                     "subjects": [
-                        "`laravel`,",
-                        "`tech-knowledge`"
+                        "laravel,",
+                        "tech-knowledge"
                     ],
                     "number": 9,
                     "objective": "Laravel",
@@ -5156,8 +5156,8 @@
                 },
                 {
                     "subjects": [
-                        "`composer`,",
-                        "`tech-knowledge`"
+                        "composer,",
+                        "tech-knowledge"
                     ],
                     "number": 10,
                     "objective": "PHP Dependency Manager",
@@ -5172,10 +5172,10 @@
                 },
                 {
                     "subjects": [
-                        "`mvc`"
+                        "mvc"
                     ],
                     "number": 11,
-                    "objective": "Laravel Development Pattern: `laravel`, `tec",
+                    "objective": "Laravel Development Pattern: laravel, tec",
                     "question": "Laravel projects use a ___ design pattern.",
                     "answers": [
                         "Model View Controller",
@@ -5188,7 +5188,7 @@
                 {
                     "subjects": [],
                     "number": 12,
-                    "objective": "Models: `laravel`, `migration`, `tec",
+                    "objective": "Models: laravel, migration, tec",
                     "question": "In Laravel projects, ___ is simply a way to tell the database that it is being updated with a new model.",
                     "answers": [
                         "upgrade",
@@ -5201,7 +5201,7 @@
                 {
                     "subjects": [],
                     "number": 13,
-                    "objective": "Templating Engine: `blade`, `tec",
+                    "objective": "Templating Engine: blade, tec",
                     "question": "___ is templating engine that comes with Laravel.",
                     "answers": [
                         "Blade",
@@ -5214,7 +5214,7 @@
                 {
                     "subjects": [],
                     "number": 14,
-                    "objective": "Controller Method: `controller`, `tec",
+                    "objective": "Controller Method: controller, tec",
                     "question": "Laravel determines which controller method to call based on:",
                     "answers": [
                         "The HTTP method used to send the request",
@@ -5235,11 +5235,11 @@
             "questions": [
                 {
                     "subjects": [
-                        "`Python`",
-                        "`var`",
-                        "`variable`",
-                        "`tech",
-                        "vocab`"
+                        "Python",
+                        "var",
+                        "variable",
+                        "tech",
+                        "vocab"
                     ],
                     "number": 1,
                     "objective": "Declaring a variable",
@@ -5254,11 +5254,11 @@
                 },
                 {
                     "subjects": [
-                        "`Python`",
-                        "`parameters`",
-                        "`tech",
-                        "vocab`",
-                        "`syntax`"
+                        "Python",
+                        "parameters",
+                        "tech",
+                        "vocab",
+                        "syntax"
                     ],
                     "number": 2,
                     "objective": "Understanding default parameters",
@@ -5273,9 +5273,9 @@
                 },
                 {
                     "subjects": [
-                        "`Python`",
-                        "`syntax`",
-                        "`Classes`"
+                        "Python",
+                        "syntax",
+                        "Classes"
                     ],
                     "number": 3,
                     "objective": "Establishing context in Class instantiation",
@@ -5290,9 +5290,9 @@
                 },
                 {
                     "subjects": [
-                        "`Python`",
-                        "`Django`",
-                        "`Regex`"
+                        "Python",
+                        "Django",
+                        "Regex"
                     ],
                     "number": 4,
                     "objective": "Regex metacharacter used to declare the end of the line",
@@ -5307,10 +5307,10 @@
                 },
                 {
                     "subjects": [
-                        "`Python`",
-                        "`Django`",
-                        "`dev",
-                        "environment`"
+                        "Python",
+                        "Django",
+                        "dev",
+                        "environment"
                     ],
                     "number": 5,
                     "objective": "Importance of the runserver command in Django",
@@ -5325,9 +5325,9 @@
                 },
                 {
                     "subjects": [
-                        "`Python`",
-                        "`dev",
-                        "environment`"
+                        "Python",
+                        "dev",
+                        "environment"
                     ],
                     "number": 6,
                     "objective": "Test the reason to use virtualenv when developing in Python",
@@ -5342,9 +5342,9 @@
                 },
                 {
                     "subjects": [
-                        "`Python`",
-                        "`syntax`",
-                        "`parameters`"
+                        "Python",
+                        "syntax",
+                        "parameters"
                     ],
                     "number": 7,
                     "objective": "Understanding the possibility of argument lists in functions",
@@ -5359,10 +5359,10 @@
                 },
                 {
                     "subjects": [
-                        "`Python`",
-                        "`Django`",
-                        "`templates`",
-                        "`MVC`"
+                        "Python",
+                        "Django",
+                        "templates",
+                        "MVC"
                     ],
                     "number": 8,
                     "objective": "Testing the importance of using templates in Django",
@@ -5377,10 +5377,10 @@
                 },
                 {
                     "subjects": [
-                        "`MVC`",
-                        "`models`",
-                        "`tech",
-                        "vocab`"
+                        "MVC",
+                        "models",
+                        "tech",
+                        "vocab"
                     ],
                     "number": 9,
                     "objective": "Using models in an MVC architecture",
@@ -5395,9 +5395,9 @@
                 },
                 {
                     "subjects": [
-                        "`Python`",
-                        "`Django`",
-                        "`syntax`"
+                        "Python",
+                        "Django",
+                        "syntax"
                     ],
                     "number": 10,
                     "objective": "Importance of having capture groups for dynamic parameters",

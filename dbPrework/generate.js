@@ -100,6 +100,9 @@ const insertHeadings = filePath => {
         }
         questionCount++;
         if (tmpLine.indexOf("-") >= 0) {
+          if (!tmpLine.indexOf("```") >= 0) {
+            tmpLine = tmpLine.replace(/[`]+/g, "");
+          }
           let subjects = tmpLine.slice(tmpLine.indexOf("-")).split(" ");
           subjects.shift();
           (typeof (quiz.questions) === "undefined") ? quiz.questions = [{}]: null;
