@@ -7,5 +7,6 @@ router.route("/")
 router.route("/:number")
     .get(cpController.findByCpNum)
 
-    
+router.route("/:number/subject")
+    .get(cpController.findBySubject)    
 module.exports = router;

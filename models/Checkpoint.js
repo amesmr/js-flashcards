@@ -8,7 +8,7 @@ const CheckpointSchema = new Schema({
   number: {
     Number
   },
-  quiz: [{
+  quiz: {
       title: {
         type: "String"
       },
@@ -36,7 +36,7 @@ const CheckpointSchema = new Schema({
           type: Number
         },
       }]
-    }]
+    }
 });
 
 const Checkpoint = mongoose.model("Checkpoint", CheckpointSchema);

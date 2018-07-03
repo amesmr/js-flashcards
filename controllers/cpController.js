@@ -18,7 +18,33 @@ module.exports = {
             .catch(err => res.status(422).json(err));
         
     },
-    findBySubject: function() {
+    findBySubject: function(req, res) {
+        db.Checkpoint
+            .find({})
+            .then(data => {
+                let quizArray = [];
+                data.forEach(checkpoint => {
+                    quizArray.push(checkpoint.quiz.questions)
+                })
+                // res.json(quizArray)
+                let questionArray = []
+                quizArray.forEach(quiz => {
+                    
+                    quiz.forEach(question => {
+                        questionArray.push(question)
+                    })
+                })
+                // res.json(questionArray)
+                questionArray.forEach(question => {
+                    console.log(question.subjects)
+                })
+                let results = questionArray.filter(question => 
+                        question.subjects.includes("`vocab`")
+                )
 
+                res.json(results)
+                
+            })
+            .catch(err => res.status(422).json(err))
     }
 }
