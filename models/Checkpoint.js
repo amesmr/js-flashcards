@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CheckpointSchema = new Schema({
-  welome: {
+  welcome: {
     String
   },
   number: {
     Number
   },
-  quiz: [{
+  quiz: {
       title: {
         type: "String"
       },
@@ -36,7 +36,7 @@ const CheckpointSchema = new Schema({
           type: Number
         },
       }]
-    }]
+    }
 });
 
 const Checkpoint = mongoose.model("Checkpoint", CheckpointSchema);
