@@ -19,7 +19,7 @@
     border: 1px black solid;
     padding: 0 auto;
     box-shadow: 20px 20px 50px black;
-    transition: opacity 1500ms;
+    transition: opacity 2500ms;
     max-height: 150px;
     overflow-y: scroll;
     background-color: white;
