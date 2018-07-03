@@ -3411,8 +3411,8 @@
             "questions": [
                 {
                     "subjects": [
-                        "noSQL,",
-                        "MongoDB,",
+                        "noSQL",
+                        "MongoDB",
                         "vocab"
                     ],
                     "number": 1,
@@ -3428,7 +3428,7 @@
                 },
                 {
                     "subjects": [
-                        "bson,",
+                        "bson",
                         "vocab"
                     ],
                     "number": 2,
@@ -3444,8 +3444,8 @@
                 },
                 {
                     "subjects": [
-                        "collection,",
-                        "document,",
+                        "collection",
+                        "document",
                         "vocab"
                     ],
                     "number": 3,
@@ -3461,7 +3461,7 @@
                 },
                 {
                     "subjects": [
-                        "mongod,",
+                        "mongod",
                         "tech-knowledge"
                     ],
                     "number": 4,
@@ -3477,7 +3477,7 @@
                 },
                 {
                     "subjects": [
-                        "use,",
+                        "use",
                         "vocab"
                     ],
                     "number": 5,
@@ -3493,7 +3493,7 @@
                 },
                 {
                     "subjects": [
-                        "db,",
+                        "db",
                         "vocab"
                     ],
                     "number": 6,
@@ -3509,7 +3509,7 @@
                 },
                 {
                     "subjects": [
-                        "insert,",
+                        "insert",
                         "vocab"
                     ],
                     "number": 7,
@@ -3525,7 +3525,7 @@
                 },
                 {
                     "subjects": [
-                        "find,",
+                        "find",
                         "vocab"
                     ],
                     "number": 8,
@@ -3541,7 +3541,7 @@
                 },
                 {
                     "subjects": [
-                        "update,",
+                        "update",
                         "vocab"
                     ],
                     "number": 9,
@@ -3557,7 +3557,7 @@
                 },
                 {
                     "subjects": [
-                        "remove,",
+                        "remove",
                         "vocab"
                     ],
                     "number": 10,
@@ -3573,7 +3573,7 @@
                 },
                 {
                     "subjects": [
-                        "drop,",
+                        "drop",
                         "vocab"
                     ],
                     "number": 11,
@@ -3589,7 +3589,7 @@
                 },
                 {
                     "subjects": [
-                        "dropDatabase,",
+                        "dropDatabase",
                         "vocab"
                     ],
                     "number": 12,
@@ -3605,8 +3605,8 @@
                 },
                 {
                     "subjects": [
-                        "_id,",
-                        "ObjectId,",
+                        "_id",
+                        "ObjectId",
                         "vocab"
                     ],
                     "number": 13,
@@ -3622,7 +3622,7 @@
                 },
                 {
                     "subjects": [
-                        "sort,",
+                        "sort",
                         "vocab"
                     ],
                     "number": 14,
@@ -3638,7 +3638,7 @@
                 },
                 {
                     "subjects": [
-                        "mongojs,",
+                        "mongojs",
                         "tech-knowledge"
                     ],
                     "number": 15,
@@ -3654,8 +3654,8 @@
                 },
                 {
                     "subjects": [
-                        "mongoose,",
-                        "models,",
+                        "mongoose",
+                        "models",
                         "tech-knowledge"
                     ],
                     "number": 16,
@@ -3671,9 +3671,9 @@
                 },
                 {
                     "subjects": [
-                        "mongoose,",
-                        "callback,",
-                        "promise,",
+                        "mongoose",
+                        "callback",
+                        "promise",
                         "tech-knowledge"
                     ],
                     "number": 17,
@@ -3689,8 +3689,8 @@
                 },
                 {
                     "subjects": [
-                        "mongoose,",
-                        "schema,",
+                        "mongoose",
+                        "schema",
                         "vocab"
                     ],
                     "number": 18,
@@ -3706,8 +3706,8 @@
                 },
                 {
                     "subjects": [
-                        "mongoose,",
-                        "populate,",
+                        "mongoose",
+                        "populate",
                         "vocab"
                     ],
                     "number": 19,
@@ -3732,9 +3732,9 @@
             "questions": [
                 {
                     "subjects": [
-                        "ES6,",
-                        "ES2015,",
-                        "ECMAScript,",
+                        "ES6",
+                        "ES2015",
+                        "ECMAScript",
                         "vocab"
                     ],
                     "number": 1,
@@ -3750,11 +3750,11 @@
                 },
                 {
                     "subjects": [
-                        "var,",
-                        "let,",
-                        "const,",
-                        "block-scope,",
-                        "functional-scope,",
+                        "var",
+                        "let",
+                        "const",
+                        "block-scope",
+                        "functional-scope",
                         "vocab"
                     ],
                     "number": 2,
@@ -3770,7 +3770,7 @@
                 },
                 {
                     "subjects": [
-                        "var,",
+                        "var",
                         "functional-scope"
                     ],
                     "number": 3,
@@ -3786,7 +3786,7 @@
                 },
                 {
                     "subjects": [
-                        "let,",
+                        "let",
                         "functional-scope"
                     ],
                     "number": 4,
@@ -3802,8 +3802,8 @@
                 },
                 {
                     "subjects": [
-                        "let,",
-                        "const,",
+                        "let",
+                        "const",
                         "vocab"
                     ],
                     "number": 5,
@@ -3819,8 +3819,8 @@
                 },
                 {
                     "subjects": [
-                        "let,",
-                        "const,",
+                        "let",
+                        "const",
                         "vocab"
                     ],
                     "number": 6,
@@ -3836,7 +3836,7 @@
                 },
                 {
                     "subjects": [
-                        "template-literals,",
+                        "template-literals",
                         "syntax"
                     ],
                     "number": 7,
@@ -3852,8 +3852,8 @@
                 },
                 {
                     "subjects": [
-                        "objects,",
-                        "ES6,",
+                        "objects",
+                        "ES6",
                         "syntax"
                     ],
                     "number": 8,
@@ -3869,10 +3869,10 @@
                 },
                 {
                     "subjects": [
-                        "startsWith,",
-                        "endsWith,",
-                        "includes,",
-                        "ES6,",
+                        "startsWith",
+                        "endsWith",
+                        "includes",
+                        "ES6",
                         "vocab"
                     ],
                     "number": 9,
@@ -3888,8 +3888,8 @@
                 },
                 {
                     "subjects": [
-                        "map,",
-                        "ES6,",
+                        "map",
+                        "ES6",
                         "syntax"
                     ],
                     "number": 10,
@@ -3905,8 +3905,8 @@
                 },
                 {
                     "subjects": [
-                        "filter,",
-                        "ES6,",
+                        "filter",
+                        "ES6",
                         "vocab"
                     ],
                     "number": 11,
@@ -3922,7 +3922,7 @@
                 },
                 {
                     "subjects": [
-                        "arrow-functions,",
+                        "arrow-functions",
                         "syntax"
                     ],
                     "number": 12,
@@ -3938,9 +3938,9 @@
                 },
                 {
                     "subjects": [
-                        "arrow-functions,",
-                        "lexical-binding,",
-                        "this,",
+                        "arrow-functions",
+                        "lexical-binding",
+                        "this",
                         "vocab"
                     ],
                     "number": 13,
@@ -3956,7 +3956,7 @@
                 },
                 {
                     "subjects": [
-                        "destructuring,",
+                        "destructuring",
                         "syntax"
                     ],
                     "number": 14,
@@ -3972,8 +3972,8 @@
                 },
                 {
                     "subjects": [
-                        "transpiling,",
-                        "babel,",
+                        "transpiling",
+                        "babel",
                         "vocab"
                     ],
                     "number": 15,
@@ -3989,7 +3989,7 @@
                 },
                 {
                     "subjects": [
-                        "exports,",
+                        "exports",
                         "vocab"
                     ],
                     "number": 16,
@@ -4005,8 +4005,8 @@
                 },
                 {
                     "subjects": [
-                        "class,",
-                        "vocab,",
+                        "class",
+                        "vocab",
                         "syntax"
                     ],
                     "number": 17,
@@ -4022,7 +4022,7 @@
                 },
                 {
                     "subjects": [
-                        "yarn,",
+                        "yarn",
                         "vocab"
                     ],
                     "number": 18,
@@ -4038,7 +4038,7 @@
                 },
                 {
                     "subjects": [
-                        "react,",
+                        "react",
                         "tech-knowledge"
                     ],
                     "number": 19,
@@ -4054,7 +4054,7 @@
                 },
                 {
                     "subjects": [
-                        "JSX,",
+                        "JSX",
                         "tech-knowledge"
                     ],
                     "number": 20,
@@ -4070,7 +4070,7 @@
                 },
                 {
                     "subjects": [
-                        "create-react-app,",
+                        "create-react-app",
                         "syntax"
                     ],
                     "number": 21,
@@ -4086,7 +4086,7 @@
                 },
                 {
                     "subjects": [
-                        "create-react-app,",
+                        "create-react-app",
                         "tech-knowledge"
                     ],
                     "number": 22,
@@ -4102,7 +4102,7 @@
                 },
                 {
                     "subjects": [
-                        "react,",
+                        "react",
                         "tech-knowledge"
                     ],
                     "number": 23,
@@ -4118,8 +4118,8 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "components,",
+                        "react",
+                        "components",
                         "tech-knowledge"
                     ],
                     "number": 24,
@@ -4135,8 +4135,8 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "JSX,",
+                        "react",
+                        "JSX",
                         "tech-knowledge"
                     ],
                     "number": 25,
@@ -4152,8 +4152,8 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "ReactDOM.render,",
+                        "react",
+                        "ReactDOM.render",
                         "tech-knowledge"
                     ],
                     "number": 26,
@@ -4169,8 +4169,8 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "JSX,",
+                        "react",
+                        "JSX",
                         "syntax"
                     ],
                     "number": 27,
@@ -4186,8 +4186,8 @@
                 },
                 {
                     "subjects": [
-                        "JSX,",
-                        "class,",
+                        "JSX",
+                        "class",
                         "syntax"
                     ],
                     "number": 28,
@@ -4203,7 +4203,7 @@
                 },
                 {
                     "subjects": [
-                        "JSX,",
+                        "JSX",
                         "syntax"
                     ],
                     "number": 29,
@@ -4219,7 +4219,7 @@
                 },
                 {
                     "subjects": [
-                        "JSX,",
+                        "JSX",
                         "syntax"
                     ],
                     "number": 30,
@@ -4235,7 +4235,7 @@
                 },
                 {
                     "subjects": [
-                        "JSX,",
+                        "JSX",
                         "syntax"
                     ],
                     "number": 31,
@@ -4251,7 +4251,7 @@
                 },
                 {
                     "subjects": [
-                        "components,",
+                        "components",
                         "tech-knowledge"
                     ],
                     "number": 32,
@@ -4267,8 +4267,8 @@
                 },
                 {
                     "subjects": [
-                        "JSX,",
-                        "props,",
+                        "JSX",
+                        "props",
                         "tech-knowledge"
                     ],
                     "number": 33,
@@ -4284,9 +4284,9 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "props,",
-                        "components,",
+                        "react",
+                        "props",
+                        "components",
                         "tech-knowledge"
                     ],
                     "number": 34,
@@ -4302,8 +4302,8 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "props,",
+                        "react",
+                        "props",
                         "tech-knowledge"
                     ],
                     "number": 35,
@@ -4319,7 +4319,7 @@
                 },
                 {
                     "subjects": [
-                        "react,",
+                        "react",
                         "tech-knowledge"
                     ],
                     "number": 36,
@@ -4335,8 +4335,8 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "import,",
+                        "react",
+                        "import",
                         "tech-knowledge"
                     ],
                     "number": 37,
@@ -4352,8 +4352,8 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "state,",
+                        "react",
+                        "state",
                         "vocab"
                     ],
                     "number": 38,
@@ -4369,8 +4369,8 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "setState,",
+                        "react",
+                        "setState",
                         "vocab"
                     ],
                     "number": 39,
@@ -4386,9 +4386,9 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "onClick,",
-                        "onSubmit,",
+                        "react",
+                        "onClick",
+                        "onSubmit",
                         "onChange"
                     ],
                     "number": 40,
@@ -4404,8 +4404,8 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "components,",
+                        "react",
+                        "components",
                         "tech-knowledge"
                     ],
                     "number": 41,
@@ -4421,8 +4421,8 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "render,",
+                        "react",
+                        "render",
                         "tech-knowledge"
                     ],
                     "number": 42,
@@ -4438,8 +4438,8 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "componentDidMount,",
+                        "react",
+                        "componentDidMount",
                         "tech-knowledge"
                     ],
                     "number": 43,
@@ -4455,9 +4455,9 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "stateless,",
-                        "stateful,",
+                        "react",
+                        "stateless",
+                        "stateful",
                         "tech-knowledge"
                     ],
                     "number": 44,
@@ -4473,8 +4473,8 @@
                 },
                 {
                     "subjects": [
-                        "react,",
-                        "JSX,",
+                        "react",
+                        "JSX",
                         "ternary"
                     ],
                     "number": 45,
@@ -4499,7 +4499,7 @@
             "questions": [
                 {
                     "subjects": [
-                        "algorithm,",
+                        "algorithm",
                         "vocab"
                     ],
                     "number": 1,
@@ -4515,7 +4515,7 @@
                 },
                 {
                     "subjects": [
-                        "linear-search,",
+                        "linear-search",
                         "vocab"
                     ],
                     "number": 2,
@@ -4531,7 +4531,7 @@
                 },
                 {
                     "subjects": [
-                        "binary-search,",
+                        "binary-search",
                         "vocab"
                     ],
                     "number": 3,
@@ -4547,7 +4547,7 @@
                 },
                 {
                     "subjects": [
-                        "linear-search,",
+                        "linear-search",
                         "vocab"
                     ],
                     "number": 4,
@@ -4563,7 +4563,7 @@
                 },
                 {
                     "subjects": [
-                        "selection-sort,",
+                        "selection-sort",
                         "vocab"
                     ],
                     "number": 5,
@@ -4579,7 +4579,7 @@
                 },
                 {
                     "subjects": [
-                        "insertion-sort,",
+                        "insertion-sort",
                         "vocab"
                     ],
                     "number": 6,
@@ -4595,7 +4595,7 @@
                 },
                 {
                     "subjects": [
-                        "quick-sort,",
+                        "quick-sort",
                         "vocab"
                     ],
                     "number": 7,
@@ -4611,7 +4611,7 @@
                 },
                 {
                     "subjects": [
-                        "time-complexity,",
+                        "time-complexity",
                         "vocab"
                     ],
                     "number": 8,
@@ -4629,7 +4629,7 @@
                     "subjects": [
                         "Notation",
                         "-",
-                        "big-o-notation,",
+                        "big-o-notation",
                         "tech-knowledge"
                     ],
                     "number": 9,
@@ -4645,7 +4645,7 @@
                 },
                 {
                     "subjects": [
-                        "big-o-notation,",
+                        "big-o-notation",
                         "tech-knowledge"
                     ],
                     "number": 10,
@@ -4661,7 +4661,7 @@
                 },
                 {
                     "subjects": [
-                        "data-structure,",
+                        "data-structure",
                         "vocab"
                     ],
                     "number": 11,
@@ -4677,7 +4677,7 @@
                 },
                 {
                     "subjects": [
-                        "stacks,",
+                        "stacks",
                         "vocab"
                     ],
                     "number": 12,
@@ -4693,7 +4693,7 @@
                 },
                 {
                     "subjects": [
-                        "queues,",
+                        "queues",
                         "vocab"
                     ],
                     "number": 13,
@@ -4709,7 +4709,7 @@
                 },
                 {
                     "subjects": [
-                        "linked-lists,",
+                        "linked-lists",
                         "vocab"
                     ],
                     "number": 14,
@@ -4727,7 +4727,7 @@
                     "subjects": [
                         "Hybrid",
                         "-",
-                        "dictionaries,",
+                        "dictionaries",
                         "vocab"
                     ],
                     "number": 15,
@@ -4745,7 +4745,7 @@
                     "subjects": [
                         "Structure",
                         "-",
-                        "trees,",
+                        "trees",
                         "vocab"
                     ],
                     "number": 16,
@@ -4770,7 +4770,7 @@
             "questions": [
                 {
                     "subjects": [
-                        "compiled,",
+                        "compiled",
                         "tech-vocab"
                     ],
                     "number": 1,
@@ -4786,7 +4786,7 @@
                 },
                 {
                     "subjects": [
-                        "package,",
+                        "package",
                         "tech-knowledge"
                     ],
                     "number": 2,
@@ -4802,7 +4802,7 @@
                 },
                 {
                     "subjects": [
-                        "main,",
+                        "main",
                         "tech-knowledge"
                     ],
                     "number": 3,
@@ -4818,7 +4818,7 @@
                 },
                 {
                     "subjects": [
-                        "data-type,",
+                        "data-type",
                         "double"
                     ],
                     "number": 4,
@@ -4834,7 +4834,7 @@
                 },
                 {
                     "subjects": [
-                        "arrays,",
+                        "arrays",
                         "tech-knowledge"
                     ],
                     "number": 5,
@@ -4850,7 +4850,7 @@
                 },
                 {
                     "subjects": [
-                        "ArrayList,",
+                        "ArrayList",
                         "tech-knowledge"
                     ],
                     "number": 6,
@@ -4866,8 +4866,8 @@
                 },
                 {
                     "subjects": [
-                        "ArrayList,",
-                        "remove,",
+                        "ArrayList",
+                        "remove",
                         "tech-vocab"
                     ],
                     "number": 7,
@@ -4883,9 +4883,9 @@
                 },
                 {
                     "subjects": [
-                        "HashMap,",
-                        "put,",
-                        "get,",
+                        "HashMap",
+                        "put",
+                        "get",
                         "tech-vocab"
                     ],
                     "number": 8,
@@ -4901,8 +4901,8 @@
                 },
                 {
                     "subjects": [
-                        "class,",
-                        "object,",
+                        "class",
+                        "object",
                         "tech-knowledge"
                     ],
                     "number": 9,
@@ -4918,8 +4918,8 @@
                 },
                 {
                     "subjects": [
-                        "public,",
-                        "private,",
+                        "public",
+                        "private",
                         "tech-knowledge"
                     ],
                     "number": 10,
@@ -4935,8 +4935,8 @@
                 },
                 {
                     "subjects": [
-                        "subclasses,",
-                        "extends,",
+                        "subclasses",
+                        "extends",
                         "tech-vocab"
                     ],
                     "number": 11,
@@ -4952,7 +4952,7 @@
                 },
                 {
                     "subjects": [
-                        "polymorphism,",
+                        "polymorphism",
                         "tech-vocab"
                     ],
                     "number": 12,
@@ -4968,8 +4968,8 @@
                 },
                 {
                     "subjects": [
-                        "private,",
-                        "protected,",
+                        "private",
+                        "protected",
                         "tech-knowledge"
                     ],
                     "number": 13,
@@ -4985,7 +4985,7 @@
                 },
                 {
                     "subjects": [
-                        "interface,",
+                        "interface",
                         "tech-knowledge"
                     ],
                     "number": 14,
@@ -5010,7 +5010,7 @@
             "questions": [
                 {
                     "subjects": [
-                        "PHP,",
+                        "PHP",
                         "tech-knowledge"
                     ],
                     "number": 1,
@@ -5026,7 +5026,7 @@
                 },
                 {
                     "subjects": [
-                        "PHP,",
+                        "PHP",
                         "syntax"
                     ],
                     "number": 2,
@@ -5042,7 +5042,7 @@
                 },
                 {
                     "subjects": [
-                        "echo,",
+                        "echo",
                         "syntax"
                     ],
                     "number": 3,
@@ -5058,7 +5058,7 @@
                 },
                 {
                     "subjects": [
-                        "associative-arrays,",
+                        "associative-arrays",
                         "tech-knowledge"
                     ],
                     "number": 4,
@@ -5074,9 +5074,9 @@
                 },
                 {
                     "subjects": [
-                        "classes,",
-                        "objects,",
-                        "instantiation,",
+                        "classes",
+                        "objects",
+                        "instantiation",
                         "tech-vocab"
                     ],
                     "number": 5,
@@ -5092,8 +5092,8 @@
                 },
                 {
                     "subjects": [
-                        "objects,",
-                        "public-properties,",
+                        "objects",
+                        "public-properties",
                         "tech-knowledge"
                     ],
                     "number": 6,
@@ -5108,7 +5108,7 @@
                 },
                 {
                     "subjects": [
-                        "new,",
+                        "new",
                         "tech-vocab"
                     ],
                     "number": 7,
@@ -5124,7 +5124,7 @@
                 },
                 {
                     "subjects": [
-                        "superglobals,",
+                        "superglobals",
                         "tech-vocab"
                     ],
                     "number": 8,
@@ -5140,7 +5140,7 @@
                 },
                 {
                     "subjects": [
-                        "laravel,",
+                        "laravel",
                         "tech-knowledge"
                     ],
                     "number": 9,
@@ -5156,7 +5156,7 @@
                 },
                 {
                     "subjects": [
-                        "composer,",
+                        "composer",
                         "tech-knowledge"
                     ],
                     "number": 10,
@@ -5175,7 +5175,7 @@
                         "mvc"
                     ],
                     "number": 11,
-                    "objective": "Laravel Development Pattern: laravel, tec",
+                    "objective": "Laravel Development Pattern: laravel tec",
                     "question": "Laravel projects use a ___ design pattern.",
                     "answers": [
                         "Model View Controller",
@@ -5188,7 +5188,7 @@
                 {
                     "subjects": [],
                     "number": 12,
-                    "objective": "Models: laravel, migration, tec",
+                    "objective": "Models: laravel migration tec",
                     "question": "In Laravel projects, ___ is simply a way to tell the database that it is being updated with a new model.",
                     "answers": [
                         "upgrade",
@@ -5201,7 +5201,7 @@
                 {
                     "subjects": [],
                     "number": 13,
-                    "objective": "Templating Engine: blade, tec",
+                    "objective": "Templating Engine: blade tec",
                     "question": "___ is templating engine that comes with Laravel.",
                     "answers": [
                         "Blade",
@@ -5214,7 +5214,7 @@
                 {
                     "subjects": [],
                     "number": 14,
-                    "objective": "Controller Method: controller, tec",
+                    "objective": "Controller Method: controller tec",
                     "question": "Laravel determines which controller method to call based on:",
                     "answers": [
                         "The HTTP method used to send the request",
