@@ -12,11 +12,13 @@ class MenuBar extends Component {
             tagdropdown: false,
             tags: ["Tag1","Tag2","Tag3","Tag4","Tag5"],
             cpdropdown: false,
+            selectedTags: []
             
         }
 
         this.openDropdown = this.openDropdown.bind(this)
         this.onCardTypeSelected = this.onCardTypeSelected.bind(this)
+        this.handleTagSelection = this.handleTagSelection.bind(this)
     }
 
 
@@ -31,8 +33,20 @@ class MenuBar extends Component {
             
         
             this.props.sessionFilters("This is happening")
+        
         }
     }
+
+    handleTagSelection(e) {
+		const newSelection = e.target.value;
+		let newSelectionArray;
+		if(this.state.selectedTags.indexOf(newSelection) > -1) {
+			newSelectionArray = this.state.selectedTags.filter(s => s !== newSelection)
+		} else {
+			newSelectionArray = [...this.state.selectedTags, newSelection];
+		}
+		this.setState({ selectedTags: newSelectionArray }, () => console.log('tag selection', this.state.selectedTags));
+	}
 
     openDropdown(filter) {
 
@@ -99,7 +113,13 @@ class MenuBar extends Component {
                             return (
                                 <p key={iterator}>
                                     <label>
-                                        <input type="checkbox" ref={`droptags${iterator}`} value={tag}/>
+                                        <input 
+                                        type="checkbox" 
+                                        name={`droptags${iterator}`} 
+                                        value={tag} 
+                                        checked={this.state.selectedTags.indexOf(tag) > -1} 
+                                        onChange={this.handleTagSelection}
+                                        />
                                         <span>{tag}</span>
                                     </label>
                                 </p>
@@ -116,7 +136,7 @@ class MenuBar extends Component {
                             return (
                                 <p key={iterator + 100}>
                                     <label>
-                                        <input type="checkbox" ref="dropcp" value={cp}/>
+                                        <input type="checkbox" name={`dropcp${iterator}`} value={cp}/>
                                         <span>{cp}</span>
                                     </label>
                                 </p>
