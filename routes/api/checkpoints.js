@@ -3,6 +3,6 @@ const cpController = require("../../controllers/cpController");
 
 router.route("/")
     .get(cpController.findAll)
-    .post()
+    
 
 module.exports = router;

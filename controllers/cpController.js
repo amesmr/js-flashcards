@@ -2,7 +2,7 @@ const db = require("../models");
 
 
 module.exports = {
-    findAll: function() {
+    findAll: function(req, res) {
         db.Checkpoint
             .find({})
             .then(data => res.json(data))
