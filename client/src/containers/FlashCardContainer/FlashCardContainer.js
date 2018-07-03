@@ -14,6 +14,7 @@ class FlashCardContainer extends Component {
         }
     
         this.hoverSwitchChange = this.hoverSwitchChange.bind(this)
+        this.startButtonFlip = this.startButtonFlip.bind(this)
       }
      
     
@@ -23,12 +24,25 @@ class FlashCardContainer extends Component {
           hoverSwitch: dataFromMenu
         })
       }
+
+      startButtonFlip() {
+        if(this.state.started) {
+          // Perform an API call with the bounds taking from menu bar
+        } else {
+          // Do nothing. Or Potentially create a message on the Flashcards that says something along
+          // the lines of YOU ARE CHANGING FLASHCARD SETTINGS
+        }
+        this.setState({
+          started: !this.state.started
+        })
+      }
     
       render() {
         return (
         <div className="fcContainer">
             <MenuBar 
               hoverGrab={this.hoverSwitchChange}
+              startFunc={this.startButtonFlip}
               initialRound={this.state.started}
             />
             <div className="container">

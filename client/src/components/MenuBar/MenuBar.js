@@ -59,8 +59,8 @@ class MenuBar extends Component {
     render() {
         return (
             <div className="menubar">
+                <button className="menuitem menubtn" onClick={this.props.startFunc}>{this.props.initialRound ? "Stop" : "Start"}</button>
                 <button className="menuitem menubtn">Shuffle</button>
-                <button className="menuitem menubtn">Reset</button>
                 <div className="menuitem">
                     <p>
                         <label>
