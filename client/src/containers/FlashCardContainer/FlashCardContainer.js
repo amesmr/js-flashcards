@@ -9,6 +9,7 @@ class FlashCardContainer extends Component {
     
         this.state = {
           hoverSwitch: "on",
+          started: false
           
         }
     
@@ -28,8 +29,10 @@ class FlashCardContainer extends Component {
         <div className="fcContainer">
             <MenuBar 
               hoverGrab={this.hoverSwitchChange}
+              initialRound={this.state.started}
             />
             <div className="container">
+            
               <FlashCard
               question="This is a crazy question, holy shit"
               answers ={["Answer A", "Answer B","Answer C","Answer D"]}
@@ -39,7 +42,9 @@ class FlashCardContainer extends Component {
               goal="This is the goal"
               cpName="Checkpoint 5000"
               hoverSwitch={this.state.hoverSwitch}
-              />
+              initialRound={this.state.started}
+              /> 
+              
             </div>
         </div>
         )
