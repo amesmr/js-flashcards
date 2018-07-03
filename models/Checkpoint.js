@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CheckpointSchema = new Schema({
-  welome: {
+  welcome: {
     String
   },
   number: {
