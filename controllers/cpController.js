@@ -19,6 +19,9 @@ module.exports = {
         
     },
     findBySubject: function(req, res) {
+        console.log(req.params.subject);
+        let subjectArray = req.params.subject.split('+')
+        
         db.Checkpoint
             .find({})
             .then(data => {
@@ -35,13 +38,10 @@ module.exports = {
                     })
                 })
                 // res.json(questionArray)
-                questionArray.forEach(question => {
-                    console.log(question.subjects)
-                })
                 let results = questionArray.filter(question => 
-                        question.subjects.includes("arrays") || 
-                        question.subjects.includes("sql")   ||
-                        question.subjects.includes("react")
+                        question.subjects.includes(subjectArray[0])  
+                        || question.subjects.includes(subjectArray[1]) 
+                        || question.subjects.includes(subjectArray[2])
                 )
 
                 res.json(results)
