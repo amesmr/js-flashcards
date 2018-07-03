@@ -2,6 +2,7 @@ import React , { Component } from 'react';
 import './MenuBar.css'
 
 
+const checkpoints = ["CP1","CP2","CP3","CP4","CP5","CP6"];
 
 class MenuBar extends Component {
     constructor(props) {
@@ -11,11 +12,26 @@ class MenuBar extends Component {
             tagdropdown: false,
             tags: ["Tag1","Tag2","Tag3","Tag4","Tag5"],
             cpdropdown: false,
-            checkpoints: ["CP1","CP2","CP3","CP4","CP5","CP6"],
+            
         }
 
         this.openDropdown = this.openDropdown.bind(this)
         this.onCardTypeSelected = this.onCardTypeSelected.bind(this)
+    }
+
+
+    componentDidUpdate() {
+        if(!this.props.initialRound) {
+            console.log("You have stopped the flashcards")
+        } else {
+            const cpValues = []
+            for (var i = 0; i<checkpoints.length;i++){
+                console.log(this.refs.droptags + i)
+            }
+            
+        
+            this.props.sessionFilters("This is happening")
+        }
     }
 
     openDropdown(filter) {
@@ -56,6 +72,7 @@ class MenuBar extends Component {
     }
 
 
+
     render() {
         return (
             <div className="menubar">
@@ -82,28 +99,30 @@ class MenuBar extends Component {
                             return (
                                 <p key={iterator}>
                                     <label>
-                                        <input type="checkbox" value={tag}/>
+                                        <input type="checkbox" ref={`droptags${iterator}`} value={tag}/>
                                         <span>{tag}</span>
                                     </label>
                                 </p>
                             )
                         })}
                         
+                        
                     </form>
                 </div>
                 <div className="menuitem">
                     <button className="dropbtn menubtn" onClick={() => this.openDropdown("checkpoint")}>Sort by Checkpoint</button>
                     <form className="dropdown-items" ref="dropdownmenuc">
-                        {this.state.checkpoints.map((cp,iterator) => {
+                        {checkpoints.map((cp,iterator) => {
                             return (
                                 <p key={iterator + 100}>
                                     <label>
-                                        <input type="checkbox" value={cp}/>
+                                        <input type="checkbox" ref="dropcp" value={cp}/>
                                         <span>{cp}</span>
                                     </label>
                                 </p>
                             )
                         })}  
+                    
                     </form>
                 </div>
             </div>

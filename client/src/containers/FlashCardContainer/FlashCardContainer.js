@@ -15,6 +15,7 @@ class FlashCardContainer extends Component {
     
         this.hoverSwitchChange = this.hoverSwitchChange.bind(this)
         this.startButtonFlip = this.startButtonFlip.bind(this)
+        this.grabStudySessionFilters = this.grabStudySessionFilters.bind(this)
       }
      
     
@@ -36,6 +37,10 @@ class FlashCardContainer extends Component {
           started: !this.state.started
         })
       }
+
+      grabStudySessionFilters(sessionFilters) {
+        console.log(sessionFilters)
+      }
     
       render() {
         return (
@@ -44,6 +49,7 @@ class FlashCardContainer extends Component {
               hoverGrab={this.hoverSwitchChange}
               startFunc={this.startButtonFlip}
               initialRound={this.state.started}
+              sessionFilters={this.grabStudySessionFilters}
             />
             <div className="container">
             
