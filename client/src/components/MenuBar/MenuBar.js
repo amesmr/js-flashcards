@@ -22,6 +22,7 @@ class MenuBar extends Component {
         this.handleTagSelection = this.handleTagSelection.bind(this)
         this.handleCPSelection = this.handleCPSelection.bind(this)
         this.sendTheFilters = this.sendTheFilters.bind(this)
+        this.hideNav = this.hideNav.bind(this)
     }
 
     sendTheFilters() {
@@ -31,6 +32,9 @@ class MenuBar extends Component {
         this.props.sessionCP(cp)
     }
     
+    hideNav() {
+        this.refs.menubar.classList.add("started")
+    }
             
         
         
@@ -99,11 +103,12 @@ class MenuBar extends Component {
 
     render() {
         return (
-            <div className="menubar">
+            <div className="menubar" ref="menubar">
                 <button className="menuitem menubtn" onClick={() => {
                     if(!this.props.initialRound) {
                         this.props.startFunc()
                         this.sendTheFilters()
+                        this.hideNav()
                     } else {
                         this.props.startFunc()
                     }
