@@ -4,6 +4,7 @@ import MenuBar from '../../components/MenuBar';
 import './FlashCardContainer.css';
 import API from '../../utils/API'
 
+
 class FlashCardContainer extends Component {
     constructor(props) {
         super(props)
@@ -20,6 +21,7 @@ class FlashCardContainer extends Component {
         this.startButtonFlip = this.startButtonFlip.bind(this)
         this.grabStudySessionTags = this.grabStudySessionTags.bind(this)
         this.grabStudySessionCheckPoints = this.grabStudySessionCheckPoints.bind(this)
+        this.ApiCalls = this.ApiCalls.bind(this)
       }
      
     
@@ -29,43 +31,42 @@ class FlashCardContainer extends Component {
           hoverSwitch: dataFromMenu
         })
       }
+      
+      ApiCalls () {
+        if(this.state.tagsSelected !== null && this.state.cpSelected !== null ) {
+          API.getQuestionsByCpNumAndSubject(this.state.cpSelected, this.state.tagsSelected)
+            .then(res => {
+              console.log(res)
+            }).catch(err => {
+              console.log(err)
+            })
+        } else if (this.state.cpSelected !== null) {
+          API.getQuestionsByCpNumber(this.state.cpSelected)
+            .then(res => {
+              console.log(res)
+            }).catch(err => {
+              console.log(err)
+            })
+        } else if (this.state.tagsSelected !== null) {
+          API.getQuestionsBySubject(this.state.tagsSelected)
+            .then(res => {
+              console.log(res)
+            }).catch(err => {
+              console.log(err)
+            })
+        } else {
+          API.getCheckpoints()
+            .then(res => {
+              console.log(res)
+            }).catch(err => {
+              console.log(err)
+            })
+        }
+      }
 
       startButtonFlip() {
-        if(this.state.started) {
-          // Perform an API call with the bounds taking from menu bar
-          if(this.state.tagsSelected !== null && this.state.cpSelected !== null ) {
-            API.getQuestionsByCpNumAndSubject()
-              .then(res => {
-                console.log(res)
-              }).catch(err => {
-                console.log(err)
-              })
-          } else if (this.state.cpSelected !== null) {
-            API.getQuestionsByCpNumber()
-              .then(res => {
-                console.log(res)
-              }).catch(err => {
-                console.log(err)
-              })
-          } else if (this.state.tagsSelected !== null) {
-            API.getQuestionsBySubject()
-              .then(res => {
-                console.log(res)
-              }).catch(err => {
-                console.log(err)
-              })
-          } else {
-            API.getCheckpoints()
-              .then(res => {
-                console.log(res)
-              }).catch(err => {
-                console.log(err)
-              })
-          }
-        } else {
-          // Do nothing. Or Potentially create a message on the Flashcards that says something along
-          // the lines of YOU ARE CHANGING FLASHCARD SETTINGS
-        }
+        
+        setTimeout(this.ApiCalls, 2000)
         this.setState({
           started: !this.state.started
         })

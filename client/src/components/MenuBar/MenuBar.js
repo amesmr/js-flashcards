@@ -40,7 +40,7 @@ class MenuBar extends Component {
 		const newSelection = e.target.value;
 		let newSelectionArray;
 		if(this.state.selectedTags.indexOf(newSelection) > -1) {
-			newSelectionArray = this.state.selectedTags.filter(s => s !== newSelection)
+			newSelectionArray = this.state.selectedTags.filter(selection => selection !== newSelection)
 		} else {
 			newSelectionArray = [...this.state.selectedTags, newSelection];
 		}
@@ -51,7 +51,7 @@ class MenuBar extends Component {
 		const newSelection = e.target.value;
 		let newSelectionArray;
 		if(this.state.selectedCP.indexOf(newSelection) > -1) {
-			newSelectionArray = this.state.selectedCP.filter(s => s !== newSelection)
+			newSelectionArray = this.state.selectedCP.filter(selection => selection !== newSelection)
 		} else {
 			newSelectionArray = [...this.state.selectedCP, newSelection];
 		}
@@ -155,9 +155,9 @@ class MenuBar extends Component {
                                     <label>
                                         <input 
                                         type="checkbox" 
-                                        name={`dropcp${iterator}`} 
-                                        value={iterator}
-                                        checked={this.state.selectedCP.indexOf(cp) > -1} 
+                                        name={cp} 
+                                        value={iterator+1}
+                                        checked={this.state.selectedCP.indexOf((iterator+1).toString()) > -1} 
                                         onChange={this.handleCPSelection}
                                         />
                                         <span>{cp}</span>
