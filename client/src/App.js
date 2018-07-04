@@ -25,7 +25,7 @@ class App extends Component {
       {!this.state.ready ?
         <div>
         <h1>Welcome to Trilogy Study Buddy</h1>
-        <a class="waves-effect waves-light btn-large" onClick={this.readyOrNot}><i class="material-icons left">cloud</i>Click to Start Studying!</a>
+        <a className="waves-effect waves-light btn-large" onClick={this.readyOrNot}><i className="material-icons left">cloud</i>Click to Start Studying!</a>
         </div>
         :
         <FlashCardContainer />
