@@ -8,8 +8,22 @@
     {
       "type": "node",
       "request": "launch",
-      "name": "Launch Program",
+      "name": "Generate",
       "program": "${workspaceFolder}\\dbPrework\\generate.js"
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "merge",
+      "program": "${workspaceFolder}\\dbPrework\\merge.js"
+    },
+
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch Program",
+      "program": "${workspaceFolder}\\dbPrework\\merge.js"
     }
   ]
 }
