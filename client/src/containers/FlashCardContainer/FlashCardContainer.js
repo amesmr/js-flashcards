@@ -22,7 +22,9 @@ class FlashCardContainer extends Component {
           // Holds the selected tags from the dropdown on change
           selectedTags: [],
           // Holds the select checkpoints from the dropdown on change
-          selectedCP: []
+          selectedCP: [],
+          // State to store the current index number of the question the user is on. Feel free to change to what you selected Matt.
+          testNum: 0
           
         }
     
@@ -141,13 +143,34 @@ class FlashCardContainer extends Component {
             })
           }
       }
-
+      // For both this nextFunc and prevFunc do not forget to go back and change the this.state.testNum to match the actual index state
       nextFunc() {
-        console.log("This is next");
+        
+        if(this.state.testNum + 1 >= this.state.arrayOfQuestions.length) {
+          this.setState({
+            testNum: 0
+          })
+        } else {
+          this.setState({
+            testNum: this.state.testNum + 1
+          })
+        }
+        console.log(this.state.testNum)
       }
 
       prevFunc() {
-        console.log("This is prev");
+        
+        if(this.state.testNum - 1 === 0) {
+          this.setState({
+            testNum: this.state.arrayOfQuestions.length - 1
+          })
+        } else {
+          this.setState({
+            testNum: this.state.testNum - 1
+          })
+        }
+
+        console.log(this.state.testNum)
       }
 
       
@@ -167,8 +190,9 @@ class FlashCardContainer extends Component {
             />
             <div className="container">
             {(this.state.apiLoaded && this.state.started) &&
+              <div>
               <FlashCard
-              question={this.state.arrayOfQuestions[0].question}
+              question={this.state.arrayOfQuestions[this.state.testNum].question}
               answers ={["Answer A", "Answer B","Answer C","Answer D"]}
               numberInSet={1}
               answer="Answer B"
@@ -178,9 +202,11 @@ class FlashCardContainer extends Component {
               hoverSwitch={this.state.hoverSwitch}
               initialRound={this.state.started}
               /> 
-            }
+            
             <Button type="Prev" prevFunc={this.prevFunc}/>
             <Button type="Next" nextFunc={this.nextFunc}/>
+            </div>
+            }
             </div>
         </div>
         )
