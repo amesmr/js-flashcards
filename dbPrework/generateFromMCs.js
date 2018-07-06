@@ -48,10 +48,7 @@ let quiz = [{}];
 let question = {};
 let fileCount = 0;
 let printingCode = false;
-let lastQuestion = 0;
-let firstOnce = true;
 let newFile = true;
-let quizes = 2;
 let code = "";
 
 const insertHeadings = filePath => {
@@ -172,8 +169,8 @@ getPaths().forEach((filePath, idx, arr) => {
     "quiz": quizObj
   }
   allCheckpoints.push(cp);
-  console.log(code);
-  console.log(fileCount);
+  // console.log(code);
+  // console.log(fileCount);
   if (idx === arr.length - 1) { // last quiz.  Write the file
     write(__dirname + "/checkpoints.json", "");
     write(__dirname + "/checkpoints.json", JSON.stringify(allCheckpoints, null, 4));
