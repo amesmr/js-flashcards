@@ -2,14 +2,41 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CheckpointSchema = new Schema({
-    cpName: String,
-    cpNum: Number,
-    questions: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "Question"
-        }
-    ]
+  welcome: {
+    String
+  },
+  number: {
+    Number
+  },
+  quiz: {
+      title: {
+        type: "String"
+      },
+      questions: [{
+        subjects: {
+          type: [
+            String
+          ]
+        },
+        number: {
+          type: Number
+        },
+        objectives: {
+          type: String
+        },
+        question: {
+          type: String
+        },
+        answers: {
+          type: [
+            String
+          ]
+        },
+        answer: {
+          type: Number
+        },
+      }]
+    }
 });
 
 const Checkpoint = mongoose.model("Checkpoint", CheckpointSchema);

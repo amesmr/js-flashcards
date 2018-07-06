@@ -1,16 +1,20 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const logger = require('morgan')
+const routes = require('./routes');
+const logger = require('morgan');
 
 const PORT = process.env.PORT || 8080;
 const app = express();
 
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/checkPoint";
+const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/flashcards";
 
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
+mongoose.connect(MONGODB_URI, function (err) {
+  if (err) throw err;
+  console.log("Connected to mongo");
+});
 
 
 app.use(logger('dev'));
@@ -23,6 +27,8 @@ if(process.env.NODE_ENV === 'production') {
 } else {
     app.use(express.static('./client/public/'))
 }
+
+app.use(routes);
 
 
 app.listen(PORT, function() {

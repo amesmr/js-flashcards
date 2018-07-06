@@ -1,9 +1,32 @@
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+
 .menubar {
     background-color: #333;
     display: flex;
     max-height: 90px;
     z-index: 4;
+    opacity: 1;
+    transition: opacity 1500;
+    
 }
+
+/* .menubar.started {
+    opacity: 0;
+    
+} */
 
 .menubar > .menuitem {
     flex: 0 0 20%;
@@ -23,13 +46,28 @@
     max-height: 150px;
     overflow-y: scroll;
     background-color: white;
-    display: none;
 }
 
 .dropdown-items.active {
     opacity: 1;
-    background-color: white;
-    display: inherit
+}
+
+.dropdown-items::-webkit-scrollbar {
+    width: 4px;
+}
+
+.dropdown-items::-webkit-scrollbar:hover {
+    width: 10px;
+}
+ 
+.dropdown-items::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.dropdown-items::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
 }
 
 .menubtn {

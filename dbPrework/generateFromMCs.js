@@ -3,9 +3,9 @@ const join = require('path').join;
 const path = require("path");
 const GenerateSchema = require('generate-schema')
 
-const getPath = (fromRoot) => join(__dirname, '..', fromRoot);
-const getMCPath = (subFolder) => getPath("js-flashcards/mdFromCPs" + (subFolder ? `/${subFolder}` : ''));
 
+const getPath = (fromRoot) => join(__dirname, '..', fromRoot);
+const getMCPath = (subFolder) => getPath("/dbPrework/mdFromCPs" + (subFolder ? `/${subFolder}` : ''));
 // if this wasn't a one-off script, I'd promisify these and use async / await
 const readDir = (path) => fs.readdirSync(path);
 const read = (path) => fs.readFileSync(path, {
@@ -49,8 +49,6 @@ let quiz = [{}];
 let question = {};
 let fileCount = 0;
 let printingCode = false;
-let lastQuestion = 0;
-let firstOnce = true;
 let newFile = true;
 let quizes = 2;
 let codeSnip = "";
