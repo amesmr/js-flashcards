@@ -10,15 +10,22 @@ class FlashCardContainer extends Component {
         super(props)
     
         this.state = {
+          // The state the determines the style of card (either flash card or quiz card)
           hoverSwitch: "on",
+          // The state that determines if the user has begun a round of flashcards
           started: false,
+          // This will store our array of questions returned from the API call
           arrayOfQuestions: [],
+          // This is a state that prevents the flashcards from loading before the API response is received
           apiLoaded: false,
+          // Holds the selected tags from the dropdown on change
           selectedTags: [],
+          // Holds the select checkpoints from the dropdown on change
           selectedCP: []
           
         }
     
+        // Binding this to all of the functions passed throughout the components
         this.hoverSwitchChange = this.hoverSwitchChange.bind(this)
         this.startButtonFlip = this.startButtonFlip.bind(this)
         this.ApiCalls = this.ApiCalls.bind(this)
@@ -39,7 +46,7 @@ class FlashCardContainer extends Component {
         this.setState({ selectedTags: newSelectionArray }, () => console.log('tag selection', this.state.selectedTags));
         }
         
-        handleCPSelection(e) {
+      handleCPSelection(e) {
         const newSelection = e.target.value;
         let newSelectionArray;
         if(this.state.selectedCP.indexOf(newSelection) > -1) {
@@ -67,10 +74,9 @@ class FlashCardContainer extends Component {
       }
       
       ApiCalls () {
-        console.log(this.state.selectedTags)
-        console.log(this.state.selectedCP)
+        const sort = this.state.selectedTags.map(word => word.toLowerCase())
         if(this.state.selectedTags.length > 0 && this.state.selectedCP.length > 0 ) {
-          API.getQuestionsByCpNumAndSubject(this.state.selectedCP.join('+').toLowerCase(), this.state.selectedTags.join('+').toLowerCase())
+          API.getQuestionsByCpNumAndSubject(this.state.selectedCP.join('+'), sort.join('+'))
             .then(res => {
               console.log(res.data)
               this.setState({
@@ -82,7 +88,7 @@ class FlashCardContainer extends Component {
               console.log(err)
             })
         } else if (this.state.selectedCP.length > 0) {
-          API.getQuestionsByCpNumber(this.state.selectedCP.join('+').toLowerCase())
+          API.getQuestionsByCpNumber(this.state.selectedCP.join('+'))
             .then(res => {
               
               this.setState({
@@ -93,11 +99,11 @@ class FlashCardContainer extends Component {
               console.log(err)
             })
         } else if (this.state.selectedTags.length > 0) {
-          API.getQuestionsBySubject(this.state.selectedTags.join('+').toLowerCase())
+          API.getQuestionsBySubject(sort.join('+'))
             .then(res => {
               console.log(res)
               this.setState({
-                arrayOfQuestions: res.data[0].quiz.questions,
+                arrayOfQuestions: res.data,
                 apiLoaded: true
               })
             }).catch(err => {

@@ -25,6 +25,7 @@ module.exports = {
             .find({})
             .then(data => {
                 let quizArray = [];
+                
                 data.forEach(checkpoint => {
                     quizArray.push(checkpoint.quiz.questions)
                 })
