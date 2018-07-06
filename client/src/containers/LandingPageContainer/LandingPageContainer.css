@@ -1,6 +1,5 @@
 html {
     background-color: #2c93a4;
-    height: 100%;
     font-family: museo-sans,sans-serif;
 }
 
@@ -15,8 +14,4 @@ html {
 .landingPage {
     background-color: white;
     margin-top: 100px;
-}
-
-p {
-    font-size: 50px;
 }
