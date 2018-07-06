@@ -19,48 +19,11 @@ class MenuBar extends Component {
 
         this.openDropdown = this.openDropdown.bind(this)
         this.onCardTypeSelected = this.onCardTypeSelected.bind(this)
-        this.handleTagSelection = this.handleTagSelection.bind(this)
-        this.handleCPSelection = this.handleCPSelection.bind(this)
-        this.sendTheFilters = this.sendTheFilters.bind(this)
-        this.hideNav = this.hideNav.bind(this)
-    }
-
-    sendTheFilters() {
-        const tag = this.state.selectedTags.join('+').toLowerCase()
-        this.props.sessionFilters(tag)
-        const cp = this.state.selectedCP.join('+').toLowerCase()
-        this.props.sessionCP(cp)
-    }
-    
-    hideNav() {
-        this.refs.menubar.classList.add("started")
-    }
-            
         
         
-    
-
-    handleTagSelection(e) {
-		const newSelection = e.target.value;
-		let newSelectionArray;
-		if(this.state.selectedTags.indexOf(newSelection) > -1) {
-			newSelectionArray = this.state.selectedTags.filter(selection => selection !== newSelection)
-		} else {
-			newSelectionArray = [...this.state.selectedTags, newSelection];
-		}
-		this.setState({ selectedTags: newSelectionArray }, () => console.log('tag selection', this.state.selectedTags));
     }
+
     
-    handleCPSelection(e) {
-		const newSelection = e.target.value;
-		let newSelectionArray;
-		if(this.state.selectedCP.indexOf(newSelection) > -1) {
-			newSelectionArray = this.state.selectedCP.filter(selection => selection !== newSelection)
-		} else {
-			newSelectionArray = [...this.state.selectedCP, newSelection];
-		}
-		this.setState({ selectedCP: newSelectionArray }, () => console.log('CP selection', this.state.selectedCP));
-	}
 
     openDropdown(filter) {
 
@@ -107,8 +70,6 @@ class MenuBar extends Component {
                 <button className="menuitem startbtn menubtn" onClick={() => {
                     if(!this.props.initialRound) {
                         this.props.startFunc()
-                        this.sendTheFilters()
-                        this.hideNav()
                     } else {
                         this.props.startFunc()
                     }
@@ -139,8 +100,8 @@ class MenuBar extends Component {
                                         type="checkbox" 
                                         name={`droptags${iterator}`} 
                                         value={tag} 
-                                        checked={this.state.selectedTags.indexOf(tag) > -1} 
-                                        onChange={this.handleTagSelection}
+                                        checked={this.props.checkedTags(tag)} 
+                                        onChange={this.props.handleTagSelection}
                                         />
                                         <span>{tag}</span>
                                     </label>
@@ -162,8 +123,8 @@ class MenuBar extends Component {
                                         type="checkbox" 
                                         name={cp} 
                                         value={iterator+1}
-                                        checked={this.state.selectedCP.indexOf((iterator+1).toString()) > -1} 
-                                        onChange={this.handleCPSelection}
+                                        checked={this.props.checkedCP(iterator)} 
+                                        onChange={this.props.handleCPSelection}
                                         />
                                         <span>{cp}</span>
                                     </label>
