@@ -13,7 +13,9 @@ class FlashCardContainer extends Component {
           hoverSwitch: "on",
           started: false,
           tagsSelected: null,
-          cpSelected: null
+          cpSelected: null,
+          arrayOfQuestions: [],
+          apiLoaded: false
           
         }
     
@@ -36,14 +38,23 @@ class FlashCardContainer extends Component {
         if(this.state.tagsSelected !== null && this.state.cpSelected !== null ) {
           API.getQuestionsByCpNumAndSubject(this.state.cpSelected, this.state.tagsSelected)
             .then(res => {
-              console.log(res)
+              console.log(res.data)
+              this.setState({
+                arrayOfQuestions: res.data[0].quiz.questions,
+                apiLoaded: true
+              })
+              console.log(this.state.apiLoaded)
             }).catch(err => {
               console.log(err)
             })
         } else if (this.state.cpSelected !== null) {
           API.getQuestionsByCpNumber(this.state.cpSelected)
             .then(res => {
-              console.log(res)
+              
+              this.setState({
+                arrayOfQuestions: res.data[0].quiz.questions,
+                apiLoaded: true
+              })
             }).catch(err => {
               console.log(err)
             })
@@ -51,6 +62,10 @@ class FlashCardContainer extends Component {
           API.getQuestionsBySubject(this.state.tagsSelected)
             .then(res => {
               console.log(res)
+              this.setState({
+                arrayOfQuestions: res.data[0].quiz.questions,
+                apiLoaded: true
+              })
             }).catch(err => {
               console.log(err)
             })
@@ -58,6 +73,10 @@ class FlashCardContainer extends Component {
           API.getCheckpoints()
             .then(res => {
               console.log(res)
+              this.setState({
+                arrayOfQuestions: res.data[0].quiz.questions,
+                apiLoaded: true
+              })
             }).catch(err => {
               console.log(err)
             })
@@ -66,7 +85,8 @@ class FlashCardContainer extends Component {
 
       startButtonFlip() {
         
-        setTimeout(this.ApiCalls, 2000)
+        this.ApiCalls()
+        console.log("This has fired")
         this.setState({
           started: !this.state.started
         })
@@ -97,9 +117,9 @@ class FlashCardContainer extends Component {
               sessionCP={this.grabStudySessionCheckPoints}
             />
             <div className="container">
-            
+            {this.state.apiLoaded &&
               <FlashCard
-              question="This is a crazy question, holy shit"
+            question={this.state.arrayOfQuestions[0].question}
               answers ={["Answer A", "Answer B","Answer C","Answer D"]}
               numberInSet={1}
               answer="Answer B"
@@ -109,7 +129,7 @@ class FlashCardContainer extends Component {
               hoverSwitch={this.state.hoverSwitch}
               initialRound={this.state.started}
               /> 
-              
+            }
             </div>
         </div>
         )

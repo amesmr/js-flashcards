@@ -22,6 +22,7 @@ class MenuBar extends Component {
         this.handleTagSelection = this.handleTagSelection.bind(this)
         this.handleCPSelection = this.handleCPSelection.bind(this)
         this.sendTheFilters = this.sendTheFilters.bind(this)
+        this.hideNav = this.hideNav.bind(this)
     }
 
     sendTheFilters() {
@@ -31,6 +32,9 @@ class MenuBar extends Component {
         this.props.sessionCP(cp)
     }
     
+    hideNav() {
+        this.refs.menubar.classList.add("started")
+    }
             
         
         
@@ -99,17 +103,18 @@ class MenuBar extends Component {
 
     render() {
         return (
-            <div className="menubar">
-                <button className="menuitem menubtn" onClick={() => {
+            <div className="menubar" ref="menubar">
+                <button className="menuitem startbtn menubtn" onClick={() => {
                     if(!this.props.initialRound) {
                         this.props.startFunc()
                         this.sendTheFilters()
+                        this.hideNav()
                     } else {
                         this.props.startFunc()
                     }
                 }}>{this.props.initialRound ? "Stop" : "Start"}</button>
-                <button className="menuitem menubtn">Shuffle</button>
-                <div className="menuitem">
+                <button className="menuitem shufflebtn menubtn">Shuffle</button>
+                <div className="menuitem cardswitch">
                     <p>
                         <label>
                             <input className="with-gap" name="cardtype" type="radio" value="on" onChange={this.onCardTypeSelected} />
@@ -123,7 +128,7 @@ class MenuBar extends Component {
                         </label>
                     </p>
                 </div>
-                <div className="menuitem">
+                <div className="menuitem tagdrop">
                     <button className="dropbtn menubtn" onClick={() => this.openDropdown("tag")}>Sort by Tag</button>
                     <form className="dropdown-items" ref="dropdownmenu">
                         {tags.map((tag,iterator) => {
@@ -146,7 +151,7 @@ class MenuBar extends Component {
                         
                     </form>
                 </div>
-                <div className="menuitem">
+                <div className="menuitem cpdrop">
                     <button className="dropbtn menubtn" onClick={() => this.openDropdown("checkpoint")}>Sort by Checkpoint</button>
                     <form className="dropdown-items" ref="dropdownmenuc">
                         {checkpoints.map((cp,iterator) => {
