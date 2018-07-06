@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import FlashCard from '../../components/FlashCard';
 import MenuBar from '../../components/MenuBar';
 import './FlashCardContainer.css';
-import API from '../../utils/API'
+import API from '../../utils/API';
+import Button from '../../components/Button';
 
 
 class FlashCardContainer extends Component {
@@ -33,6 +34,8 @@ class FlashCardContainer extends Component {
         this.handleTagSelection = this.handleTagSelection.bind(this)
         this.checkedCP = this.checkedCP.bind(this)
         this.checkedTags = this.checkedTags.bind(this)
+        this.nextFunc = this.nextFunc.bind(this)
+        this.prevFunc = this.prevFunc.bind(this)
       }
 
       handleTagSelection(e) {
@@ -139,6 +142,14 @@ class FlashCardContainer extends Component {
           }
       }
 
+      nextFunc() {
+        console.log("This is next");
+      }
+
+      prevFunc() {
+        console.log("This is prev");
+      }
+
       
       render() {
         return (
@@ -168,6 +179,8 @@ class FlashCardContainer extends Component {
               initialRound={this.state.started}
               /> 
             }
+            <Button type="Prev" prevFunc={this.prevFunc}/>
+            <Button type="Next" nextFunc={this.nextFunc}/>
             </div>
         </div>
         )
