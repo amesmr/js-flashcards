@@ -10,11 +10,10 @@ class MenuBar extends Component {
         super(props)
 
         this.state = {
+            // States that manage the status of the dropdown
             tagdropdown: false,
             cpdropdown: false,
-            selectedTags: [],
-            selectedCP: []
-            
+                     
         }
 
         this.openDropdown = this.openDropdown.bind(this)
@@ -24,7 +23,7 @@ class MenuBar extends Component {
     }
 
     
-
+    // Function that activates the dropdown for both checkpoints and tags (this is determined by the argument filter)
     openDropdown(filter) {
 
         if(filter === "tag") {
@@ -57,7 +56,7 @@ class MenuBar extends Component {
         
             
     }
-
+    // Function that utilizes a callback to pass the value of the flash/quiz card selection to parent(FlashCardContainer)
     onCardTypeSelected(event) {
         this.props.hoverGrab(event.currentTarget.value)
     }

@@ -24,6 +24,7 @@ module.exports = {
         db.Checkpoint
             .find({})
             .then(data => {
+                // Takes the data and through multiple steps breaks the path down into a more usable JSON response for the application
                 let quizArray = [];
                 
                 data.forEach(checkpoint => {
