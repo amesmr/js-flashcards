@@ -9,7 +9,7 @@ import Button from '../../components/Button';
 class FlashCardContainer extends Component {
     constructor(props) {
         super(props)
-    
+
         this.state = {
           // The state the determines the style of card (either flash card or quiz card)
           hoverSwitch: "on",
@@ -24,10 +24,10 @@ class FlashCardContainer extends Component {
           // Holds the select checkpoints from the dropdown on change
           selectedCP: [],
           // State to store the current index number of the question the user is on. Feel free to change to what you selected Matt.
-          testNum: 0
-          
+          questionNum: 0
+
         }
-    
+
         // Binding this to all of the functions passed throughout the components
         this.hoverSwitchChange = this.hoverSwitchChange.bind(this)
         this.startButtonFlip = this.startButtonFlip.bind(this)
@@ -52,7 +52,7 @@ class FlashCardContainer extends Component {
         }
         this.setState({ selectedTags: newSelectionArray }, () => console.log('tag selection', this.state.selectedTags));
         }
-        
+
       handleCPSelection(e) {
         const newSelection = e.target.value;
         let newSelectionArray;
@@ -63,7 +63,7 @@ class FlashCardContainer extends Component {
         }
         this.setState({ selectedCP: newSelectionArray }, () => console.log('CP selection', this.state.selectedCP));
         }
-     
+
       // Returns a boolean value to allow dropdown to display which checkpoints are checked
       checkedCP (iterator) {
         return this.state.selectedCP.indexOf((iterator+1).toString()) > -1
@@ -104,9 +104,10 @@ class FlashCardContainer extends Component {
         } else if (this.state.selectedCP.length > 0) {
           API.getQuestionsByCpNumber(this.state.selectedCP.join('+'))
             .then(res => {
-              
+
               this.setState({
                 arrayOfQuestions: res.data[0].quiz.questions,
+                cpName: res.data[0].quiz.title,
                 apiLoaded: true
               })
             }).catch(err => {
@@ -131,6 +132,7 @@ class FlashCardContainer extends Component {
               console.log(res)
               this.setState({
                 arrayOfQuestions: res.data[0].quiz.questions,
+                cpName: res.data[0].quiz.title,
                 apiLoaded: true
               })
             }).catch(err => {
@@ -161,37 +163,37 @@ class FlashCardContainer extends Component {
             })
           }
       }
-      // For both this nextFunc and prevFunc do not forget to go back and change the this.state.testNum to match the actual index state
+      // For both this nextFunc and prevFunc do not forget to go back and change the this.state.questionNum to match the actual index state
       nextFunc() {
         // Resets the cards back to zero if user clicks next on the last card
-        if(this.state.testNum + 1 >= this.state.arrayOfQuestions.length) {
+        if(this.state.questionNum + 1 >= this.state.arrayOfQuestions.length) {
           this.setState({
             // Represents the index of the current visible question
-            testNum: 0
+            questionNum: 0
           })
         } else {
           // Increments the index by one
           this.setState({
-            testNum: this.state.testNum + 1
+            questionNum: this.state.questionNum + 1
           })
         }
-        // console.log(this.state.testNum)
+        // console.log(this.state.questionNum)
       }
 
       prevFunc() {
         // Sets the question to the last selection in the array if the user hits previous on the first card
-        if(this.state.testNum - 1 === 0) {
+        if(this.state.questionNum - 1 === 0) {
           this.setState({
-            testNum: this.state.arrayOfQuestions.length - 1
+            questionNum: this.state.arrayOfQuestions.length - 1
           })
         } else {
           // Decrements the index on each previous click
           this.setState({
-            testNum: this.state.testNum - 1
+            questionNum: this.state.questionNum - 1
           })
         }
 
-        // console.log(this.state.testNum)
+        // console.log(this.state.questionNum)
       }
 
       // Using the Fisher-Yates shuffling algorithm
@@ -201,17 +203,17 @@ class FlashCardContainer extends Component {
           const j = Math.floor(Math.random() * (i + 1));
           [newArray[i],newArray[j]]=[newArray[j],newArray[i]];
         }
-        
+
         this.setState({
           arrayOfQuestions: newArray
         })
       }
 
-      
+
       render() {
         return (
         <div className="fcContainer">
-            <MenuBar 
+            <MenuBar
               shuffle={this.shuffle}
               hoverGrab={this.hoverSwitchChange}
               startFunc={this.startButtonFlip}
@@ -224,20 +226,20 @@ class FlashCardContainer extends Component {
               checkedTags={this.checkedTags}
             />
             <div className="container">
-            
+
             {(this.state.apiLoaded && this.state.started) &&
               <div>
               {this.state.arrayOfQuestions.length > 0 ?
               <FlashCard
-              question={this.state.arrayOfQuestions[this.state.testNum].question}
-              answers ={["Answer A", "Answer B","Answer C","Answer D"]}
-              numberInSet={1}
-              answer="Answer B"
-              lesson="This is the lesson"
-              goal="This is the goal"
-              cpName="Checkpoint 5000"
+              question={this.state.arrayOfQuestions[this.state.questionNum].question}
+              answers ={this.state.arrayOfQuestions[this.state.questionNum].answers}
+              answer={this.state.arrayOfQuestions[this.state.questionNum].answers[this.state.arrayOfQuestions[this.state.questionNum].answer]}
+              objective={this.state.arrayOfQuestions[this.state.questionNum].objective}
+              goal={this.state.arrayOfQuestions[this.state.questionNum].goal}
+              description={this.state.arrayOfQuestions[this.state.questionNum].description}
               hoverSwitch={this.state.hoverSwitch}
-              initialRound={this.state.started}
+                    initialRound={this.state.started}
+                    cpName
               /> :
               <h2>"There were no results found for this query! Try broadening your study session."</h2>
               }
