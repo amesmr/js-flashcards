@@ -5,38 +5,40 @@
     margin: 150px auto;
   }
   /*Switch the commentted text to switch between on click vs. on hover*/
-#hoverSwitch:hover .flipper, .flashCard-container.hover .flipper { 
+#hoverSwitch:hover .flipper, .flashCard-container.hover .flipper {
     -webkit-transform: rotateY(180deg);
   }
-  
+
   .flashCard-container, .front, .back {
       width: 500px;
       height: 300px;
   }
-  
+
   .flipper {
       -webkit-transition: 0.6s;
       -webkit-transform-style: preserve-3d;
       position: relative;
   }
-  
+
   .front, .back {
       -webkit-backface-visibility: hidden;
       position: absolute;
       top: 0;
       left: 0;
   }
-  
+
   .front {
     z-index: 2;
     background: lightblue;
     box-shadow: 20px 20px 50px black
   }
-  
+
   .back {
     -webkit-transform: rotateY(180deg);
     background: lightcoral;
     box-shadow: 20px 20px 50px black
   }
-
-
+.answerReveal {
+  /* font: italic bold 20px Georgia, serif; */
+  font-weight: bold
+}
