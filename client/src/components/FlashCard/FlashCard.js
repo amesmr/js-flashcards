@@ -63,11 +63,16 @@ class FlashCard extends Component {
           })
       }
 
-  transFormQuestion(question) {
-    
-
-  }
-
+    transFormQuestion = question => {
+        let newQuestion = question;
+        if (question.indexOf("```") >= 0) {
+            newQuestion = newQuestion.replace("```", "<code>"); // this will only replace the first occurance
+            newQuestion = newQuestion.replace("```", "</code>");
+        }
+        newQuestion = newQuestion.replace(/(?:\r\n|\r|\n)/g, '<br>');  // the regex allows for global replacements
+        console.log(newQuestion);
+        return newQuestion;
+    }
 
     render() {
         return (
@@ -75,7 +80,9 @@ class FlashCard extends Component {
             <div className="flipper">
                 <div className="front">
                     {/* <h6 className="question">{this.props.question}</h6> */}
-                    <code className="question">{this.props.question}</code>
+                        <code className="question"><br />
+                            <div dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
+                            </code>
                     <form>
                     {this.props.answers.map((answer, iterator) => {
                         return (
