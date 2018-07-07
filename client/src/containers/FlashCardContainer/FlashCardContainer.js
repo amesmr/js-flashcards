@@ -191,6 +191,7 @@ class FlashCardContainer extends Component {
             <div className="container">
             {(this.state.apiLoaded && this.state.started) &&
               <div>
+              {this.state.arrayOfQuestions.length > 0 ?
               <FlashCard
               question={this.state.arrayOfQuestions[this.state.testNum].question}
               answers ={["Answer A", "Answer B","Answer C","Answer D"]}
@@ -201,8 +202,9 @@ class FlashCardContainer extends Component {
               cpName="Checkpoint 5000"
               hoverSwitch={this.state.hoverSwitch}
               initialRound={this.state.started}
-              /> 
-            
+              /> :
+              <h2>"There were no results found for this query! Try broadening your study session."</h2>
+              }
             <Button type="Prev" prevFunc={this.prevFunc}/>
             <Button type="Next" nextFunc={this.nextFunc}/>
             </div>
