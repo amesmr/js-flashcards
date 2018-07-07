@@ -74,7 +74,7 @@ class MenuBar extends Component {
                         this.props.startFunc()
                     }
                 }}>{this.props.initialRound ? "Stop" : "Start"}</button>
-                <button className="menuitem shufflebtn menubtn">Shuffle</button>
+                <button className="menuitem shufflebtn menubtn" onClick={this.props.shuffle}>Shuffle</button>
                 <div className="menuitem cardswitch">
                     <p>
                         <label>

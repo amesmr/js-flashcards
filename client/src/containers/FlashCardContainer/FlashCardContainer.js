@@ -38,6 +38,7 @@ class FlashCardContainer extends Component {
         this.checkedTags = this.checkedTags.bind(this)
         this.nextFunc = this.nextFunc.bind(this)
         this.prevFunc = this.prevFunc.bind(this)
+        this.shuffle = this.shuffle.bind(this)
       }
 
       handleTagSelection(e) {
@@ -46,6 +47,7 @@ class FlashCardContainer extends Component {
         if(this.state.selectedTags.indexOf(newSelection) > -1) {
           newSelectionArray = this.state.selectedTags.filter(selection => selection !== newSelection)
         } else {
+          // Need to add an if statement that only allows the user to select three to five tags maximum
           newSelectionArray = [...this.state.selectedTags, newSelection];
         }
         this.setState({ selectedTags: newSelectionArray }, () => console.log('tag selection', this.state.selectedTags));
@@ -173,11 +175,25 @@ class FlashCardContainer extends Component {
         console.log(this.state.testNum)
       }
 
+      // Using the Fisher-Yates shuffling algorithm
+      shuffle() {
+        let newArray = this.state.arrayOfQuestions
+        for (let i = newArray.length - 1; i > 0 ;i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [newArray[i],newArray[j]]=[newArray[j],newArray[i]];
+        }
+        
+        this.setState({
+          arrayOfQuestions: newArray
+        })
+      }
+
       
       render() {
         return (
         <div className="fcContainer">
             <MenuBar 
+              shuffle={this.shuffle}
               hoverGrab={this.hoverSwitchChange}
               startFunc={this.startButtonFlip}
               initialRound={this.state.started}
