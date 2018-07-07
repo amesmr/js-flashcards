@@ -17,41 +17,44 @@ class FlashCard extends Component {
         this.onAnswerSelected = this.onAnswerSelected.bind(this)
       }
       
+      // On component mount (following API response) checks for the status of the card type switch and presents the appropriate card type
       componentDidMount(){
           if (this.props.hoverSwitch === "off") {
-              console.log("This is working")
+              //console.log("This is working")
             this.refs.flipCardContainer.removeAttribute("id","hoverSwitch")
           } 
       }
-
+      // Any time the card type is switch update the DOM to reflect the user selection. Allows for switch mid study session
       componentDidUpdate(){
         if (this.props.hoverSwitch === "off") {
-            console.log("This is working")
+            //console.log("This is working")
           this.refs.flipCardContainer.removeAttribute("id","hoverSwitch")
         } else {
             this.refs.flipCardContainer.setAttribute("id","hoverSwitch")
         }
       }
     
+      // Checks the user selection against answer if the user has chosen to use the quiz cards
       checkAnswer(event) {
         event.preventDefault();
 
-        console.log(this.state.selected)        
+        //console.log(this.state.selected)        
         if(!this.state.flipped) {
             this.refs.flipCardContainer.classList.add("hover")
           this.setState({
             flipped: true
           })
-          console.log("Flip to back")
+          //console.log("Flip to back")
         } else {
             this.refs.flipCardContainer.classList.remove("hover")
           this.setState({
             flipped: false
           })
-          console.log("Flip to front")
+          //console.log("Flip to front")
         }
       }
 
+      // Stores the user's choice on quiz card in the state
       onAnswerSelected(event) {
           this.setState({
               selected: event.currentTarget.value
