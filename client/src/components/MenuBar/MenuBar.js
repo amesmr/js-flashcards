@@ -2,7 +2,7 @@ import React , { Component } from 'react';
 import './MenuBar.css'
 
 
-const checkpoints = ["Bash","HTML/CSS/Git","JavaScript","JavaScript/jQuery","Timers/API","Node"];
+const checkpoints = ["Bash","HTML/CSS/Git","JavaScript","JavaScript/jQuery","Timers/API","Node","Express","MySQL","Mongo","ES6 and React","Computer Science","Java","Laravel/PHP","Python/Django"];
 const tags = ["React","Vocab","SQL","Arrays","Mongo","JavaScript"]
 
 class MenuBar extends Component {
@@ -10,11 +10,10 @@ class MenuBar extends Component {
         super(props)
 
         this.state = {
+            // States that manage the status of the dropdown
             tagdropdown: false,
             cpdropdown: false,
-            selectedTags: [],
-            selectedCP: []
-            
+                     
         }
 
         this.openDropdown = this.openDropdown.bind(this)
@@ -24,7 +23,7 @@ class MenuBar extends Component {
     }
 
     
-
+    // Function that activates the dropdown for both checkpoints and tags (this is determined by the argument filter)
     openDropdown(filter) {
 
         if(filter === "tag") {
@@ -57,7 +56,7 @@ class MenuBar extends Component {
         
             
     }
-
+    // Function that utilizes a callback to pass the value of the flash/quiz card selection to parent(FlashCardContainer)
     onCardTypeSelected(event) {
         this.props.hoverGrab(event.currentTarget.value)
     }
@@ -74,7 +73,7 @@ class MenuBar extends Component {
                         this.props.startFunc()
                     }
                 }}>{this.props.initialRound ? "Stop" : "Start"}</button>
-                <button className="menuitem shufflebtn menubtn">Shuffle</button>
+                <button className="menuitem shufflebtn menubtn" onClick={this.props.shuffle}>Shuffle</button>
                 <div className="menuitem cardswitch">
                     <p>
                         <label>
