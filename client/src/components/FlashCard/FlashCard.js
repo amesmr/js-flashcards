@@ -19,14 +19,14 @@ class FlashCard extends Component {
       
       componentDidMount(){
           if (this.props.hoverSwitch === "off") {
-              console.log("This is working")
+              //console.log("This is working")
             this.refs.flipCardContainer.removeAttribute("id","hoverSwitch")
           } 
       }
 
       componentDidUpdate(){
         if (this.props.hoverSwitch === "off") {
-            console.log("This is working")
+            //console.log("This is working")
           this.refs.flipCardContainer.removeAttribute("id","hoverSwitch")
         } else {
             this.refs.flipCardContainer.setAttribute("id","hoverSwitch")
@@ -36,19 +36,19 @@ class FlashCard extends Component {
       checkAnswer(event) {
         event.preventDefault();
 
-        console.log(this.state.selected)        
+        //console.log(this.state.selected)        
         if(!this.state.flipped) {
             this.refs.flipCardContainer.classList.add("hover")
           this.setState({
             flipped: true
           })
-          console.log("Flip to back")
+          //console.log("Flip to back")
         } else {
             this.refs.flipCardContainer.classList.remove("hover")
           this.setState({
             flipped: false
           })
-          console.log("Flip to front")
+          //console.log("Flip to front")
         }
       }
 
