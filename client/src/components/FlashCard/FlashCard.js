@@ -34,6 +34,8 @@ class FlashCard extends Component {
         } else {
             this.refs.flipCardContainer.setAttribute("id","hoverSwitch")
         }
+
+        
       }
 
       // Checks the user selection against answer if the user has chosen to use the quiz cards
