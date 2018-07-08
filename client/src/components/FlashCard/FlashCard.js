@@ -65,14 +65,20 @@ class FlashCard extends Component {
 
     transFormQuestion = question => {
         let newQuestion = question;
+        // console.log("orig question");
+        // console.log(question);
         if (question.indexOf("```") >= 0) {
-            newQuestion = newQuestion.replace("```", "<code>"); // this will only replace the first occurance
-            newQuestion = newQuestion.replace("```", "</code>");
+            newQuestion = newQuestion.replace("```JavaScript", "<br><pre>"); // this will only replace the first occurance
+            newQuestion = newQuestion.replace("```", "</pre>");
+            newQuestion = newQuestion.replace('/[`]/g', ''); // strip out any danglers
         }
         newQuestion = newQuestion.replace(/(?:\r\n|\r|\n)/g, '<br>');  // the regex allows for global replacements
-        console.log(newQuestion);
+        newQuestion = newQuestion.replace(/(?:\t)/g, '    '); // grrrr
+        // console.log("new question");
+        // console.log(newQuestion);
         return newQuestion;
     }
+
 
     render() {
         return (
