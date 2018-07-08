@@ -38,7 +38,11 @@
     background: lightcoral;
     box-shadow: 20px 20px 50px black
   }
-.answerReveal {
-  /* font: italic bold 20px Georgia, serif; */
-  font-weight: bold
-}
+  .answerReveal {
+    /* font: italic bold 20px Georgia, serif; */
+    font-weight: bold;
+    text-align: left;
+  }
+  .question {
+    text-align: left;
+  }

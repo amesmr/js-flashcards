@@ -1,0 +1,66 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "title": "course Set",
+    "type": "array",
+    "items": {
+        "type": "object",
+        "properties": {
+            "checkpoint": {
+                "type": "number"
+            },
+            "welcome": {
+                "type": "string"
+            },
+            "quiz": {
+                "type": "object",
+                "properties": {
+                    "title": {
+                        "type": "string"
+                    },
+                    "questions": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "subjects": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "objective": {
+                                    "type": "string"
+                                },
+                                "question": {
+                                    "type": "string"
+                                },
+                                "options": {
+                                    "type": "array",
+                                    "items": {
+                                        "type": "string"
+                                    }
+                                },
+                                "answer": {
+                                    "type": "number"
+                                }
+                            },
+                            "required": [
+                                "subjects",
+                                "objective",
+                                "question",
+                                "options",
+                                "answer"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "required": [
+            "checkpoint",
+            "welcome",
+            "quiz"
+        ],
+        "title": "course"
+    }
+}
