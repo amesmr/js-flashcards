@@ -26,7 +26,7 @@ class App extends Component {
 
   readyOrNot() {
     this.setState({
-        ready: true
+        ready: !this.state.ready
     })
   }
 
@@ -79,10 +79,11 @@ class App extends Component {
         <FlashCardContainer 
         selectedCP={this.state.selectedCP}
         selectedTags={this.state.selectedTags}
+        readySwitch={this.readyOrNot}
         />
       }
        
-      
+
       </div>
     );
   }

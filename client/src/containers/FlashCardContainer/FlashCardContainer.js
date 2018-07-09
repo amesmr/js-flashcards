@@ -133,7 +133,9 @@ class FlashCardContainer extends Component {
               arrayOfQuestions: [],
               // Returns the API loading failsafe in preparation for the next call
               apiLoaded: false
+              
             })
+            this.props.readySwitch()
           }
       }
       // For both this nextFunc and prevFunc do not forget to go back and change the this.state.questionNum to match the actual index state
