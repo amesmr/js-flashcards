@@ -10,9 +10,9 @@ class MenuBar extends Component {
         super(props)
 
         this.state = {
-            // States that manage the status of the dropdown
-            tagdropdown: false,
-            cpdropdown: false,
+            // // States that manage the status of the dropdown
+            // tagdropdown: false,
+            // cpdropdown: false,
                      
         }
 

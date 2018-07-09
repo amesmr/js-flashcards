@@ -32,10 +32,6 @@ class FlashCardContainer extends Component {
         this.hoverSwitchChange = this.hoverSwitchChange.bind(this)
         this.startButtonFlip = this.startButtonFlip.bind(this)
         this.ApiCalls = this.ApiCalls.bind(this)
-        // this.handleCPSelection = this.handleCPSelection.bind(this)
-        // this.handleTagSelection = this.handleTagSelection.bind(this)
-        // this.checkedCP = this.checkedCP.bind(this)
-        // this.checkedTags = this.checkedTags.bind(this)
         this.nextFunc = this.nextFunc.bind(this)
         this.prevFunc = this.prevFunc.bind(this)
         this.shuffle = this.shuffle.bind(this)
@@ -195,12 +191,6 @@ class FlashCardContainer extends Component {
               hoverGrab={this.hoverSwitchChange}
               startFunc={this.startButtonFlip}
               initialRound={this.state.started}
-              sessionFilters={this.grabStudySessionTags}
-              sessionCP={this.grabStudySessionCheckPoints}
-              handleCPSelection={this.handleCPSelection}
-              handleTagSelection={this.handleTagSelection}
-              checkedCP={this.checkedCP}
-              checkedTags={this.checkedTags}
             />
             <div className="container">
 
