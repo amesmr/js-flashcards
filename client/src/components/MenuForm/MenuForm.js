@@ -53,7 +53,6 @@ export default class MenuBar extends Component {
                 </div>
                 <div className="form-section">
                 </div>
-                <button>Start</button>
             </form>
         </div>
         )

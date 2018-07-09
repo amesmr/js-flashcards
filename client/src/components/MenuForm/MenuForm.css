@@ -1,3 +1,9 @@
 .form-component {
     overflow-y: scroll;
+    background: white
 }
+
+ul {
+    column-count: 3
+}
+
