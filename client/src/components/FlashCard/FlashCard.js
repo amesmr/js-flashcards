@@ -110,7 +110,7 @@ class FlashCard extends Component {
                         )
                     })}
 
-                {this.props.hoverSwitch === "off" && <input type="submit" onClick={this.checkAnswer} />}
+                {this.props.hoverSwitch === "off" ? <input type="submit" onClick={this.checkAnswer} /> : <button onClick={this.checkAnswer}>"Flip"</button>}
 
 
                     </form>
@@ -123,7 +123,7 @@ class FlashCard extends Component {
                   <p className="objective"><i>Objective: {this.props.objective}</i></p>
                   <p className="description"><i>Description: {this.props.description}</i></p>
                   <p className="cpName">{this.props.cpName}</p>
-                  {this.props.hoverSwitch === "off" && <input type="reset" onClick={this.checkAnswer} />}
+                  {this.props.hoverSwitch === "off" ? <input type="reset" onClick={this.checkAnswer} /> : <button onClick={this.checkAnswer}>"Flip"</button>}
 
                 </div>
             </div>
