@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import './MenuForm.css'
 
+
+const checkpoints = ["Bash","HTML/CSS/Git","JavaScript","JavaScript/jQuery","Timers/API","Node","Express","MySQL","Mongo","ES6 and React","Computer Science","Java","Laravel/PHP","Python/Django"];
 export default class MenuBar extends Component {
 
     constructor(props) {
@@ -30,7 +32,24 @@ export default class MenuBar extends Component {
                     </p>
                 </div>
                 <div className="form-section">
-
+                    <ul>
+                        {checkpoints.map((cp,iterator) => {
+                            return (
+                                <li key={iterator + 100}>
+                                    <label>
+                                        <input 
+                                        type="checkbox" 
+                                        name={cp} 
+                                        value={iterator+1}
+                                        checked={this.props.checkedCP(iterator)} 
+                                        onChange={this.props.handleCPSelection}
+                                        />
+                                        <span>{cp}</span>
+                                    </label>
+                                </li>
+                            )
+                        })} 
+                    </ul> 
                 </div>
                 <div className="form-section">
                 </div>
