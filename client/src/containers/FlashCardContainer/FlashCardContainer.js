@@ -177,6 +177,8 @@ class FlashCardContainer extends Component {
             questionNum: this.state.questionNum + 1
           })
         }
+
+        console.log(this.props)
         // console.log(this.state.questionNum)
       }
 
