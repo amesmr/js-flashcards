@@ -6,7 +6,7 @@ import App from '../App';
 import FlashCard from '../components/FlashCard'
 import FlashCardContainer from '../containers/FlashCardContainer';
 import LandingPageContainer from '../containers/LandingPageContainer/LandingPageContainer';
-import MenuBar from '../components/MenuBar';
+import MenuForm from '../components/MenuForm';
 
 
 storiesOf("App", module)
