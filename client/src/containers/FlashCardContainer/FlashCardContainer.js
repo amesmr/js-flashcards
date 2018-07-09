@@ -20,9 +20,9 @@ class FlashCardContainer extends Component {
           // This is a state that prevents the flashcards from loading before the API response is received
           apiLoaded: false,
           // Holds the selected tags from the dropdown on change
-          selectedTags: [],
+          selectedTags: this.props.selectedTags,
           // Holds the select checkpoints from the dropdown on change
-          selectedCP: [],
+          selectedCP: this.props.selectedCP,
           // State to store the current index number of the question the user is on. Feel free to change to what you selected Matt.
           questionNum: 0
 

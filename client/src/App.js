@@ -18,6 +18,10 @@ class App extends Component {
 
 
     this.readyOrNot = this.readyOrNot.bind(this)
+    this.checkedCP = this.checkedCP.bind(this)
+    this.handleCPSelection = this.handleCPSelection.bind(this)
+    this.checkedTags = this.checkedTags.bind(this)
+    this.handleTagSelection = this.handleTagSelection.bind(this)
   }
 
   readyOrNot() {
@@ -65,11 +69,20 @@ class App extends Component {
       {!this.state.ready ?
         <LandingPageContainer 
         onstart={this.readyOrNot}
-        checkedCP={this.checkedCP}/>
+        checkedCP={this.checkedCP}
+        handleCPSelection={this.handleCPSelection}
+        checkedTags={this.checkedTags}
+        handleTagSelection={this.handleTagSelection}
+        
+        />
         :
-        <FlashCardContainer />
+        <FlashCardContainer 
+        selectedCP={this.state.selectedCP}
+        selectedTags={this.state.selectedTags}
+        />
       }
        
+      
       </div>
     );
   }

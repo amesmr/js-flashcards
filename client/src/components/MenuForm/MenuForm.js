@@ -16,7 +16,7 @@ export default class MenuBar extends Component {
     render() {
         return (
         <div>
-            <form>
+            <form className="form-component">
                 <div className="form-section">
                     <p>
                         <label>
