@@ -3,46 +3,59 @@
 .flashCard-container {
     -webkit-perspective: 1000;
     margin: 15px auto;
-  }
-  /*Switch the commentted text to switch between on click vs. on hover*/
-#hoverSwitch:hover .flipper, .flashCard-container.hover .flipper {
+}
+
+/*Switch the commentted text to switch between on click vs. on hover*/
+
+#hoverSwitch:hover .flipper,
+.flashCard-container.hover .flipper {
     -webkit-transform: rotateY(180deg);
-  }
+}
 
-  .flashCard-container, .front, .back {
-      width: 500px;
-      height: 400px;
-  }
+.flashCard-container,
+.front,
+.back {
+    width: 500px;
+    height: 400px;
+}
 
-  .flipper {
-      -webkit-transition: 0.6s;
-      -webkit-transform-style: preserve-3d;
-      position: relative;
-  }
+.flipper {
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+    position: relative;
+}
 
-  .front, .back {
-      -webkit-backface-visibility: hidden;
-      position: absolute;
-      top: 0;
-      left: 0;
-  }
+.front,
+.back {
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
-  .front {
+.front {
     z-index: 2;
     background: lightblue;
     box-shadow: 20px 20px 50px black
-  }
+}
 
-  .back {
+.back {
     -webkit-transform: rotateY(180deg);
     background: lightcoral;
     box-shadow: 20px 20px 50px black
-  }
-  .answerReveal {
+}
+
+.answerReveal {
     /* font: italic bold 20px Georgia, serif; */
     font-weight: bold;
     text-align: left;
-  }
-  .question {
+}
+
+.question {
     text-align: left;
-  }
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+}

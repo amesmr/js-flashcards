@@ -35,7 +35,7 @@ class FlashCard extends Component {
             this.refs.flipCardContainer.setAttribute("id","hoverSwitch")
         }
 
-        
+
       }
 
       // Checks the user selection against answer if the user has chosen to use the quiz cards
@@ -70,7 +70,7 @@ class FlashCard extends Component {
         // console.log("orig question");
         // console.log(question);
         if (question.indexOf("```") >= 0) {
-            newQuestion = newQuestion.replace("```JavaScript", "<br><pre>"); // this will only replace the first occurance
+            newQuestion = newQuestion.replace("```JavaScript", "<pre>"); // this will only replace the first occurance
             newQuestion = newQuestion.replace("```", "</pre>");
             newQuestion = newQuestion.replace('/[`]/g', ''); // strip out any danglers
         }
@@ -88,9 +88,9 @@ class FlashCard extends Component {
             <div className="flipper">
                 <div className="front">
                     {/* <h6 className="question">{this.props.question}</h6> */}
-                        <code className="question"><br />
-                            <div dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
-                            </code>
+                    <code className="question">
+                        <div dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
+                    </code>
                     <form>
                     {this.props.answers.map((answer, iterator) => {
                         return (
