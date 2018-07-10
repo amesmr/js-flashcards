@@ -88,27 +88,30 @@ class FlashCard extends Component {
             <div className="flipper">
                 <div className="front">
                     {/* <h6 className="question">{this.props.question}</h6> */}
+                    <span>{this.props.number}</span>
                     <code className="question">
                         <div dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
                     </code>
                     <form>
+                        <ul className="answerColumn">
                     {this.props.answers.map((answer, iterator) => {
                         return (
                             this.props.hoverSwitch === "off" ?
-                            <p key={iterator}>
+                            <li key={iterator}>
                                 <label>
                                     <input className="with-gap" name="group1" type="radio" value={answer} checked={this.state.selected === answer} onChange={this.onAnswerSelected}  />
                                     <span className="answerChoice">{answer}</span>
                                 </label>
-                            </p>
+                            </li>
                             :
-                            <p key={iterator}>
+                            <li key={iterator}>
                                 <label>
                                     <span>{answer}</span>
                                 </label>
-                            </p>
+                            </li>
                         )
                     })}
+                        </ul>
 
                 {this.props.hoverSwitch === "off" ? <input type="submit" onClick={this.checkAnswer} /> : <button onClick={this.checkAnswer}>"Flip"</button>}
 
@@ -116,6 +119,7 @@ class FlashCard extends Component {
                     </form>
                 </div>
                 <div className="back">
+                <span>{this.props.number}</span>
                   <p>{ this.props.hoverSwitch === "off" && (this.props.answer === this.state.selected ? "You were correct!" : "Sorry, that is incorrect!"
                     )}</p>
                   <h6>The answer was: </h6>

@@ -198,6 +198,7 @@ class FlashCardContainer extends Component {
               <div>
               {this.state.arrayOfQuestions.length > 0 ?
               <FlashCard
+              number={(this.state.questionNum + 1).toString() + "/" + this.state.arrayOfQuestions.length.toString()}
               question={this.state.arrayOfQuestions[this.state.questionNum].question}
               answers ={this.state.arrayOfQuestions[this.state.questionNum].answers}
               answer={this.state.arrayOfQuestions[this.state.questionNum].answers[this.state.arrayOfQuestions[this.state.questionNum].answer]}
