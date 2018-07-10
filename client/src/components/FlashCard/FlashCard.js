@@ -88,6 +88,7 @@ class FlashCard extends Component {
             <div className="flipper">
                 <div className="front">
                     {/* <h6 className="question">{this.props.question}</h6> */}
+                    <span>{this.props.number}</span>
                     <code className="question">
                         <div dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
                     </code>
@@ -116,6 +117,7 @@ class FlashCard extends Component {
                     </form>
                 </div>
                 <div className="back">
+                <span>{this.props.number}</span>
                   <p>{ this.props.hoverSwitch === "off" && (this.props.answer === this.state.selected ? "You were correct!" : "Sorry, that is incorrect!"
                     )}</p>
                   <h6>The answer was: </h6>
