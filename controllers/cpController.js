@@ -82,5 +82,44 @@ module.exports = {
                 
             })
             .catch(err => res.status(422).json(err));
+    },
+
+    findAllSubjects: function(req,res) {
+        db.Checkpoint
+            .find({})
+            .then(data => {
+                // Takes the data and through multiple steps breaks the path down into a more usable JSON response for the application
+                let quizArray = [];
+                
+                data.forEach(checkpoint => {
+                    quizArray.push(checkpoint.quiz.questions)
+                })
+                // res.json(quizArray)
+                let questionArray = []
+                quizArray.forEach(quiz => {
+                    
+                    quiz.forEach(question => {
+                        questionArray.push(question)
+                    })
+                })
+                
+                let subjectArray = []
+                questionArray.forEach(question => {
+                    subjectArray.push(question.subjects)
+                })
+                let subjectList = []
+                subjectArray.forEach(list => {
+                    for(let i = 0; i < list.length; i++) {
+                        if(subjectList.indexOf(list[i]) < 0) {
+                            subjectList.push(list[i])
+                        }
+                    }
+                })
+                res.json(subjectList)
+            })
+            .catch(err => {
+                res.json(err)
+            })
+                
     }
 }
