@@ -59,3 +59,12 @@ pre {
     margin: 0;
     padding: 0;
 }
+
+.answerColumn {
+    column-count: 2
+
+}
+
+li {
+    list-style: none;
+}

@@ -93,23 +93,25 @@ class FlashCard extends Component {
                         <div dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
                     </code>
                     <form>
+                        <ul className="answerColumn">
                     {this.props.answers.map((answer, iterator) => {
                         return (
                             this.props.hoverSwitch === "off" ?
-                            <p key={iterator}>
+                            <li key={iterator}>
                                 <label>
                                     <input className="with-gap" name="group1" type="radio" value={answer} checked={this.state.selected === answer} onChange={this.onAnswerSelected}  />
                                     <span className="answerChoice">{answer}</span>
                                 </label>
-                            </p>
+                            </li>
                             :
-                            <p key={iterator}>
+                            <li key={iterator}>
                                 <label>
                                     <span>{answer}</span>
                                 </label>
-                            </p>
+                            </li>
                         )
                     })}
+                        </ul>
 
                 {this.props.hoverSwitch === "off" ? <input type="submit" onClick={this.checkAnswer} /> : <button onClick={this.checkAnswer}>"Flip"</button>}
 
