@@ -125,7 +125,7 @@ module.exports = {
                 let refinedSubjectList = [];
                 for (let subj in subjMap) {
                     if (subjMap[subj] > 1) {
-                        refinedSubjectList.push(subj)
+                        refinedSubjectList.push(subj + ' ' + subjMap[subj])
                     }
                 }
 

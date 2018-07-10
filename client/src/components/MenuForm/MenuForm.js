@@ -73,17 +73,20 @@ export default class MenuBar extends Component {
                     <h6>Sort by Topic</h6>
                     <ul>
                         {this.state.tags.map((tag,iterator) => {
+                            let tagParts = tag.split(' ');
+                            let tagName = tagParts[0];
+                            let tagNumber = tagParts[1];
                             return (
                                 <li key={iterator + 100} id="checkBox">
                                     <label>
                                         <input 
                                         type="checkbox"
-                                        name={tag} 
-                                        value={tag}
-                                        checked={this.props.checkedTags(tag)} 
+                                        name={tagName} 
+                                        value={tagName}
+                                        checked={this.props.checkedTags(tagName)} 
                                         onChange={this.props.handleTagSelection}
                                         />
-                                        <span>{tag}</span>
+                                        <span>{tagName} {tagNumber}</span>
                                     </label>
                                 </li>
                             )
