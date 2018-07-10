@@ -110,12 +110,26 @@ module.exports = {
                 let subjectList = []
                 subjectArray.forEach(list => {
                     for(let i = 0; i < list.length; i++) {
-                        if(subjectList.indexOf(list[i]) < 0) {
-                            subjectList.push(list[i])
-                        }
+                        // if(subjectList.indexOf(list[i]) < 0) {
+                        //     subjectList.push(list[i])
+                        // }
+                        subjectList.push(list[i])
                     }
                 })
-                res.json(subjectList)
+                let subjMap = {};
+                for (let subject of subjectList) {
+                    subjMap[subject] = subjMap[subject] + 1 || 1;
+                }
+
+                // res.json(subjMap)
+                let refinedSubjectList = [];
+                for (let subj in subjMap) {
+                    if (subjMap[subj] > 1) {
+                        refinedSubjectList.push(subj + ' ' + subjMap[subj])
+                    }
+                }
+
+                res.json(refinedSubjectList)
             })
             .catch(err => {
                 res.json(err)
