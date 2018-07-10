@@ -16,5 +16,9 @@ export default {
 
     getQuestionsByCpNumAndSubject: function(number, subject) {
         return axios.get(`/api/checkpoints/${number}/${subject}`)
+    },
+
+    getAllSubjects: function() {
+        return axios.get("/api/checkpoints/null/null/subjects")
     }
 }

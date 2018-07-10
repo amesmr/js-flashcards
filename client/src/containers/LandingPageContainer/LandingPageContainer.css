@@ -3,6 +3,10 @@ html {
     font-family: museo-sans,sans-serif;
 }
 
+.jumbo-landing {
+    text-align: center;
+}
+
 .studyBtn {
     background-color: #11c8e7;
     margin: 0 30px 30px 30px;
@@ -13,5 +17,8 @@ html {
 }
 .landingPage {
     background-color: white;
-    margin-top: 100px;
+    margin-top: 50px;
+
 }
+
+

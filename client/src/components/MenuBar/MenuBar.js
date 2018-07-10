@@ -2,17 +2,14 @@ import React , { Component } from 'react';
 import './MenuBar.css'
 
 
-const checkpoints = ["Bash","HTML/CSS/Git","JavaScript","JavaScript/jQuery","Timers/API","Node","Express","MySQL","Mongo","ES6 and React","Computer Science","Java","Laravel/PHP","Python/Django"];
-const tags = ["React","Vocab","SQL","Arrays","Mongo","JavaScript"]
-
 class MenuBar extends Component {
     constructor(props) {
         super(props)
 
         this.state = {
-            // States that manage the status of the dropdown
-            tagdropdown: false,
-            cpdropdown: false,
+            // // States that manage the status of the dropdown
+            // tagdropdown: false,
+            // cpdropdown: false,
                      
         }
 
@@ -88,51 +85,52 @@ class MenuBar extends Component {
                         </label>
                     </p>
                 </div>
-                <div className="menuitem tagdrop">
-                    <button className="dropbtn menubtn" onClick={() => this.openDropdown("tag")}>Sort by Tag</button>
-                    <form className="dropdown-items" ref="dropdownmenu">
-                        {tags.map((tag,iterator) => {
-                            return (
-                                <p key={iterator}>
-                                    <label>
-                                        <input 
-                                        type="checkbox" 
-                                        name={`droptags${iterator}`} 
-                                        value={tag} 
-                                        checked={this.props.checkedTags(tag)} 
-                                        onChange={this.props.handleTagSelection}
-                                        />
-                                        <span>{tag}</span>
-                                    </label>
-                                </p>
-                            )
-                        })}
+                {// <div className="menuitem tagdrop">
+                //     <button className="dropbtn menubtn" onClick={() => this.openDropdown("tag")}>Sort by Tag</button>
+                //     <form className="dropdown-items" ref="dropdownmenu">
+                //         {tags.map((tag,iterator) => {
+                //             return (
+                //                 <p key={iterator}>
+                //                     <label>
+                //                         <input 
+                //                         type="checkbox" 
+                //                         name={`droptags${iterator}`} 
+                //                         value={tag} 
+                //                         checked={this.props.checkedTags(tag)} 
+                //                         onChange={this.props.handleTagSelection}
+                //                         />
+                //                         <span>{tag}</span>
+                //                     </label>
+                //                 </p>
+                //             )
+                //         })}
                         
                         
-                    </form>
-                </div>
-                <div className="menuitem cpdrop">
-                    <button className="dropbtn menubtn" onClick={() => this.openDropdown("checkpoint")}>Sort by Checkpoint</button>
-                    <form className="dropdown-items" ref="dropdownmenuc">
-                        {checkpoints.map((cp,iterator) => {
-                            return (
-                                <p key={iterator + 100}>
-                                    <label>
-                                        <input 
-                                        type="checkbox" 
-                                        name={cp} 
-                                        value={iterator+1}
-                                        checked={this.props.checkedCP(iterator)} 
-                                        onChange={this.props.handleCPSelection}
-                                        />
-                                        <span>{cp}</span>
-                                    </label>
-                                </p>
-                            )
-                        })}  
+                //     </form>
+                // </div>
+                // <div className="menuitem cpdrop">
+                //     <button className="dropbtn menubtn" onClick={() => this.openDropdown("checkpoint")}>Sort by Checkpoint</button>
+                //     <form className="dropdown-items" ref="dropdownmenuc">
+                //         {checkpoints.map((cp,iterator) => {
+                //             return (
+                //                 <p key={iterator + 100}>
+                //                     <label>
+                //                         <input 
+                //                         type="checkbox" 
+                //                         name={cp} 
+                //                         value={iterator+1}
+                //                         checked={this.props.checkedCP(iterator)} 
+                //                         onChange={this.props.handleCPSelection}
+                //                         />
+                //                         <span>{cp}</span>
+                //                     </label>
+                //                 </p>
+                //             )
+                //         })}  
                     
-                    </form>
-                </div>
+                //     </form>}
+                //</div>
+            }
             </div>
         )
     }

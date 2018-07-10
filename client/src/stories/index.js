@@ -6,6 +6,7 @@ import App from '../App';
 import FlashCard from '../components/FlashCard'
 import FlashCardContainer from '../containers/FlashCardContainer';
 import LandingPageContainer from '../containers/LandingPageContainer/LandingPageContainer';
+import MenuForm from '../components/MenuForm';
 
 
 storiesOf("App", module)
@@ -49,6 +50,11 @@ storiesOf("FlashCardContainer", module)
 storiesOf("LandingPageContainer", module)
     .add("container for landing page", () => (
         <LandingPageContainer />
+    ))
+
+storiesOf("MenuForm", module)
+    .add("container for landing page form", () => (
+        <MenuForm />
     ))
   
   

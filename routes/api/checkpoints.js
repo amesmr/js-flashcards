@@ -12,4 +12,7 @@ router.route("/sort/:subject")
     
 router.route("/:number/:subject")
     .get(cpController.findBySubjectAndNum)
+
+router.route("/null/null/subjects")
+    .get(cpController.findAllSubjects)
 module.exports = router;

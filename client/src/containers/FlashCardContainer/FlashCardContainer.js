@@ -20,9 +20,9 @@ class FlashCardContainer extends Component {
           // This is a state that prevents the flashcards from loading before the API response is received
           apiLoaded: false,
           // Holds the selected tags from the dropdown on change
-          selectedTags: [],
+          selectedTags: this.props.selectedTags,
           // Holds the select checkpoints from the dropdown on change
-          selectedCP: [],
+          selectedCP: this.props.selectedCP,
           // State to store the current index number of the question the user is on. Feel free to change to what you selected Matt.
           questionNum: 0
 
@@ -32,48 +32,17 @@ class FlashCardContainer extends Component {
         this.hoverSwitchChange = this.hoverSwitchChange.bind(this)
         this.startButtonFlip = this.startButtonFlip.bind(this)
         this.ApiCalls = this.ApiCalls.bind(this)
-        this.handleCPSelection = this.handleCPSelection.bind(this)
-        this.handleTagSelection = this.handleTagSelection.bind(this)
-        this.checkedCP = this.checkedCP.bind(this)
-        this.checkedTags = this.checkedTags.bind(this)
         this.nextFunc = this.nextFunc.bind(this)
         this.prevFunc = this.prevFunc.bind(this)
         this.shuffle = this.shuffle.bind(this)
       }
 
-      handleTagSelection(e) {
-        const newSelection = e.target.value;
-        let newSelectionArray;
-        if(this.state.selectedTags.indexOf(newSelection) > -1) {
-          newSelectionArray = this.state.selectedTags.filter(selection => selection !== newSelection)
-        } else {
-          // Need to add an if statement that only allows the user to select three to five tags maximum
-          newSelectionArray = [...this.state.selectedTags, newSelection];
-        }
-        this.setState({ selectedTags: newSelectionArray }, () => console.log('tag selection', this.state.selectedTags));
-        }
-
-      handleCPSelection(e) {
-        const newSelection = e.target.value;
-        let newSelectionArray;
-        if(this.state.selectedCP.indexOf(newSelection) > -1) {
-          newSelectionArray = this.state.selectedCP.filter(selection => selection !== newSelection)
-        } else {
-          newSelectionArray = [...this.state.selectedCP, newSelection];
-        }
-        this.setState({ selectedCP: newSelectionArray }, () => console.log('CP selection', this.state.selectedCP));
-        }
-
-      // Returns a boolean value to allow dropdown to display which checkpoints are checked
-      checkedCP (iterator) {
-        return this.state.selectedCP.indexOf((iterator+1).toString()) > -1
+      componentDidMount(){
+        this.ApiCalls()
+        this.setState({
+          started: true
+        })
       }
-
-      // Returns a boolean value to allow dropdown to display which tags are checked
-      checkedTags (tag) {
-        return this.state.selectedTags.indexOf(tag) > -1
-      }
-
       // Grabs the value of the flash/quiz card switch in the menubar child component
       hoverSwitchChange(dataFromMenu) {
         console.log(dataFromMenu)
@@ -160,7 +129,9 @@ class FlashCardContainer extends Component {
               arrayOfQuestions: [],
               // Returns the API loading failsafe in preparation for the next call
               apiLoaded: false
+              
             })
+            this.props.readySwitch()
           }
       }
       // For both this nextFunc and prevFunc do not forget to go back and change the this.state.questionNum to match the actual index state
@@ -177,6 +148,8 @@ class FlashCardContainer extends Component {
             questionNum: this.state.questionNum + 1
           })
         }
+
+        console.log(this.props)
         // console.log(this.state.questionNum)
       }
 
@@ -218,12 +191,6 @@ class FlashCardContainer extends Component {
               hoverGrab={this.hoverSwitchChange}
               startFunc={this.startButtonFlip}
               initialRound={this.state.started}
-              sessionFilters={this.grabStudySessionTags}
-              sessionCP={this.grabStudySessionCheckPoints}
-              handleCPSelection={this.handleCPSelection}
-              handleTagSelection={this.handleTagSelection}
-              checkedCP={this.checkedCP}
-              checkedTags={this.checkedTags}
             />
             <div className="container">
 
