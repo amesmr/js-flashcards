@@ -3,6 +3,7 @@ import './App.css';
 // import FlashCardContainer from './containers/FlashCardContainer';
 import LandingPageContainer from './containers/LandingPageContainer/LandingPageContainer';
 import FlashCardContainer from './containers/FlashCardContainer';
+import QuizContainer from './containers/QuizContainer';
 
 class App extends Component {
   constructor(props) {
@@ -93,7 +94,10 @@ class App extends Component {
         readySwitch={this.readyOrNot}
         />
         :
-        <div>This will be a quiz</div>
+        <QuizContainer 
+        selectedCP={this.state.selectedCP}
+        selectedTags={this.state.selectedTags}
+        />
         
       }
        
