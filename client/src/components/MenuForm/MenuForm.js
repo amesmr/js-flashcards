@@ -4,7 +4,7 @@ import API from '../../utils/API';
 
 
 const checkpoints = ["Bash","HTML/CSS/Git","JavaScript","JavaScript/jQuery","Timers/API","Node","Express","MySQL","Mongo","ES6 and React","Computer Science","Java","Laravel/PHP","Python/Django"];
-const tags = [];
+
 export default class MenuBar extends Component {
 
     constructor(props) {
@@ -79,7 +79,7 @@ export default class MenuBar extends Component {
                                         <input 
                                         type="checkbox"
                                         name={tag} 
-                                        value={iterator+1}
+                                        value={tag}
                                         checked={this.props.checkedTags(tag)} 
                                         onChange={this.props.handleTagSelection}
                                         />

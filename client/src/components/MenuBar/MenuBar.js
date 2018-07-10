@@ -2,9 +2,6 @@ import React , { Component } from 'react';
 import './MenuBar.css'
 
 
-const checkpoints = ["Bash","HTML/CSS/Git","JavaScript","JavaScript/jQuery","Timers/API","Node","Express","MySQL","Mongo","ES6 and React","Computer Science","Java","Laravel/PHP","Python/Django"];
-const tags = ["React","Vocab","SQL","Arrays","Mongo","JavaScript"]
-
 class MenuBar extends Component {
     constructor(props) {
         super(props)
