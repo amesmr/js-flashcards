@@ -4,7 +4,7 @@ import './QuizQuestion.css'
 
 
 // Testing array for questions
-const array = ["wow", "wow", "wow", "wow"]
+const array = ["wow", "wow2", "wow3", "wow4"]
 export default class QuizQuestion extends Component {
     constructor(props) {
         super(props)
@@ -34,7 +34,7 @@ export default class QuizQuestion extends Component {
                             <li className="answerColumn" key={item}>
                                 <label>
                                     <input className="with-gap" name={`group${iterator}`} type="radio" value={item} checked={this.state.selected === item} onChange={this.onAnswerSelected}  />
-                                    <span className="answerChoice">{answer}</span>
+                                    <span className="answerChoice">{item}</span>
                                 </label>
                             </li>
                         )

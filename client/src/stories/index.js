@@ -7,6 +7,7 @@ import FlashCard from '../components/FlashCard'
 import FlashCardContainer from '../containers/FlashCardContainer';
 import LandingPageContainer from '../containers/LandingPageContainer/LandingPageContainer';
 import MenuForm from '../components/MenuForm';
+import QuizQuestion from '../components/QuizQuestion';
 
 
 storiesOf("App", module)
@@ -57,4 +58,7 @@ storiesOf("MenuForm", module)
         <MenuForm />
     ))
   
-  
+storiesOf("QuizQuestion", module)
+    .add("question format for quiz component", () => (
+        <QuizQuestion />
+    ))
