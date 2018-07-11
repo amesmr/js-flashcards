@@ -3,7 +3,7 @@ import API from '../../utils/API';
 import QuizQuestion from '../../components/QuizQuestion';
 import './QuizContainer.css'
 
-
+const answerArray = []
 export default class QuizContainer extends Component {
     constructor(props) {
         super(props)
@@ -20,12 +20,15 @@ export default class QuizContainer extends Component {
           // Stores the name of the checkpoint selected
           cpName: '',
           // Holds the score
-          totalCorrect: 0
+          totalCorrect: 0,
+          // Triggers results page on submission of quiz
+          
         }
 
         this.ApiCalls = this.ApiCalls.bind(this)
         this.checkAnswers = this.checkAnswers.bind(this)
         this.keepScore = this.keepScore.bind(this)
+        this.trackAnswers = this.trackAnswers.bind(this)
     }
 
     componentDidMount() {
@@ -99,13 +102,27 @@ export default class QuizContainer extends Component {
 
       checkAnswers(event) {
         event.preventDefault()
+        
         console.log(this.state.totalCorrect)
+        console.log(answerArray)
+
+        this.setState({
+          triggerResults: true
+        })
+      }
+      
+      trackAnswers(answer) {
+
+        answerArray.push(answer)
       }
 
-      keepScore() {
-        this.setState({
-          totalCorrect: this.state.totalCorrect + 1
-        })
+      keepScore(answer) {
+        if(!answerArray.includes(answer)) {
+          this.setState({
+            totalCorrect: this.state.totalCorrect + 1
+          })
+        }
+       
       }
 
     render() {
@@ -123,6 +140,7 @@ export default class QuizContainer extends Component {
                             key={iterator}
                             ref={iterator}
                             increment={this.keepScore}
+                            trackAnswers={this.trackAnswers}
                             />
                         )
                     })}

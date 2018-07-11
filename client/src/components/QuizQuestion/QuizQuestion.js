@@ -22,10 +22,12 @@ export default class QuizQuestion extends Component {
         this.setState({
             selected: event.currentTarget.value
         })
-
+        
         if (this.props.options.indexOf(event.currentTarget.value) === this.props.answer) {
-            this.props.increment()
-        } 
+            this.props.increment(event.currentTarget.value)
+        }
+        
+        this.props.trackAnswers(event.currentTarget.value);
 
     }
 
