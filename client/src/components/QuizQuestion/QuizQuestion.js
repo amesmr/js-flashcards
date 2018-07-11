@@ -11,7 +11,8 @@ export default class QuizQuestion extends Component {
         
         
         this.state = {
-            selected: ''
+            selected: '',
+            correctAnswers: 0
         }
 
         this.onAnswerSelected = this.onAnswerSelected.bind(this)
@@ -21,6 +22,11 @@ export default class QuizQuestion extends Component {
         this.setState({
             selected: event.currentTarget.value
         })
+
+        if (this.props.options.indexOf(event.currentTarget.value) === this.props.answer) {
+            this.props.increment()
+        } 
+
     }
 
 
@@ -34,7 +40,7 @@ export default class QuizQuestion extends Component {
                         return (
                             <li key={item}>
                                 <label>
-                                    <input className="with-gap" name={`group${iterator}`} type="radio" value={item} checked={this.state.selected === item} onChange={this.onAnswerSelected}  />
+                                    <input className="with-gap" name={item} type="radio" value={item} checked={this.state.selected === item} onChange={this.onAnswerSelected}  />
                                     <span className="answerChoice">{item}</span>
                                 </label>
                             </li>
