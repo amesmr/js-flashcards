@@ -18,10 +18,14 @@ export default class QuizContainer extends Component {
           // Holds the select checkpoints from the dropdown on change
           selectedCP: this.props.selectedCP,
           // Stores the name of the checkpoint selected
-          cpName: ''
+          cpName: '',
+          // Holds the score
+          totalCorrect: 0
         }
 
         this.ApiCalls = this.ApiCalls.bind(this)
+        this.checkAnswers = this.checkAnswers.bind(this)
+        this.keepScore = this.keepScore.bind(this)
     }
 
     componentDidMount() {
@@ -40,7 +44,8 @@ export default class QuizContainer extends Component {
                 // Passes array of results into the state
                 arrayOfQuestions: res.data,
                 // Uses state to prevent flashcard from loading before response from API received
-                apiLoaded: true
+                apiLoaded: true,
+                
               })
               // console.log(this.state.apiLoaded)
               console.log("both are searched")
@@ -92,6 +97,17 @@ export default class QuizContainer extends Component {
         }
       }
 
+      checkAnswers(event) {
+        event.preventDefault()
+        console.log(this.state.totalCorrect)
+      }
+
+      keepScore() {
+        this.setState({
+          totalCorrect: this.state.totalCorrect + 1
+        })
+      }
+
     render() {
         return (
             <div className="container">
@@ -104,12 +120,15 @@ export default class QuizContainer extends Component {
                             answer={question.answer}
                             options={question.answers}
                             className="row"
+                            key={iterator}
+                            ref={iterator}
+                            increment={this.keepScore}
                             />
                         )
                     })}
 
 
-                    <input className="row" type="submit" />
+                    <input className="row" type="submit" onClick={this.checkAnswers}/>
                 </form>
             </div>
         )

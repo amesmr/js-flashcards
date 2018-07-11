@@ -8,9 +8,9 @@
     "client": "node scripts/start-client.js",
     "start": "concurrently \"nodemon server.js\" \"npm run client\"",
     "build": "node scripts/build.js",
-    "seed": "node scripts/seedDB.js",
+    "seed": "mongoimport --db flashcards --collection checkpoints --type json --file data.json --jsonArray",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "installDeps": "yarn && cd client && yarn",
+    "installDeps": "npm i && cd client && npm i",
     "heroku-postbuild": "cd client/ && npm install --only=dev && npm install && npm run build"
   },
   "repository": {
