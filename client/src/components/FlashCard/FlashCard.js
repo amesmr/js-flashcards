@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './FlashCard.css';
+import Button from '../Button';
 
 
 
@@ -21,6 +22,7 @@ class FlashCard extends Component {
 
       // On component mount (following API response) checks for the status of the card type switch and presents the appropriate card type
       componentDidMount(){
+        
           if (this.props.hoverSwitch === "off") {
               //console.log("This is working")
             this.refs.flipCardContainer.removeAttribute("id","hoverSwitch")
@@ -28,15 +30,15 @@ class FlashCard extends Component {
       }
       // Any time the card type is switch update the DOM to reflect the user selection. Allows for switch mid study session
       componentDidUpdate(){
+          
         if (this.props.hoverSwitch === "off") {
             //console.log("This is working")
           this.refs.flipCardContainer.removeAttribute("id","hoverSwitch")
         } else {
             this.refs.flipCardContainer.setAttribute("id","hoverSwitch")
         }
-
-
-      }
+        
+    }
 
       // Checks the user selection against answer if the user has chosen to use the quiz cards
       checkAnswer(event) {
@@ -48,12 +50,16 @@ class FlashCard extends Component {
           this.setState({
             flipped: true
           })
+          
+         
           //console.log("Flip to back")
         } else {
             this.refs.flipCardContainer.classList.remove("hover")
           this.setState({
             flipped: false
           })
+         
+          
           //console.log("Flip to front")
         }
       }
@@ -128,7 +134,20 @@ class FlashCard extends Component {
                   <p className="description"><i>Description: {this.props.description}</i></p>
                   <p className="cpName">{this.props.cpName}</p>
                   {this.props.hoverSwitch === "off" ? <input type="reset" onClick={this.checkAnswer} /> : <button onClick={this.checkAnswer}>"Flip"</button>}
-
+                  <Button type="Prev" prevFunc={() => {
+                      this.props.prevFunc()
+                      this.refs.flipCardContainer.classList.remove("hover");
+                      this.setState({
+                        flipped: false
+                      })
+                    }}/>
+                  <Button type="Next" nextFunc={() => {
+                      this.props.nextFunc()
+                      this.refs.flipCardContainer.classList.remove("hover")
+                      this.setState({
+                        flipped: false
+                      })
+                    }}/>
                 </div>
             </div>
         </div>)
