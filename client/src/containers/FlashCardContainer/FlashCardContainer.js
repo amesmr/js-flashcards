@@ -56,10 +56,10 @@ class FlashCardContainer extends Component {
       // Utilizes API functions to retrieve desired content from our database
       ApiCalls () {
         // Takes the array of selected tags and reverts them to lowercase to match values in the database
-        const sort = this.state.selectedTags.map(word => word.toLowerCase())
+        // const sort = this.state.selectedTags.map(word => word.toLowerCase())
         // Checks if user has selected any tags and any checkpoints (Utilizes the tags and cp API route)
         if(this.state.selectedTags.length > 0 && this.state.selectedCP.length > 0 ) {
-          API.getQuestionsByCpNumAndSubject(this.state.selectedCP.join('+'), sort.join('+')) // Joins selections by plus sign for compatability with routes
+          API.getQuestionsByCpNumAndSubject(this.state.selectedCP.join('+'), this.state.selectedTags.join('+')) // Joins selections by plus sign for compatability with routes
             .then(res => {
               console.log(res.data)
               this.setState({
@@ -87,7 +87,7 @@ class FlashCardContainer extends Component {
             })
             // Else if that is activated if user only selects Tags for sorting
         } else if (this.state.selectedTags.length > 0) {
-          API.getQuestionsBySubject(sort.join('+'))
+          API.getQuestionsBySubject(this.state.selectedTags.join('+'))
             .then(res => {
               console.log(res)
               this.setState({
