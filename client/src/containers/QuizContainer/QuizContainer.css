@@ -1,0 +1,6 @@
+.quiz-form {
+    overflow-y: scroll;
+    background: white;
+    max-height: 600px;
+    margin-top: 50px;
+}

@@ -21,6 +21,7 @@ class LandingPageContainer extends Component {
                             handleCPSelection={this.props.handleCPSelection}
                             checkedTags={this.props.checkedTags}
                             handleTagSelection={this.props.handleTagSelection}
+                            handleFormSelection={this.props.handleFormSelection}
                             />
                         </div>
                     </div>

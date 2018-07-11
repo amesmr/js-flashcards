@@ -72,18 +72,20 @@ class MenuBar extends Component {
                 }}>{this.props.initialRound ? "Stop" : "Start"}</button>
                 <button className="menuitem shufflebtn menubtn" onClick={this.props.shuffle}>Shuffle</button>
                 <div className="menuitem cardswitch">
-                    <p>
-                        <label>
-                            <input className="with-gap" name="cardtype" type="radio" value="on" onChange={this.onCardTypeSelected} />
-                            <span className="checkboxStyle">FlashCards</span>
-                        </label>
-                    </p>
-                    <p>
-                        <label>
-                            <input className="with-gap" name="cardtype" type="radio" value="off"  onChange={this.onCardTypeSelected}/>
-                            <span className="checkboxStyle">QuizCards</span>
-                        </label>
-                    </p>
+                    <ul className="answerColumn">
+                        <li>
+                            <label>
+                                <input className="with-gap" name="cardtype" type="radio" value="on" onChange={this.onCardTypeSelected} />
+                                <span className="checkboxStyle">FlashCards</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label>
+                                <input className="with-gap" name="cardtype" type="radio" value="off"  onChange={this.onCardTypeSelected}/>
+                                <span className="checkboxStyle">QuizCards</span>
+                            </label>
+                        </li>
+                    </ul>
                 </div>
                 {// <div className="menuitem tagdrop">
                 //     <button className="dropbtn menubtn" onClick={() => this.openDropdown("tag")}>Sort by Tag</button>

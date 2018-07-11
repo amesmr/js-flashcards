@@ -3,6 +3,7 @@ import './App.css';
 // import FlashCardContainer from './containers/FlashCardContainer';
 import LandingPageContainer from './containers/LandingPageContainer/LandingPageContainer';
 import FlashCardContainer from './containers/FlashCardContainer';
+import QuizContainer from './containers/QuizContainer';
 
 class App extends Component {
   constructor(props) {
@@ -14,6 +15,8 @@ class App extends Component {
         selectedTags: [],
         // Holds the select checkpoints from the dropdown on change
         selectedCP: [],
+        // Hold the value of the current state of the study form the user selects
+        formType: "FlashCards"
     }
 
 
@@ -22,11 +25,12 @@ class App extends Component {
     this.handleCPSelection = this.handleCPSelection.bind(this)
     this.checkedTags = this.checkedTags.bind(this)
     this.handleTagSelection = this.handleTagSelection.bind(this)
+    this.handleFormSelection = this.handleFormSelection.bind(this)
   }
 
   readyOrNot() {
     this.setState({
-        ready: !this.state.ready
+        ready: !this.state.ready,
     })
   }
 
@@ -62,6 +66,12 @@ class App extends Component {
   checkedTags (tag) {
     return this.state.selectedTags.indexOf(tag) > -1
   }
+
+  handleFormSelection(e) {
+    this.setState({
+      formType: e.currentTarget.value
+    })
+  }
   
   render() {
     return (
@@ -73,14 +83,22 @@ class App extends Component {
         handleCPSelection={this.handleCPSelection}
         checkedTags={this.checkedTags}
         handleTagSelection={this.handleTagSelection}
+        handleFormSelection={this.handleFormSelection}
         
         />
         :
+        this.state.formType === "FlashCards" ?
         <FlashCardContainer 
         selectedCP={this.state.selectedCP}
         selectedTags={this.state.selectedTags}
         readySwitch={this.readyOrNot}
         />
+        :
+        <QuizContainer 
+        selectedCP={this.state.selectedCP}
+        selectedTags={this.state.selectedTags}
+        />
+        
       }
        
 
