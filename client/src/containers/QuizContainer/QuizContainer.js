@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
+import QuizQuestion from '../../components/QuizQuestion';
+import './QuizContainer.css'
 
 
 export default class QuizContainer extends Component {
@@ -41,6 +43,7 @@ export default class QuizContainer extends Component {
                 apiLoaded: true
               })
               // console.log(this.state.apiLoaded)
+              console.log("both are searched")
             }).catch(err => {
               console.log(err)
             })
@@ -54,6 +57,7 @@ export default class QuizContainer extends Component {
                 cpName: res.data[0].quiz.title,
                 apiLoaded: true
               })
+              console.log("cp is searched")
             }).catch(err => {
               console.log(err)
             })
@@ -66,6 +70,7 @@ export default class QuizContainer extends Component {
                 arrayOfQuestions: res.data,
                 apiLoaded: true
               })
+              console.log("tags are searched")
             }).catch(err => {
               console.log(err)
             })
@@ -79,6 +84,8 @@ export default class QuizContainer extends Component {
                 cpName: res.data[0].quiz.title,
                 apiLoaded: true
               })
+
+              console.log("else is searched")
             }).catch(err => {
               console.log(err)
             })
@@ -87,12 +94,22 @@ export default class QuizContainer extends Component {
 
     render() {
         return (
-            <div>
-                <form>
+            <div className="container">
+                <form className="quiz-form">
+                    {this.state.arrayOfQuestions.map((question, iterator) => {
+                        return (
+                            <QuizQuestion 
+                            questionNum={iterator + 1}
+                            question={question.question}
+                            answer={question.answer}
+                            options={question.answers}
+                            className="row"
+                            />
+                        )
+                    })}
 
 
-
-                    <input type="submit" />
+                    <input className="row" type="submit" />
                 </form>
             </div>
         )

@@ -9,7 +9,7 @@ module.exports = {
             .catch(err => res.status(422).json(err))
     },
     findByCpNum: function(req, res) {
-        let cpArray = req.params.number.split('')
+        let cpArray = req.params.number.split('+')
         cpArray = cpArray.map(number => {return {checkpoint: parseInt(number)}})
         console.log(cpArray)
         db.Checkpoint
