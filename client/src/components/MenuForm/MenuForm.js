@@ -33,17 +33,17 @@ export default class MenuBar extends Component {
         return (
         <div className="" >
             <form className="form-component container">
-                <div className="form-section row">
-                    <h6>Study Style</h6>
+                <div className="form-section row studyStyle">
+                    <h6 className='landingStudyTitle'>Study Style</h6>
                     <p className="col m6 radioSlt">
                         <label>
-                            <input className="with-gap" name="content-type" type="radio" value="FlashCards" onChange={this.props.handleFormSelection}/>
+                            <input className="with-gap" name="content-type" type="radio" checked value="FlashCards" onChange={this.props.handleFormSelection}/>
                             <span className="checkboxStyle">FlashCards</span>
                         </label>
                     </p>
                     <p className="col m6 radioSlt">
                         <label>
-                            <input className="with-gap" name="content-type" type="radio" value="Quiz" onChange={this.props.handleFormSelection}/>
+                            <input className="with-gap" name="content-type" type="radio" checked value="Quiz" onChange={this.props.handleFormSelection}/>
                             <span className="checkboxStyle">Take Quiz</span>
                         </label>
                     </p>
