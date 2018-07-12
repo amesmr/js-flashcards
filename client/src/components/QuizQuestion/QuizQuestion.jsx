@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from '../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react';
 import './QuizQuestion.css'
 
 
@@ -8,8 +8,8 @@ import './QuizQuestion.css'
 export default class QuizQuestion extends Component {
     constructor(props) {
         super(props)
-        
-        
+
+
         this.state = {
             selected: '',
             correctAnswers: 0
@@ -25,7 +25,7 @@ export default class QuizQuestion extends Component {
 
         if (this.props.options.indexOf(event.currentTarget.value) === this.props.answer) {
             this.props.increment()
-        } 
+        }
 
     }
 
@@ -33,7 +33,7 @@ export default class QuizQuestion extends Component {
     render() {
         return (
             <div>
-                
+
                 <p><span>{this.props.questionNum}</span>. {this.props.question}</p>
                 <ul className="answerColumn">
                     {this.props.options.map((item, iterator) => {
@@ -49,5 +49,5 @@ export default class QuizQuestion extends Component {
                 </ul>
             </div>
         )
-    } 
+    }
 }

@@ -1,4 +1,4 @@
-import React , { Component } from 'react';
+import React , { Component } from '../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react';
 import './MenuBar.css'
 
 
@@ -10,16 +10,16 @@ class MenuBar extends Component {
             // // States that manage the status of the dropdown
             // tagdropdown: false,
             // cpdropdown: false,
-                     
+
         }
 
         this.openDropdown = this.openDropdown.bind(this)
         this.onCardTypeSelected = this.onCardTypeSelected.bind(this)
-        
-        
+
+
     }
 
-    
+
     // Function that activates the dropdown for both checkpoints and tags (this is determined by the argument filter)
     openDropdown(filter) {
 
@@ -50,8 +50,8 @@ class MenuBar extends Component {
                 })
             }
         }
-        
-            
+
+
     }
     // Function that utilizes a callback to pass the value of the flash/quiz card selection to parent(FlashCardContainer)
     onCardTypeSelected(event) {
@@ -94,11 +94,11 @@ class MenuBar extends Component {
                 //             return (
                 //                 <p key={iterator}>
                 //                     <label>
-                //                         <input 
-                //                         type="checkbox" 
-                //                         name={`droptags${iterator}`} 
-                //                         value={tag} 
-                //                         checked={this.props.checkedTags(tag)} 
+                //                         <input
+                //                         type="checkbox"
+                //                         name={`droptags${iterator}`}
+                //                         value={tag}
+                //                         checked={this.props.checkedTags(tag)}
                 //                         onChange={this.props.handleTagSelection}
                 //                         />
                 //                         <span>{tag}</span>
@@ -106,8 +106,8 @@ class MenuBar extends Component {
                 //                 </p>
                 //             )
                 //         })}
-                        
-                        
+
+
                 //     </form>
                 // </div>
                 // <div className="menuitem cpdrop">
@@ -117,19 +117,19 @@ class MenuBar extends Component {
                 //             return (
                 //                 <p key={iterator + 100}>
                 //                     <label>
-                //                         <input 
-                //                         type="checkbox" 
-                //                         name={cp} 
+                //                         <input
+                //                         type="checkbox"
+                //                         name={cp}
                 //                         value={iterator+1}
-                //                         checked={this.props.checkedCP(iterator)} 
+                //                         checked={this.props.checkedCP(iterator)}
                 //                         onChange={this.props.handleCPSelection}
                 //                         />
                 //                         <span>{cp}</span>
                 //                     </label>
                 //                 </p>
                 //             )
-                //         })}  
-                    
+                //         })}
+
                 //     </form>}
                 //</div>
             }
