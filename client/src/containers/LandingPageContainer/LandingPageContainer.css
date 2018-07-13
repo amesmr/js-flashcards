@@ -1,6 +1,7 @@
 html {
     /* background-color: #2c93a4; */
     font-family: museo-sans,sans-serif;
+    font-size: 18px;
 }
 
 .landingTitle {
@@ -36,5 +37,4 @@ html {
     margin-top: 25px;
 
 }
-
 
