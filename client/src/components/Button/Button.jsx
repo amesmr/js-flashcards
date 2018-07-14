@@ -1,4 +1,4 @@
-import React from '../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react'
+import React from 'react'
 
 
 const Button = (props) => (
