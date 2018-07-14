@@ -8,8 +8,8 @@ import './QuizQuestion.css'
 export default class QuizQuestion extends Component {
     constructor(props) {
         super(props)
-        
-        
+
+
         this.state = {
             selected: '',
             correctAnswers: 0
@@ -35,7 +35,7 @@ export default class QuizQuestion extends Component {
     render() {
         return (
             <div>
-                
+
                 <p><span>{this.props.questionNum}</span>. {this.props.question}</p>
                 <ul className="answerColumn">
                     {this.props.options.map((item, iterator) => {
@@ -51,5 +51,5 @@ export default class QuizQuestion extends Component {
                 </ul>
             </div>
         )
-    } 
+    }
 }

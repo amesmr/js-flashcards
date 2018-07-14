@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from '../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react';
 import API from '../../utils/API';
 import QuizQuestion from '../../components/QuizQuestion';
 import './QuizContainer.css'
@@ -50,7 +50,7 @@ export default class QuizContainer extends Component {
                 arrayOfQuestions: res.data,
                 // Uses state to prevent flashcard from loading before response from API received
                 apiLoaded: true,
-                
+
               })
               // console.log(this.state.apiLoaded)
               console.log("both are searched")
@@ -150,7 +150,7 @@ export default class QuizContainer extends Component {
                   <form className="quiz-form">
                     {this.state.arrayOfQuestions.map((question, iterator) => {
                         return (
-                            <QuizQuestion 
+                            <QuizQuestion
                             questionNum={iterator + 1}
                             question={question.question}
                             answer={question.answer}
