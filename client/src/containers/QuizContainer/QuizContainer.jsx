@@ -1,9 +1,9 @@
-import React, { Component } from '../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react';
+import React, { Component } from 'react';
 import API from '../../utils/API';
 import QuizQuestion from '../../components/QuizQuestion';
 import './QuizContainer.css'
 
-
+const answerMap = {}
 export default class QuizContainer extends Component {
     constructor(props) {
         super(props)
@@ -20,12 +20,17 @@ export default class QuizContainer extends Component {
           // Stores the name of the checkpoint selected
           cpName: '',
           // Holds the score
-          totalCorrect: 0
+          totalCorrect: 0,
+          // Holds the total incorrect
+          totalIncorrect: 0,
+          // Triggers results page on submission of quiz
+          triggerResults: false
         }
 
         this.ApiCalls = this.ApiCalls.bind(this)
         this.checkAnswers = this.checkAnswers.bind(this)
-        this.keepScore = this.keepScore.bind(this)
+        this.trackAnswers = this.trackAnswers.bind(this)
+        this.showResults = this.showResults.bind(this)
     }
 
     componentDidMount() {
@@ -34,10 +39,10 @@ export default class QuizContainer extends Component {
 
     ApiCalls () {
         // Takes the array of selected tags and reverts them to lowercase to match values in the database
-        const sort = this.state.selectedTags.map(word => word.toLowerCase())
+        // const sort = this.state.selectedTags.map(word => word.toLowerCase())
         // Checks if user has selected any tags and any checkpoints (Utilizes the tags and cp API route)
         if(this.state.selectedTags.length > 0 && this.state.selectedCP.length > 0 ) {
-          API.getQuestionsByCpNumAndSubject(this.state.selectedCP.join('+'), sort.join('+')) // Joins selections by plus sign for compatability with routes
+          API.getQuestionsByCpNumAndSubject(this.state.selectedCP.join('+'), this.state.selectedTags.join('+')) // Joins selections by plus sign for compatability with routes
             .then(res => {
               console.log(res.data)
               this.setState({
@@ -68,7 +73,7 @@ export default class QuizContainer extends Component {
             })
             // Else if that is activated if user only selects Tags for sorting
         } else if (this.state.selectedTags.length > 0) {
-          API.getQuestionsBySubject(sort.join('+'))
+          API.getQuestionsBySubject(this.state.selectedTags.join('+'))
             .then(res => {
               console.log(res)
               this.setState({
@@ -97,21 +102,52 @@ export default class QuizContainer extends Component {
         }
       }
 
-      checkAnswers(event) {
+      async checkAnswers(event) {
         event.preventDefault()
-        console.log(this.state.totalCorrect)
+        for (let answer in answerMap) {
+
+          let correct = this.state.arrayOfQuestions[answer]
+
+          if(answerMap[answer] === correct.answers[correct.answer]) {
+            
+            this.setState({
+              totalCorrect: this.state.totalCorrect + 1
+            })
+            
+          } else {
+            
+            this.setState({
+              totalIncorrect: this.state.totalIncorrect + 1
+            })
+          }
+          
+          
+        }
+        
+        
+        this.showResults()
+        console.log(this.state.arrayOfQuestions.length)
+      }
+      
+      trackAnswers(answer, iterator) {
+
+        answerMap[iterator] = answer
       }
 
-      keepScore() {
+      showResults() {
+        console.log(this.state.totalCorrect)
         this.setState({
-          totalCorrect: this.state.totalCorrect + 1
+          triggerResults: true
         })
       }
+
+      
 
     render() {
         return (
             <div className="container">
-                <form className="quiz-form">
+                {!this.state.triggerResults ? 
+                  <form className="quiz-form">
                     {this.state.arrayOfQuestions.map((question, iterator) => {
                         return (
                             <QuizQuestion
@@ -122,7 +158,8 @@ export default class QuizContainer extends Component {
                             className="row"
                             key={iterator}
                             ref={iterator}
-                            increment={this.keepScore}
+                            
+                            trackAnswers={this.trackAnswers}
                             />
                         )
                     })}
@@ -130,6 +167,10 @@ export default class QuizContainer extends Component {
 
                     <input className="row" type="submit" onClick={this.checkAnswers}/>
                 </form>
+                :
+                <div>{(this.state.totalCorrect / this.state.arrayOfQuestions.length) * 100}%</div>
+                
+                  }
             </div>
         )
     }

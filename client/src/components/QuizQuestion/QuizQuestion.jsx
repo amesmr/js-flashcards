@@ -1,4 +1,4 @@
-import React, { Component } from '../../../../../../AppData/Local/Microsoft/TypeScript/2.9/node_modules/@types/react';
+import React, { Component } from 'react';
 import './QuizQuestion.css'
 
 
@@ -22,10 +22,12 @@ export default class QuizQuestion extends Component {
         this.setState({
             selected: event.currentTarget.value
         })
-
-        if (this.props.options.indexOf(event.currentTarget.value) === this.props.answer) {
-            this.props.increment()
-        }
+        
+        // if (this.props.options.indexOf(event.currentTarget.value) === this.props.answer) {
+        //     this.props.increment(event.currentTarget.value, event.currentTarget.name)
+        // }
+        
+        this.props.trackAnswers(event.currentTarget.value, event.currentTarget.name);
 
     }
 
@@ -40,7 +42,7 @@ export default class QuizQuestion extends Component {
                         return (
                             <li key={item}>
                                 <label>
-                                    <input className="with-gap" name={item} type="radio" value={item} checked={this.state.selected === item} onChange={this.onAnswerSelected}  />
+                                    <input className="with-gap" name={this.props.questionNum - 1} type="radio" value={item} checked={this.state.selected === item} onChange={this.onAnswerSelected}  />
                                     <span className="answerChoice">{item}</span>
                                 </label>
                             </li>
