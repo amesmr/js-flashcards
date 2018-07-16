@@ -3,7 +3,7 @@ import FlashCard from '../../components/FlashCard';
 import MenuBar from '../../components/MenuBar';
 import './FlashCardContainer.css';
 import API from '../../utils/API';
-import Button from '../../components/Button';
+
 
 
 class FlashCardContainer extends Component {
@@ -24,7 +24,9 @@ class FlashCardContainer extends Component {
           // Holds the select checkpoints from the dropdown on change
           selectedCP: this.props.selectedCP,
           // State to store the current index number of the question the user is on. Feel free to change to what you selected Matt.
-          questionNum: 0
+          questionNum: 0,
+          // State that will be passed to flash card to flip to front on next/previous
+          flipToFront: false
 
         }
 
@@ -35,6 +37,7 @@ class FlashCardContainer extends Component {
         this.nextFunc = this.nextFunc.bind(this)
         this.prevFunc = this.prevFunc.bind(this)
         this.shuffle = this.shuffle.bind(this)
+        
       }
 
       componentDidMount(){
@@ -53,10 +56,10 @@ class FlashCardContainer extends Component {
       // Utilizes API functions to retrieve desired content from our database
       ApiCalls () {
         // Takes the array of selected tags and reverts them to lowercase to match values in the database
-        const sort = this.state.selectedTags.map(word => word.toLowerCase())
+        // const sort = this.state.selectedTags.map(word => word.toLowerCase())
         // Checks if user has selected any tags and any checkpoints (Utilizes the tags and cp API route)
         if(this.state.selectedTags.length > 0 && this.state.selectedCP.length > 0 ) {
-          API.getQuestionsByCpNumAndSubject(this.state.selectedCP.join('+'), sort.join('+')) // Joins selections by plus sign for compatability with routes
+          API.getQuestionsByCpNumAndSubject(this.state.selectedCP.join('+'), this.state.selectedTags.join('+')) // Joins selections by plus sign for compatability with routes
             .then(res => {
               console.log(res.data)
               this.setState({
@@ -84,7 +87,7 @@ class FlashCardContainer extends Component {
             })
             // Else if that is activated if user only selects Tags for sorting
         } else if (this.state.selectedTags.length > 0) {
-          API.getQuestionsBySubject(sort.join('+'))
+          API.getQuestionsBySubject(this.state.selectedTags.join('+'))
             .then(res => {
               console.log(res)
               this.setState({
@@ -129,7 +132,7 @@ class FlashCardContainer extends Component {
               arrayOfQuestions: [],
               // Returns the API loading failsafe in preparation for the next call
               apiLoaded: false
-              
+
             })
             this.props.readySwitch()
           }
@@ -140,12 +143,14 @@ class FlashCardContainer extends Component {
         if(this.state.questionNum + 1 >= this.state.arrayOfQuestions.length) {
           this.setState({
             // Represents the index of the current visible question
-            questionNum: 0
+            questionNum: 0,
+            
           })
         } else {
           // Increments the index by one
           this.setState({
-            questionNum: this.state.questionNum + 1
+            questionNum: this.state.questionNum + 1,
+            
           })
         }
 
@@ -155,19 +160,23 @@ class FlashCardContainer extends Component {
 
       prevFunc() {
         // Sets the question to the last selection in the array if the user hits previous on the first card
-        if(this.state.questionNum - 1 === 0) {
+        if(this.state.questionNum === 0) {
           this.setState({
-            questionNum: this.state.arrayOfQuestions.length - 1
+            questionNum: this.state.arrayOfQuestions.length - 1,
+            
           })
         } else {
           // Decrements the index on each previous click
           this.setState({
-            questionNum: this.state.questionNum - 1
+            questionNum: this.state.questionNum - 1,
+            
           })
         }
 
         // console.log(this.state.questionNum)
       }
+
+      
 
       // Using the Fisher-Yates shuffling algorithm
       shuffle() {
@@ -178,7 +187,8 @@ class FlashCardContainer extends Component {
         }
 
         this.setState({
-          arrayOfQuestions: newArray
+          arrayOfQuestions: newArray,
+          questionNum: 0
         })
       }
 
@@ -206,13 +216,13 @@ class FlashCardContainer extends Component {
               goal={this.state.arrayOfQuestions[this.state.questionNum].goal}
               description={this.state.arrayOfQuestions[this.state.questionNum].description}
               hoverSwitch={this.state.hoverSwitch}
-                    initialRound={this.state.started}
-                    cpName
+              initialRound={this.state.started}
+              prevFunc={this.prevFunc}
+              nextFunc={this.nextFunc}
               /> :
               <h2>"There were no results found for this query! Try broadening your study session."</h2>
               }
-            <Button type="Prev" prevFunc={this.prevFunc}/>
-            <Button type="Next" nextFunc={this.nextFunc}/>
+            
             </div>
             }
             </div>

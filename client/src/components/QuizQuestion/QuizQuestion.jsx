@@ -8,8 +8,8 @@ import './QuizQuestion.css'
 export default class QuizQuestion extends Component {
     constructor(props) {
         super(props)
-        
-        
+
+
         this.state = {
             selected: '',
             correctAnswers: 0
@@ -22,10 +22,12 @@ export default class QuizQuestion extends Component {
         this.setState({
             selected: event.currentTarget.value
         })
-
-        if (this.props.options.indexOf(event.currentTarget.value) === this.props.answer) {
-            this.props.increment()
-        } 
+        
+        // if (this.props.options.indexOf(event.currentTarget.value) === this.props.answer) {
+        //     this.props.increment(event.currentTarget.value, event.currentTarget.name)
+        // }
+        
+        this.props.trackAnswers(event.currentTarget.value, event.currentTarget.name);
 
     }
 
@@ -33,14 +35,14 @@ export default class QuizQuestion extends Component {
     render() {
         return (
             <div>
-                
+
                 <p><span>{this.props.questionNum}</span>. {this.props.question}</p>
                 <ul className="answerColumn">
                     {this.props.options.map((item, iterator) => {
                         return (
                             <li key={item}>
                                 <label>
-                                    <input className="with-gap" name={item} type="radio" value={item} checked={this.state.selected === item} onChange={this.onAnswerSelected}  />
+                                    <input className="with-gap" name={this.props.questionNum - 1} type="radio" value={item} checked={this.state.selected === item} onChange={this.onAnswerSelected}  />
                                     <span className="answerChoice">{item}</span>
                                 </label>
                             </li>
@@ -49,5 +51,5 @@ export default class QuizQuestion extends Component {
                 </ul>
             </div>
         )
-    } 
+    }
 }
