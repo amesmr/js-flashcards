@@ -25,7 +25,7 @@ class LandingPageContainer extends Component {
                         />
                     </div>
                     <div className="row">
-                        <div class='col m4 offset-m4'>
+                        <div className='col m4 offset-m4'>
                             <a className="waves-effect waves-light btn studyBtn" onClick={this.props.onstart}>Start Studying!</a>
                         </div>
                     </div>
