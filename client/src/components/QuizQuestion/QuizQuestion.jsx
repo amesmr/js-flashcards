@@ -50,10 +50,9 @@ export default class QuizQuestion extends Component {
         return (
             <div>
 
-                <p><span>{this.props.questionNum}</span>. {
-                        <pre className="question">
-                            <div dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
-                        </pre>}</p>
+                <p><span>{this.props.questionNum}</span>.</p> 
+                            <div dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} >
+                            </div>
                 <ul className="answerColumn">
                     {this.props.options.map((item, iterator) => {
                         return (

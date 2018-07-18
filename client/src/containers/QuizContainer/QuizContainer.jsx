@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import API from '../../utils/API';
 import QuizQuestion from '../../components/QuizQuestion';
+import MenuBar from '../../components/MenuBar';
 import './QuizContainer.css'
 
 const answerMap = {}
@@ -109,26 +110,26 @@ export default class QuizContainer extends Component {
           let correct = this.state.arrayOfQuestions[answer]
 
           if(answerMap[answer] === correct.answers[correct.answer]) {
-            
+
             this.setState({
               totalCorrect: this.state.totalCorrect + 1
             })
-            
+
           } else {
-            
+
             this.setState({
               totalIncorrect: this.state.totalIncorrect + 1
             })
           }
-          
-          
+
+
         }
-        
-        
+
+
         this.showResults()
         console.log(this.state.arrayOfQuestions.length)
       }
-      
+
       trackAnswers(answer, iterator) {
 
         answerMap[iterator] = answer
@@ -141,12 +142,15 @@ export default class QuizContainer extends Component {
         })
       }
 
-      
+
 
     render() {
         return (
             <div className="container">
-                {!this.state.triggerResults ? 
+            <form action="/">
+              <input type="submit" value="HOME" />
+            </form>
+                {!this.state.triggerResults ?
                   <form className="quiz-form">
                     {this.state.arrayOfQuestions.map((question, iterator) => {
                         return (
@@ -158,7 +162,7 @@ export default class QuizContainer extends Component {
                             className="row"
                             key={iterator}
                             ref={iterator}
-                            
+
                             trackAnswers={this.trackAnswers}
                             />
                         )
@@ -169,7 +173,7 @@ export default class QuizContainer extends Component {
                 </form>
                 :
                 <div>{(this.state.totalCorrect / this.state.arrayOfQuestions.length) * 100}%</div>
-                
+
                   }
             </div>
         )
