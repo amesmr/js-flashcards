@@ -22,21 +22,38 @@ export default class QuizQuestion extends Component {
         this.setState({
             selected: event.currentTarget.value
         })
-        
+
         // if (this.props.options.indexOf(event.currentTarget.value) === this.props.answer) {
         //     this.props.increment(event.currentTarget.value, event.currentTarget.name)
         // }
-        
+
         this.props.trackAnswers(event.currentTarget.value, event.currentTarget.name);
 
     }
-
+    transFormQuestion = question => {
+      let newQuestion = question;
+      // console.log("orig question");
+      // console.log(question);
+      if (question.indexOf("```") >= 0) {
+          newQuestion = newQuestion.replace("```JavaScript", "<pre>"); // this will only replace the first occurance
+          newQuestion = newQuestion.replace("```", "</pre>");
+          newQuestion = newQuestion.replace('/[`]/g', ''); // strip out any danglers
+      }
+      newQuestion = newQuestion.replace(/(?:\r\n|\r|\n)/g, '<br>');  // the regex allows for global replacements
+      newQuestion = newQuestion.replace(/(?:\t)/g, '    '); // grrrr
+      // console.log("new question");
+      // console.log(newQuestion);
+      return newQuestion;
+  }
 
     render() {
         return (
             <div>
 
-                <p><span>{this.props.questionNum}</span>. {this.props.question}</p>
+                <p><span>{this.props.questionNum}</span>. {
+                        <pre className="question">
+                            <div dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
+                        </pre>}</p>
                 <ul className="answerColumn">
                     {this.props.options.map((item, iterator) => {
                         return (
