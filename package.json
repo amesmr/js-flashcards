@@ -32,6 +32,9 @@
   },
   "devDependencies": {
     "concurrently": "^3.6.0",
+    "eslint": "^5.1.0",
+    "eslint-plugin-react": "^7.10.0",
+    "eslint-watch": "^4.0.1",
     "nodemon": "^1.17.5"
   }
 }
