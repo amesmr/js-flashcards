@@ -94,8 +94,8 @@ class FlashCard extends Component {
                 <div className="flipper">
                     <div className="front">
                         {/* <h6 className="question">{this.props.question}</h6> */}
-                        <span>{this.props.number}</span>
-                            <div dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
+
+                        <div dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
                         <form>
                             <ul className="answerColumn">
                                 {this.props.answers.map((answer, iterator) => {
@@ -121,6 +121,7 @@ class FlashCard extends Component {
 
 
                         </form>
+                        <span className="fcNumber">{this.props.number}</span>
                     </div>
                     <div className="back">
                         <span>{this.props.number}</span>

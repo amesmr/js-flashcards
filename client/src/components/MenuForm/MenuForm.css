@@ -1,7 +1,7 @@
 .form-component {
     overflow-y: scroll;
     background: white;
-    max-height: 350px;
+    max-height: 400px;
     /* margin-bottom: 20px; */
     width: 100%
 }
