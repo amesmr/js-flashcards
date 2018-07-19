@@ -4,6 +4,8 @@ import QuizQuestion from "../../components/QuizQuestion";
 import "./QuizContainer.css";
 
 const answerMap = {};
+let totalCorrect = 0;
+let totalIncorrect = 0;
 export default class QuizContainer extends Component {
   constructor(props) {
     super(props);
@@ -110,23 +112,24 @@ export default class QuizContainer extends Component {
     }
   }
 
-  async checkAnswers(event) {
+  checkAnswers(event) {
     event.preventDefault();
     for (let answer in answerMap) {
       let correct = this.state.arrayOfQuestions[answer];
+      console.log(`____Question ${answer}____`)
+      console.log(answer);
+      console.log(answerMap[answer]);
+      console.log(correct.answers[correct.answer])
 
       if (answerMap[answer] === correct.answers[correct.answer]) {
-        this.setState({
-          totalCorrect: this.state.totalCorrect + 1
-        });
+        totalCorrect += 1
       } else {
-        this.setState({
-          totalIncorrect: this.state.totalIncorrect + 1
-        });
+        totalIncorrect += 1
       }
     }
 
-    this.showResults();
+    this.showResults()
+    
     console.log(this.state.arrayOfQuestions.length);
   }
 
@@ -168,7 +171,7 @@ export default class QuizContainer extends Component {
           </form>
         ) : (
           <div>
-            {(this.state.totalCorrect / this.state.arrayOfQuestions.length) *
+            {(totalCorrect / this.state.arrayOfQuestions.length) *
               100}%
           </div>
         )}
