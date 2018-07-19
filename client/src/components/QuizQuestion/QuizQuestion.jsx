@@ -44,7 +44,7 @@ export default class QuizQuestion extends Component {
     }
     newQuestion = newQuestion.replace(/(?:\t)/g, "    "); // grrrr
     // console.log("new question");
-    console.log(newQuestion);
+    // console.log(newQuestion);
     return newQuestion;
   };
 
