@@ -65,12 +65,12 @@ class FlashCard extends Component {
 
   transFormQuestion = question => {
     let newQuestion = question;
-    // console.log("orig question");
-    // console.log(question);
+    newQuestion = newQuestion.replace(/[<]+/g, "&lt;"); // React is interpreting the < and > as tags
+    newQuestion = newQuestion.replace(/[>]+/g, "&gt;");
     if (question.indexOf("```") >= 0) {
       newQuestion = newQuestion.replace("```JavaScript", "<pre>"); // this will only replace the first occurance
       newQuestion = newQuestion.replace("```", "</pre>");
-      newQuestion = newQuestion.replace("/[`]/g", ""); // strip out any danglers
+      newQuestion = newQuestion.replace(/[`]/g, ""); // strip out any danglers
       newQuestion = newQuestion.replace("\n", ""); // strip out first \n
       newQuestion = newQuestion.slice(0, newQuestion.lastIndexOf("\n")); // then remove the last one
     }

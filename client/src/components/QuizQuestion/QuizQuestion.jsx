@@ -32,15 +32,16 @@ export default class QuizQuestion extends Component {
   transFormQuestion = question => {
     let newQuestion = question;
     // console.log("orig question");
+    newQuestion = newQuestion.replace(/[<]+/g, "&lt;"); // React is interpreting the < and > as tags
+    newQuestion = newQuestion.replace(/[>]+/g, "&gt;");
     // console.log(question);
     if (question.indexOf("```") >= 0) {
       newQuestion = newQuestion.replace("```JavaScript", "<pre>"); // this will only replace the first occurance
       newQuestion = newQuestion.replace("```", "</pre>");
-      newQuestion = newQuestion.replace("/[`]+/g", ""); // strip out any danglers
+      newQuestion = newQuestion.replace(/[`]+/g, ""); // strip out any danglers
       newQuestion = newQuestion.replace("\n", ""); // strip out first \n
       newQuestion = newQuestion.slice(0, newQuestion.lastIndexOf("\n")); // then remove the last one
     }
-    // newQuestion = newQuestion.replace(/(?:\r\n|\r|\n)/g, "<br>"); // the regex allows for global replacements
     newQuestion = newQuestion.replace(/(?:\t)/g, "    "); // grrrr
     // console.log("new question");
     // console.log(newQuestion);
