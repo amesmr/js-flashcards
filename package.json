@@ -9,7 +9,7 @@
     "start": "concurrently \"nodemon server.js\" \"npm run client\"",
     "build": "node scripts/build.js",
     "seed": "mongoimport --db flashcards --collection checkpoints --type json --file data.json --jsonArray",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha",
     "installDeps": "npm i && cd client && npm i",
     "heroku-postbuild": "cd client/ && npm install --only=dev && npm install && npm run build"
   },
@@ -31,7 +31,10 @@
     "morgan": "^1.9.0"
   },
   "devDependencies": {
+    "chai": "^4.1.2",
     "concurrently": "^3.6.0",
+    "mocha": "^5.2.0",
+    "nightmare": "^3.0.1",
     "eslint": "^5.1.0",
     "eslint-plugin-react": "^7.10.0",
     "eslint-watch": "^4.0.1",

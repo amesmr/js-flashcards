@@ -43,7 +43,7 @@ export default class QuizQuestion extends Component {
     // newQuestion = newQuestion.replace(/(?:\r\n|\r|\n)/g, "<br>"); // the regex allows for global replacements
     newQuestion = newQuestion.replace(/(?:\t)/g, "    "); // grrrr
     // console.log("new question");
-    console.log(newQuestion);
+    // console.log(newQuestion);
     return newQuestion;
   };
 
