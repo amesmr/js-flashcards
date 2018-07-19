@@ -2,7 +2,6 @@
   "env": {
       "browser": true,
       "commonjs": true,
-      "react": true,
       "node": true
   },
   "rules": {
