@@ -18,7 +18,7 @@ export default class QuizQuestion extends Component {
         this.onAnswerSelected = this.onAnswerSelected.bind(this)
     }
 
-    onAnswerSelected(event) {
+    onAnswerSelected(event, bool) {
         this.setState({
             selected: event.currentTarget.value
         })

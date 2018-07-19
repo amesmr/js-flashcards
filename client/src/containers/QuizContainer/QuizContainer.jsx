@@ -102,8 +102,8 @@ export default class QuizContainer extends Component {
         }
       }
 
-      async checkAnswers(event) {
-        event.preventDefault()
+      checkAnswers() {
+        
         for (let answer in answerMap) {
 
           let correct = this.state.arrayOfQuestions[answer]
@@ -125,7 +125,7 @@ export default class QuizContainer extends Component {
         }
         
         
-        this.showResults()
+        
         console.log(this.state.arrayOfQuestions.length)
       }
       
@@ -136,6 +136,8 @@ export default class QuizContainer extends Component {
 
       showResults() {
         console.log(this.state.totalCorrect)
+        console.log(this.state.totalIncorrect)
+        
         this.setState({
           triggerResults: true
         })
@@ -153,7 +155,7 @@ export default class QuizContainer extends Component {
                             <QuizQuestion
                             questionNum={iterator + 1}
                             question={question.question}
-                            answer={question.answer}
+                            answer={question.answers[question.answer]}
                             options={question.answers}
                             className="row"
                             key={iterator}
@@ -165,10 +167,15 @@ export default class QuizContainer extends Component {
                     })}
 
 
-                    <input className="row" type="submit" onClick={this.checkAnswers}/>
+                    <input className="row" type="submit" onClick={(event) => {
+                      event.preventDefault()
+                      this.checkAnswers()
+                        setTimeout(this.showResults, 2000)
+                      
+                    }}/>
                 </form>
                 :
-                <div>{(this.state.totalCorrect / this.state.arrayOfQuestions.length) * 100}%</div>
+                <div>{}%</div>
                 
                   }
             </div>
