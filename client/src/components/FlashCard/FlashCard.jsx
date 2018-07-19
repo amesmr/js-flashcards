@@ -54,122 +54,6 @@ class FlashCard extends Component {
 
       //console.log("Flip to front")
     }
-<<<<<<< HEAD
-
-    // Checks the user selection against answer if the user has chosen to use the quiz cards
-    checkAnswer(event) {
-        event.preventDefault();
-
-        //console.log(this.state.selected)
-        if (!this.state.flipped) {
-            this.refs.flipCardContainer.classList.add("hover")
-            this.setState({
-                flipped: true
-            })
-
-
-            //console.log("Flip to back")
-        } else {
-            this.refs.flipCardContainer.classList.remove("hover")
-            this.setState({
-                flipped: false
-            })
-
-
-            //console.log("Flip to front")
-        }
-    }
-
-    // Stores the user's choice on quiz card in the state
-    onAnswerSelected(event) {
-        this.setState({
-            selected: event.currentTarget.value
-        })
-    }
-
-    transFormQuestion = question => {
-        let newQuestion = question;
-        // console.log("orig question");
-        // console.log(question);
-        if (question.indexOf("```") >= 0) {
-            newQuestion = newQuestion.replace("```JavaScript", "<pre>"); // this will only replace the first occurance
-            newQuestion = newQuestion.replace("```", "</pre>");
-            newQuestion = newQuestion.replace('/[`]/g', ''); // strip out any danglers
-        }
-        newQuestion = newQuestion.replace(/(?:\r\n|\r|\n)/g, '<br>');  // the regex allows for global replacements
-        newQuestion = newQuestion.replace(/(?:\t)/g, '    '); // grrrr
-        // console.log("new question");
-        // console.log(newQuestion);
-        return newQuestion;
-    }
-
-
-    render() {
-        return (
-            <div ref="flipCardContainer" id="hoverSwitch" className="flashCard-container">
-                <div className="flipper">
-                    <div className="front">
-                        {/* <h6 className="question">{this.props.question}</h6> */}
-
-                        <div className="fcQuestion"dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
-                        <form>
-                            <ul className="answerColumn">
-                                {this.props.answers.map((answer, iterator) => {
-                                    return (
-                                        this.props.hoverSwitch === "off" ?
-                                            <li key={iterator}>
-                                                <label>
-                                                    <input className="with-gap" name="group1" type="radio" value={answer} checked={this.state.selected === answer} onChange={this.onAnswerSelected} />
-                                                    <span className="answerChoice">{answer}</span>
-                                                </label>
-                                            </li>
-                                            :
-                                            <li key={iterator}>
-                                                <label>
-                                                    <span>{answer}</span>
-                                                </label>
-                                            </li>
-                                    )
-                                })}
-                            </ul>
-
-                            {this.props.hoverSwitch === "off" ? <input type="submit" onClick={this.checkAnswer} /> : <button className="flipBtn" onClick={this.checkAnswer}>"Flip"</button>}
-                            
-
-                        </form>
-                        <span className="fcNumber">{this.props.number}</span>
-                    </div>
-                    <div className="back">
-                        <span>{this.props.number}</span>
-                        <p>{this.props.hoverSwitch === "off" && (this.props.answer === this.state.selected ? "You were correct!" : "Sorry, that is incorrect!"
-                        )}</p>
-                        <h6>The answer was: </h6>
-                        <code className="answerReveal">{this.props.answer}</code>
-                        <p className="objective"><i>Objective: {this.props.objective}</i></p>
-                        <p className="description"><i>Description: {this.props.description}</i></p>
-                        <p className="cpName">{this.props.cpName}</p>
-                        {this.props.hoverSwitch === "off" ? <input type="reset" onClick={this.checkAnswer} /> : <button onClick={this.checkAnswer}>"Flip"</button>}
-                        <i className="medium material-icons leftChev">chevron_left</i>
-                        <Button type="Prev" prevFunc={() => {
-                            this.props.prevFunc()
-                            this.refs.flipCardContainer.classList.remove("hover");
-                            this.setState({
-                                flipped: false
-                            })
-                        }} />
-                        <Button type="Next" nextFunc={() => {
-                            this.props.nextFunc()
-                            this.refs.flipCardContainer.classList.remove("hover")
-                            this.setState({
-                                flipped: false
-                            })
-                        }} />
-                        <i className="medium material-icons rightChev">chevron_right</i>
-                    </div>
-                </div>
-            </div>
-        )
-=======
   }
 
   // Stores the user's choice on quiz card in the state
@@ -189,7 +73,6 @@ class FlashCard extends Component {
       newQuestion = newQuestion.replace("/[`]/g", ""); // strip out any danglers
       newQuestion = newQuestion.replace("\n", ""); // strip out first \n
       newQuestion = newQuestion.slice(0, newQuestion.lastIndexOf("\n")); // then remove the last one
->>>>>>> 9d06396c884854ff74e7f9a222c021a2b3586858
     }
     // newQuestion = newQuestion.replace(/(?:\r\n|\r|\n)/g, "<br>"); // the regex allows for global replacements
     newQuestion = newQuestion.replace(/(?:\t)/g, "    "); // grrrr
