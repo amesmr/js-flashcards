@@ -1,0 +1,8 @@
+pre, .answerColumn {
+  text-align:left;
+}
+
+.question {
+  text-align: left;
+  padding: 20px 20px 0p 20px;
+}

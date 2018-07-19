@@ -1,5 +1,5 @@
-/* The CSS from 3 to 41 allows the card to flip on hover */
 
+/* The CSS from 3 to 41 allows the card to flip on hover */
 .flashCard-container {
     -webkit-perspective: 1000;
     margin: 15px auto;
@@ -16,9 +16,9 @@
 .flashCard-container,
 .front,
 .back {
-    width: 100%;
+    width: 600px;
     height: 400px;
-    text-align: center;
+    text-align: left;
 }
 
 .flipper {
@@ -55,25 +55,35 @@
     text-align: left;
 }
 
-.question {
+<<<<<<< HEAD
+.fcQuestion {
     text-align: center;
-    padding-top: 50px;
+    padding-top: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+=======
+.question {
+    text-align: left;
+    padding: 20px 20px 0p 20px;
+>>>>>>> 9d06396c884854ff74e7f9a222c021a2b3586858
 }
 
 pre {
     margin: 0;
     padding: 0;
+    line-height: 1;
 }
 
 .answerColumn {
     column-count: 1;
-    text-align: center;
-    
+    text-align: left;
+
 }
 
 .answerChocie {
     padding: 50px;
-    
+
 }
 
 li {
@@ -82,7 +92,7 @@ li {
 }
 
 .fcNumber {
-    position: absolute; 
+    position: absolute;
     bottom: 0;
     right: 0;
     text-align: right;
@@ -95,4 +105,20 @@ li {
 
 .flipBtn {
     margin-top: 20px;
+}
+
+<<<<<<< HEAD
+.rightChev {
+    color: black;
+=======
+.Prev {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+.Next {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+>>>>>>> 9d06396c884854ff74e7f9a222c021a2b3586858
 }
