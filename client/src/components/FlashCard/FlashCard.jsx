@@ -95,7 +95,7 @@ class FlashCard extends Component {
                     <div className="front">
                         {/* <h6 className="question">{this.props.question}</h6> */}
 
-                        <div dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
+                        <div className="fcQuestion"dangerouslySetInnerHTML={{ __html: this.transFormQuestion(this.props.question) }} />
                         <form>
                             <ul className="answerColumn">
                                 {this.props.answers.map((answer, iterator) => {
@@ -117,8 +117,8 @@ class FlashCard extends Component {
                                 })}
                             </ul>
 
-                            {this.props.hoverSwitch === "off" ? <input type="submit" onClick={this.checkAnswer} /> : <button onClick={this.checkAnswer}>"Flip"</button>}
-
+                            {this.props.hoverSwitch === "off" ? <input type="submit" onClick={this.checkAnswer} /> : <button className="flipBtn" onClick={this.checkAnswer}>"Flip"</button>}
+                            
 
                         </form>
                         <span className="fcNumber">{this.props.number}</span>
@@ -133,6 +133,7 @@ class FlashCard extends Component {
                         <p className="description"><i>Description: {this.props.description}</i></p>
                         <p className="cpName">{this.props.cpName}</p>
                         {this.props.hoverSwitch === "off" ? <input type="reset" onClick={this.checkAnswer} /> : <button onClick={this.checkAnswer}>"Flip"</button>}
+                        <i className="medium material-icons leftChev">chevron_left</i>
                         <Button type="Prev" prevFunc={() => {
                             this.props.prevFunc()
                             this.refs.flipCardContainer.classList.remove("hover");
@@ -147,6 +148,7 @@ class FlashCard extends Component {
                                 flipped: false
                             })
                         }} />
+                        <i className="medium material-icons rightChev">chevron_right</i>
                     </div>
                 </div>
             </div>
