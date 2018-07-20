@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./MenuForm.css";
 import API from "../../utils/API";
 
+
+// Hard coded list of all available checkpoints
 const checkpoints = [
   "Bash",
   "HTML/CSS/Git",
@@ -29,6 +31,7 @@ export default class MenuBar extends Component {
   }
 
   componentDidMount() {
+    // Grabs all subjects from the database and populates the subject filtering section
     API.getAllSubjects()
       .then(res => {
         console.log(res);

@@ -171,7 +171,7 @@ export default class QuizContainer extends Component {
           </form>
         ) : (
           <div>
-            {(totalCorrect / this.state.arrayOfQuestions.length) *
+            {(totalCorrect / this.state.arrayOfQuestions.length).toFixed(2) *
               100}%
           </div>
         )}

@@ -12,12 +12,13 @@ describe("JS-Flashcards", function() {
             .click("input[name='JavaScript']")
             .click("a.studyBtn")
             .evaluate(function() {
-                return document
+                return document.querySelector("code.question")
             })
-            .then(function(document) {
-                console.localStorage(document);
-                expect(document).to.equal("Nothing");
+            .then(function(flashcard) {
+                console.log(flashcard);
+                expect(flashcard).to.not.equal(undefined);
                 done();
             });
+            
     });
 })

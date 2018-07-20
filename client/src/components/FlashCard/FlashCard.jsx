@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./FlashCard.css";
 import Button from "../Button";
 
-// Need to fix bug for when you are using quiz cards and you submit your answer, if you try to switch back to flash cards when on the back the card freezes up
 class FlashCard extends Component {
   constructor(props) {
     super(props);
@@ -88,7 +87,7 @@ class FlashCard extends Component {
         id="hoverSwitch"
         className="flashCard-container"
       >
-        <div className="flipper" onClick={this.checkAnswer}>
+        <div className="flipper" onClick={this.props.hoverSwitch === "off" ? "" : this.checkAnswer}>
           <div className="front">
             {/* <h6 className="question">{this.props.question}</h6> */}
 
