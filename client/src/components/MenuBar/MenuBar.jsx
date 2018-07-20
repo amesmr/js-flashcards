@@ -11,40 +11,40 @@ class MenuBar extends Component {
       // cpdropdown: false,
     };
 
-    this.openDropdown = this.openDropdown.bind(this);
+    // this.openDropdown = this.openDropdown.bind(this);
     this.onCardTypeSelected = this.onCardTypeSelected.bind(this);
   }
 
   // Function that activates the dropdown for both checkpoints and tags (this is determined by the argument filter)
-  openDropdown(filter) {
-    if (filter === "tag") {
-      if (this.state.tagdropdown) {
-        this.refs.dropdownmenu.classList.remove("active");
-        this.setState({
-          tagdropdown: false
-        });
-      } else {
-        this.refs.dropdownmenu.classList.add("active");
-        this.setState({
-          tagdropdown: true
-        });
-      }
-    }
+  // openDropdown(filter) {
+  //   if (filter === "tag") {
+  //     if (this.state.tagdropdown) {
+  //       this.refs.dropdownmenu.classList.remove("active");
+  //       this.setState({
+  //         tagdropdown: false
+  //       });
+  //     } else {
+  //       this.refs.dropdownmenu.classList.add("active");
+  //       this.setState({
+  //         tagdropdown: true
+  //       });
+  //     }
+  //   }
 
-    if (filter === "checkpoint") {
-      if (this.state.cpdropdown) {
-        this.refs.dropdownmenuc.classList.remove("active");
-        this.setState({
-          cpdropdown: false
-        });
-      } else {
-        this.refs.dropdownmenuc.classList.add("active");
-        this.setState({
-          cpdropdown: true
-        });
-      }
-    }
-  }
+  //   if (filter === "checkpoint") {
+  //     if (this.state.cpdropdown) {
+  //       this.refs.dropdownmenuc.classList.remove("active");
+  //       this.setState({
+  //         cpdropdown: false
+  //       });
+  //     } else {
+  //       this.refs.dropdownmenuc.classList.add("active");
+  //       this.setState({
+  //         cpdropdown: true
+  //       });
+  //     }
+  //   }
+  // }
   // Function that utilizes a callback to pass the value of the flash/quiz card selection to parent(FlashCardContainer)
   onCardTypeSelected(event) {
     this.props.hoverGrab(event.currentTarget.value);

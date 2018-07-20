@@ -1,18 +1,13 @@
-
-/* The CSS from 3 to 41 allows the card to flip on hover */
+/* Lines 1-46 cover the animation of the flashcard flip */
 .flashCard-container {
     -webkit-perspective: 1000;
     margin: 15px auto;
 }
-
-/*Switch the commentted text to switch between on click vs. on hover*/
-
-
+/* Rotates when the class of hover is applied */
 .flashCard-container.hover .flipper {
     -webkit-transform: rotateY(180deg);
 }
-
-
+/* Allows for same size front and back to give illusion of a flashcard */
 .flashCard-container,
 .front,
 .back {
@@ -20,14 +15,14 @@
     height: 400px;
     text-align: left;
 }
-
+/* Controls the flipper animation */
 .flipper {
     -webkit-transition: 0.6s;
     -webkit-transform-style: preserve-3d;
     position: relative;
     margin-top: 20px;
 }
-
+/* Hides the back of the flashcard when not facing forward */
 .front,
 .back {
     -webkit-backface-visibility: hidden;
@@ -64,12 +59,6 @@ pre {
     margin: 0;
     padding: 0;
     line-height: 1;
-}
-
-.answerColumn {
-    column-count: 1;
-    text-align: left;
-
 }
 
 .answerChocie {
