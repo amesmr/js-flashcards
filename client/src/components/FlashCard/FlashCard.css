@@ -54,9 +54,10 @@
     /* font: italic bold 20px Georgia, serif; */
     font-weight: bold;
     text-align: left;
+    padding-left: 30px;
 }
 
-.fcQuestion {
+.fcQA {
     text-align: center;
     padding-top: 40px;
     padding-bottom: 10px;
@@ -87,10 +88,22 @@ li {
     font-size: 30px;
 }
 
+.description, .objective {
+    padding-left: 30px;
+}
 .fcNumber {
     position: absolute;
     bottom: 0;
     right: 0;
+    text-align: right;
+    left: 50%;
+    padding: 10px;
+}
+
+.fcNumberBack {
+    position: absolute;
+    bottom: 0;
+    right: 50;
     text-align: right;
     left: 50%;
     padding: 10px;
@@ -113,3 +126,4 @@ li {
   bottom: 0;
   right: 0;
 }
+
