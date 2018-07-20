@@ -36,6 +36,7 @@
     background: white;
     box-shadow: 20px 20px 50px black;
     position: relative;
+    margin-top: 60px;
 }
 
 .back {
@@ -48,11 +49,13 @@
     /* font: italic bold 20px Georgia, serif; */
     font-weight: bold;
     text-align: left;
+    padding-left: 30px;
 }
 
-.question {
-    text-align: left;
-    padding: 20px 20px 0p 20px;
+.fcQA {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
 }
 
 pre {
@@ -61,20 +64,43 @@ pre {
     line-height: 1;
 }
 
-.answerChocie {
-    padding: 50px;
+
+.answerColumn {
+    column-count: 1;
+    text-align: left;
+    padding: 20px;
+    
 
 }
+
+
+/*.answerChocie {
+    padding: 50px;
+    text-align: center;
+}*/ 
 
 li {
     list-style: none;
+    padding-left: 30px;
     font-size: 30px;
 }
 
+.description, .objective {
+    padding-left: 30px;
+}
 .fcNumber {
     position: absolute;
     bottom: 0;
     right: 0;
+    text-align: right;
+    left: 50%;
+    padding: 10px;
+}
+
+.fcNumberBack {
+    position: absolute;
+    bottom: 0;
+    right: 50;
     text-align: right;
     left: 50%;
     padding: 10px;
@@ -97,3 +123,4 @@ li {
   bottom: 0;
   right: 0;
 }
+
