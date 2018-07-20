@@ -91,8 +91,8 @@ class FlashCard extends Component {
         <div className="flipper" onClick={this.checkAnswer}>
           <div className="front">
             {/* <h6 className="question">{this.props.question}</h6> */}
-            <span>{this.props.number}</span>
-            <div  className="question"
+
+            <div className="fcQuestion"
               dangerouslySetInnerHTML={{
                 __html: this.transFormQuestion(this.props.question)
               }}
@@ -115,21 +115,22 @@ class FlashCard extends Component {
                       </label>
                     </li>
                   ) : (
-                    <li key={iterator}>
-                      <label>
-                        <span>{answer}</span>
-                      </label>
-                    </li>
-                  );
+                      <li key={iterator}>
+                        <label>
+                          <span>{answer}</span>
+                        </label>
+                      </li>
+                    );
                 })}
               </ul>
 
               {this.props.hoverSwitch === "off" ? (
                 <input type="submit" onClick={this.checkAnswer} />
               ) : (
-                ""
-              )}
+                  ""
+                )}
             </form>
+            <span className="fcNumber">{this.props.number}</span>
           </div>
           <div className="back">
             <span>{this.props.number}</span>
@@ -151,8 +152,8 @@ class FlashCard extends Component {
             {this.props.hoverSwitch === "off" ? (
               <input type="reset" onClick={this.checkAnswer} />
             ) : (
-              ""
-            )}
+                ""
+              )}
             <Button
               type="Prev"
               prevFunc={() => {

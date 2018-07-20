@@ -41,6 +41,7 @@
     background: white;
     box-shadow: 20px 20px 50px black;
     position: relative;
+    margin-top: 60px;
 }
 
 .back {
@@ -55,9 +56,10 @@
     text-align: left;
 }
 
-.question {
-    text-align: left;
-    padding: 20px 20px 0p 20px;
+.fcQuestion {
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 10px;
 }
 
 pre {
@@ -69,16 +71,19 @@ pre {
 .answerColumn {
     column-count: 1;
     text-align: left;
+    padding: 20px;
 
 }
 
-.answerChocie {
+/* .answerChocie {
     padding: 50px;
+    text-align: center;
 
-}
+} */
 
 li {
     list-style: none;
+    padding-left: 30px;
     font-size: 30px;
 }
 
