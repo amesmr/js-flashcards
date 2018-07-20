@@ -65,7 +65,7 @@ pre {
 }
 
 
-.answerColumn {
+.fcAnswerColumn {
     column-count: 1;
     text-align: left;
     padding: 20px;

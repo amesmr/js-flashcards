@@ -97,7 +97,7 @@ class FlashCard extends Component {
               }}
             />
             <form>
-              <ul className="answerColumn">
+              <ul className="fcAnswerColumn">
                 {this.props.answers.map((answer, iterator) => {
                   return this.props.hoverSwitch === "off" ? (
                     <li key={iterator}>
