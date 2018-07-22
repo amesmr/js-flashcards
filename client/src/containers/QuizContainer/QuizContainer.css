@@ -6,3 +6,7 @@
     text-align: left;
     padding: 30px;
 }
+
+.results {
+    column-count: 1;
+}
