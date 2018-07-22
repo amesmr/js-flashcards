@@ -5,7 +5,7 @@ import "./QuizContainer.css";
 
 const answerMap = {};
 let totalCorrect = 0;
-let totalIncorrect = 0;
+const incorrect = [];
 export default class QuizContainer extends Component {
   constructor(props) {
     super(props);
@@ -116,16 +116,17 @@ export default class QuizContainer extends Component {
     event.preventDefault();
     for (let answer in answerMap) {
       let correct = this.state.arrayOfQuestions[answer];
-      console.log(`____Question ${answer}____`)
-      console.log(answer);
-      console.log(answerMap[answer]);
-      console.log(correct.answers[correct.answer])
+      // console.log(`____Question ${answer}____`)
+      // console.log(answer);
+      // console.log(answerMap[answer]);
+      // console.log(correct.answers[correct.answer])
 
       if (answerMap[answer] === correct.answers[correct.answer]) {
         totalCorrect += 1
       } else {
-        totalIncorrect += 1
+        incorrect.push(this.state.arrayOfQuestions[answer])
       }
+      
     }
 
     this.showResults()
@@ -173,6 +174,17 @@ export default class QuizContainer extends Component {
           <div>
             {(totalCorrect / this.state.arrayOfQuestions.length).toFixed(2) *
               100}%
+              <ul className="results">
+                {incorrect.map((answer, iterator) => {
+                  console.log(answer)
+                  return (
+                  <li key={iterator}>
+                    <p>{answer.number}. {answer.question}</p>
+                    <p>The correct answer is: {answer.answers[answer.answer]}</p>
+                  </li>
+                )
+                })}
+              </ul>
           </div>
         )}
       </div>
