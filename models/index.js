@@ -1,3 +1,3 @@
 module.exports = {
-    Checkpoint: require('./Checkpoint')
-}
+  Checkpoint: require('./Checkpoint')
+};
