@@ -96,7 +96,7 @@ class FlashCard extends Component {
           <div className="front">
             {/* <h6 className="question">{this.props.question}</h6> */}
 
-            <div className="fcQA"
+            <div className="fcQ"
               dangerouslySetInnerHTML={{
                 __html: this.transFormQuestion(this.props.question)
               }}
@@ -139,13 +139,13 @@ class FlashCard extends Component {
           <div className="back">
             {this.state.onback &&
               <div>
-                <p>
+                <p className="fcMessage">
                   {this.props.hoverSwitch === "off" &&
                     (this.props.answer === this.state.selected
                       ? "You were correct!"
                       : "Sorry, that is incorrect!")}
                 </p>
-                <h6 className="fcQA">Answer: <code className="answerReveal">{this.props.answer}</code></h6>
+                <h6 className="fcA">Answer: <code className="answerReveal">{this.props.answer}</code></h6>
                 
                 {/* <p className="objective">
                   <i>Objective: {this.props.objective}</i>
