@@ -142,7 +142,7 @@ class FlashCard extends Component {
                 <p className="fcMessage">
                   {this.props.hoverSwitch === "off" &&
                     (this.props.answer === this.state.selected
-                      ? "You were correct!"
+                      ? "You are correct!"
                       : "Sorry, that is incorrect!")}
                 </p>
                 <h6 className="fcA">Answer: <code className="answerReveal">{this.props.answer}</code></h6>
