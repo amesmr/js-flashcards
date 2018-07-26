@@ -129,7 +129,7 @@ class FlashCard extends Component {
               </ul>
 
               {this.props.hoverSwitch === "off" ? (
-                <input type="submit" onClick={this.checkAnswer} />
+                <input className="waves-effect waves-light btn submitBtn" type="submit" onClick={this.checkAnswer} />
               ) : (
                   ""
                 )}
@@ -155,7 +155,7 @@ class FlashCard extends Component {
                 </p> */}
                 {/* <p className="cpName">{this.props.cpName}</p> */}
                 {this.props.hoverSwitch === "off" ? (
-                  <input type="reset" onClick={this.checkAnswer} />
+                  <input className="waves-effect waves-light btn resetBtn" type="reset" onClick={this.checkAnswer} />
                 ) : (
                     ""
                   )}
