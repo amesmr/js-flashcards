@@ -145,15 +145,15 @@ class FlashCard extends Component {
                       ? "You were correct!"
                       : "Sorry, that is incorrect!")}
                 </p>
-                <h6 className="fcQA">The answer was: </h6>
-                <code className="answerReveal">{this.props.answer}</code>
-                <p className="objective">
+                <h6 className="fcQA">Answer: <code className="answerReveal">{this.props.answer}</code></h6>
+                
+                {/* <p className="objective">
                   <i>Objective: {this.props.objective}</i>
                 </p>
                 <p className="description">
                   <i>Description: {this.props.description}</i>
-                </p>
-                <p className="cpName">{this.props.cpName}</p>
+                </p> */}
+                {/* <p className="cpName">{this.props.cpName}</p> */}
                 {this.props.hoverSwitch === "off" ? (
                   <input type="reset" onClick={this.checkAnswer} />
                 ) : (

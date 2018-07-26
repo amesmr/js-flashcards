@@ -116,7 +116,7 @@ li {
     margin-top: 20px;
 }
 
-.Prev {
+/* .Prev {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -125,13 +125,16 @@ li {
   position: fixed;
   bottom: 0;
   right: 0;
-}
+} */
 
 .arrowPrev {
-
+    position: fixed;
+    left: 10px;
+    top: 170px;
 }
 
 .arrowNext {
-    position: relative;
-    left: 450px;
+    position: fixed;
+    right: 10px;
+    top: 170px;
 }
