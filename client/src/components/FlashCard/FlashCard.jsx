@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./FlashCard.css";
-import Button from "../Button";
+// import Button from "../Button";
+import ArrowNext from "../ArrowNext";
+import ArrowPrev from "../ArrowPrev";
 
 class FlashCard extends Component {
   constructor(props) {
@@ -137,27 +139,27 @@ class FlashCard extends Component {
           <div className="back">
             {this.state.onback &&
               <div>
-            <p>
-              {this.props.hoverSwitch === "off" &&
-                (this.props.answer === this.state.selected
-                  ? "You were correct!"
-                  : "Sorry, that is incorrect!")}
-            </p>
-            <h6 className="fcQA">The answer was: </h6>
-            <code className="answerReveal">{this.props.answer}</code>
-            <p className="objective">
-              <i>Objective: {this.props.objective}</i>
-            </p>
-            <p className="description">
-              <i>Description: {this.props.description}</i>
-            </p>
-            <p className="cpName">{this.props.cpName}</p>
-            {this.props.hoverSwitch === "off" ? (
-              <input type="reset" onClick={this.checkAnswer} />
-            ) : (
-                ""
-              )}
-            <Button
+                <p>
+                  {this.props.hoverSwitch === "off" &&
+                    (this.props.answer === this.state.selected
+                      ? "You were correct!"
+                      : "Sorry, that is incorrect!")}
+                </p>
+                <h6 className="fcQA">The answer was: </h6>
+                <code className="answerReveal">{this.props.answer}</code>
+                <p className="objective">
+                  <i>Objective: {this.props.objective}</i>
+                </p>
+                <p className="description">
+                  <i>Description: {this.props.description}</i>
+                </p>
+                <p className="cpName">{this.props.cpName}</p>
+                {this.props.hoverSwitch === "off" ? (
+                  <input type="reset" onClick={this.checkAnswer} />
+                ) : (
+                    ""
+                  )}
+                {/* <Button
               type="Prev"
               prevFunc={() => {
                 this.props.prevFunc();
@@ -176,10 +178,26 @@ class FlashCard extends Component {
                   flipped: false
                 });
               }}
-            />
-            <span className="fcNumberBack">{this.props.number}</span>
-            </div>
-          }
+            /> */}
+                <ArrowPrev
+                  prevFunc={() => {
+                    this.props.prevFunc();
+                    this.refs.flipCardContainer.classList.remove("hover");
+                    this.setState({
+                      flipped: false
+                    });
+                  }} />
+                <ArrowNext
+                  nextFunc={() => {
+                    this.props.nextFunc();
+                    this.refs.flipCardContainer.classList.remove("hover");
+                    this.setState({
+                      flipped: false
+                    });
+                  }} />
+                <span className="fcNumberBack">{this.props.number}</span>
+              </div>
+            }
           </div>
         </div>
       </div>
