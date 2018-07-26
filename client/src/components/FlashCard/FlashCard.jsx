@@ -9,7 +9,8 @@ class FlashCard extends Component {
     this.state = {
       flipped: false,
       selected: "",
-      correct: false
+      correct: false,
+      onback: false
     };
 
     this.checkAnswer = this.checkAnswer.bind(this);
@@ -41,14 +42,16 @@ class FlashCard extends Component {
     if (!this.state.flipped) {
       this.refs.flipCardContainer.classList.add("hover");
       this.setState({
-        flipped: true
+        flipped: true,
+        onback: true
       });
 
       //console.log("Flip to back")
     } else {
       this.refs.flipCardContainer.classList.remove("hover");
       this.setState({
-        flipped: false
+        flipped: false,
+        onback: false
       });
 
       //console.log("Flip to front")
@@ -132,7 +135,8 @@ class FlashCard extends Component {
             <span className="fcNumber">{this.props.number}</span>
           </div>
           <div className="back">
-
+            {this.state.onback &&
+              <div>
             <p>
               {this.props.hoverSwitch === "off" &&
                 (this.props.answer === this.state.selected
@@ -174,6 +178,8 @@ class FlashCard extends Component {
               }}
             />
             <span className="fcNumberBack">{this.props.number}</span>
+            </div>
+          }
           </div>
         </div>
       </div>
