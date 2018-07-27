@@ -12,7 +12,7 @@ class FlashCard extends Component {
       flipped: false,
       selected: "",
       correct: false,
-      onback: false
+      onback: false,
     };
 
     this.checkAnswer = this.checkAnswer.bind(this);
