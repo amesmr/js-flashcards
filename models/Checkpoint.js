@@ -3,40 +3,40 @@ const Schema = mongoose.Schema;
 
 const CheckpointSchema = new Schema({
   welcome: {
-    String
+    String,
   },
   number: {
-    Number
+    Number,
   },
   quiz: {
-      title: {
-        type: "String"
+    title: {
+      type: "String",
+    },
+    questions: [{
+      subjects: {
+        type: [
+          String,
+        ],
       },
-      questions: [{
-        subjects: {
-          type: [
-            String
-          ]
-        },
-        number: {
-          type: Number
-        },
-        objectives: {
-          type: String
-        },
-        question: {
-          type: String
-        },
-        answers: {
-          type: [
-            String
-          ]
-        },
-        answer: {
-          type: Number
-        },
-      }]
-    }
+      number: {
+        type: Number,
+      },
+      objectives: {
+        type: String,
+      },
+      question: {
+        type: String,
+      },
+      answers: {
+        type: [
+          String,
+        ],
+      },
+      answer: {
+        type: Number,
+      },
+    },],
+  },
 });
 
 const Checkpoint = mongoose.model("Checkpoint", CheckpointSchema);
