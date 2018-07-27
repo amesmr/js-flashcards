@@ -168,12 +168,14 @@ export default class QuizContainer extends Component {
               );
             })}
 
-            <input className="row" type="submit" onClick={this.checkAnswers} />
+            <input className="row" value="Submit" type="submit" onClick={this.checkAnswers} />
           </form>
         ) : (
           <div>
-            {(totalCorrect / this.state.arrayOfQuestions.length).toFixed(2) *
-              100}%
+            <div>
+            
+            <h2 className="score">You scored {(totalCorrect / this.state.arrayOfQuestions.length).toFixed(2) * 100}%</h2>
+            </div>
               <ul className="results">
                 {incorrect.map((answer, iterator) => {
                   console.log(answer)

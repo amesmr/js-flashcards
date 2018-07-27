@@ -9,7 +9,7 @@
     "start": "concurrently \"nodemon server.js\" \"npm run client\"",
     "build": "node scripts/build.js",
     "seed": "mongoimport --db flashcards --collection checkpoints --type json --file data.json",
-    "test": "mocha",
+    "test": "mocha test/flashcards.js",
     "fixTestPage": "eslint --fix test/flashcards.js",
     "installDeps": "npm i && cd client && npm i",
     "heroku-postbuild": "cd client/ && npm install --only=dev && npm install && npm run build"
@@ -29,7 +29,8 @@
     "express": "^4.16.3",
     "generate-schema": "^2.6.0",
     "mongoose": "^5.1.6",
-    "morgan": "^1.9.0"
+    "morgan": "^1.9.0",
+    "pretty-html": "0.0.1"
   },
   "devDependencies": {
     "chai": "^4.1.2",
