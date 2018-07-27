@@ -1,1 +1,1 @@
-export { default } from './FlashCardContainer.jsx';
+export { default, } from "./FlashCardContainer.jsx";

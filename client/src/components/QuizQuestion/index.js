@@ -1,1 +1,1 @@
-export { default } from './QuizQuestion.jsx'
+export { default, } from "./QuizQuestion.jsx";
