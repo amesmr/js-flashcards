@@ -23,10 +23,10 @@ class SignIn extends Component {
                 console.log('fb props', this.props);
                 // if there is a convoy id, add it to this user
                     let path = this.props.location.pathname;
-                    let convoyId = path.substr(-20, 20); 
+                    let convoyId = path.substr(-20, 20);
                     let userId = this.props.user.uid;
-                    
-                    
+
+
                     if (convoyId) {
                         db.ref(`profiles/${userId}/convoys/${convoyId}`).push(true);
                         db.ref(`convoys/${convoyId}/members/${userId}`).push(true);
@@ -37,35 +37,35 @@ class SignIn extends Component {
                 this.setState({ error });
             });
     }
-    
+
     componentDidMount() {
         document.body.className = 'bodyBackground';
     }
-  
+
     componentWillUnmount() {
         document.body.removeAttribute('class');
     }
-    
+
     render() {
         console.log('SignIn props', this.props);
         const { from } = this.props.location.state || { from: { pathname: '/convoys/' + this.props.location.pathname.substr(-20, 20) } }
         const { user } = this.props;
-    
+
         if (user) {
             console.log("redirecting to " + JSON.stringify(from));
             return <Redirect to={from} />;
         }
-    
+
         return (
             <div>
-        
+
                 <div className='container'>
-         
+
                     <div className='row' id='about'>
                         <div className='col s12'>
-                        
+
                             <div id="textBox">
-                            
+
                                 <div className="form-inline" style={{margin: '5%'}}>
                                     <h3>Sign In</h3>
                                     <div className="form-group">
@@ -87,21 +87,21 @@ class SignIn extends Component {
                                             className="btn btn-primary red"
                                             type="button"
                                             onClick={() => this.signIn()}
-                                        > 
+                                        >
                                             Sign In
                                         </button>
                                     </div>
                                     <div>{this.state.error.message}</div>
                                     <div><Link to={'/signup/' + this.props.location.pathname.substr(-20, 20)}>Sign up instead</Link></div>
                                 </div>
-                                
+
                             </div>
-                        
+
                         </div>
                     </div>
                 </div>
             </div>
-           
+
         );
     }
 }
