@@ -8,7 +8,8 @@
     "ecmaVersion": 6
   },
   "globals": {
-    "document": false
+    "document": false,
+    
   },
   "env": {
     "node": true,

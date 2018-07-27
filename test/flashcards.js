@@ -26,13 +26,38 @@ describe('JS-Flashcards', function() {
   });
 });
 
-// describe('Check the flashcard functionality', function() {
-//   this.timeout(45000);
+describe('Check the flashcard functionality', function() {
+  this.timeout(45000);
 
-//   it("Should open the JavaScript flashcards, flip the card over and reveal the correct answer", function(done) {
+  it("Should open the JavaScript flashcards, flip the card over and reveal the correct answer", function(done) {
+    Nightmare({ show: true })
+      .goto('http://localhost:3000')
+      .click('input[value=\'FlashCards\']')
+      .click('input[name=\'JavaScript\']')
+      .click('a.studyBtn')
+      .wait('.flipper')
+      .click('.flipper')
+      .wait('.arrowNext')
+      .click('.arrowNext')
+      .wait('.flipper')
+      .click('.flipper')
+      .wait('.arrowNext')
+      .click('.arrowNext')
+      .wait('.flipper')
+      .click('.flipper')
+      .wait('.answerReveal')
+      .evaluate(function() {
+        return document.body.querySelector('.answerReveal').innerHTML;
+      })
+      .end()
+      .then(answer => {
+        console.log(answer);
+        expect(answer).to.equal("quotes");
+        done();
+      })
 
-//   })
-// })
+  })
+})
 
 describe('Take a quiz!', function() {
   this.timeout(40000);
