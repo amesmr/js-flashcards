@@ -9,14 +9,13 @@ describe('JS-Flashcards', function() {
 
   it('should select JavaScript and open the flashcards', function(done) {
     Nightmare({ show: true })
-      .goto('http://localhost:3000')
+      .goto('http://flashcards-and-quizes.herokuapp.com')
       .click('input[value=\'FlashCards\']')
       .click('input[name=\'JavaScript\']')
       .click('a.studyBtn')
       .evaluate(function() {
         return ('code.question');
       })
-      .end()
       .then(function(flashcard) {
         console.log(flashcard);
         expect(flashcard).to.not.equal(undefined);
@@ -26,20 +25,16 @@ describe('JS-Flashcards', function() {
   });
 });
 
-// describe('Check the flashcard functionality', function() {
-//   this.timeout(45000);
-
-//   it("Should open the JavaScript flashcards, flip the card over and reveal the correct answer", function(done) {
-
-//   })
-// })
+describe('Check the flashcard functionality', function(done) {
+  
+})
 
 describe('Take a quiz!', function() {
   this.timeout(40000);
 
   it('Should take a quiz and present the correct results', function(done){
     Nightmare({ show: true })
-      .goto('http://localhost:3000')
+      .goto('http://flashcards-and-quizes.herokuapp.com')
       .wait('input[value="Quiz"]')
       .click('input[value="Quiz"]')
       .click('input[name="JavaScript"]')

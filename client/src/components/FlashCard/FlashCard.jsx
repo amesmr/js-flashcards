@@ -139,12 +139,12 @@ class FlashCard extends Component {
           <div className="back">
             {this.state.onback &&
               <div>
+              {this.props.hoverSwitch === "off" &&
                 <p className="fcMessage">
-                  {this.props.hoverSwitch === "off" &&
-                    (this.props.answer === this.state.selected
+                    {(this.props.answer === this.state.selected
                       ? "You are correct!"
                       : "Sorry, that is incorrect!")}
-                </p>
+                </p>}
                 <h6 className="fcA">Answer: <code className="answerReveal">{this.props.answer}</code></h6>
                 
                 {/* <p className="objective">
