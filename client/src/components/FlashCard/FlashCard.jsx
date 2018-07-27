@@ -92,11 +92,15 @@ class FlashCard extends Component {
         id="hoverSwitch"
         className="flashCard-container"
       >
-        <div className="flipper" onClick={this.props.hoverSwitch === "off" ? "" : this.checkAnswer}>
+        <div
+          className="flipper"
+          onClick={this.props.hoverSwitch === "off" ? "" : this.checkAnswer}
+        >
           <div className="front">
             {/* <h6 className="question">{this.props.question}</h6> */}
 
-            <div className="fcQ"
+            <div
+              className="fcQ"
               dangerouslySetInnerHTML={{
                 __html: this.transFormQuestion(this.props.question)
               }}
@@ -119,34 +123,42 @@ class FlashCard extends Component {
                       </label>
                     </li>
                   ) : (
-                      <li key={iterator}>
-                        <label>
-                          <span>{answer}</span>
-                        </label>
-                      </li>
-                    );
+                    <li key={iterator}>
+                      <label>
+                        <span>{answer}</span>
+                      </label>
+                    </li>
+                  );
                 })}
               </ul>
 
               {this.props.hoverSwitch === "off" ? (
-                <input className="waves-effect waves-light btn submitBtn" type="submit" onClick={this.checkAnswer} />
+                <input
+                  className="waves-effect waves-light btn submitBtn"
+                  type="submit"
+                  onClick={this.checkAnswer}
+                />
               ) : (
-                  ""
-                )}
+                ""
+              )}
             </form>
             <span className="fcNumber">{this.props.number}</span>
           </div>
           <div className="back">
-            {this.state.onback &&
+            {this.state.onback && (
               <div>
-              {this.props.hoverSwitch === "off" &&
-                <p className="fcMessage">
-                    {(this.props.answer === this.state.selected
+                {this.props.hoverSwitch === "off" && (
+                  <p className="fcMessage">
+                    {this.props.answer === this.state.selected
                       ? "You are correct!"
-                      : "Sorry, that is incorrect!")}
-                </p>}
-                <h6 className="fcA">Answer: <code className="answerReveal">{this.props.answer}</code></h6>
-                
+                      : "Sorry, that is incorrect!"}
+                  </p>
+                )}
+                <h6 className="fcA">
+                  Answer:{" "}
+                  <code className="answerReveal">{this.props.answer}</code>
+                </h6>
+
                 {/* <p className="objective">
                   <i>Objective: {this.props.objective}</i>
                 </p>
@@ -155,10 +167,14 @@ class FlashCard extends Component {
                 </p> */}
                 {/* <p className="cpName">{this.props.cpName}</p> */}
                 {this.props.hoverSwitch === "off" ? (
-                  <input className="waves-effect waves-light btn resetBtn" type="reset" onClick={this.checkAnswer} />
+                  <input
+                    className="waves-effect waves-light btn resetBtn"
+                    type="reset"
+                    onClick={this.checkAnswer}
+                  />
                 ) : (
-                    ""
-                  )}
+                  ""
+                )}
                 {/* <Button
               type="Prev"
               prevFunc={() => {
@@ -186,7 +202,8 @@ class FlashCard extends Component {
                     this.setState({
                       flipped: false
                     });
-                  }} />
+                  }}
+                />
                 <ArrowNext
                   nextFunc={() => {
                     this.props.nextFunc();
@@ -194,10 +211,11 @@ class FlashCard extends Component {
                     this.setState({
                       flipped: false
                     });
-                  }} />
+                  }}
+                />
                 <span className="fcNumberBack">{this.props.number}</span>
               </div>
-            }
+            )}
           </div>
         </div>
       </div>
