@@ -96,7 +96,7 @@ class FlashCard extends Component {
           <div className="front">
             {/* <h6 className="question">{this.props.question}</h6> */}
 
-            <div className="fcQA"
+            <div className="fcQ"
               dangerouslySetInnerHTML={{
                 __html: this.transFormQuestion(this.props.question)
               }}
@@ -129,7 +129,7 @@ class FlashCard extends Component {
               </ul>
 
               {this.props.hoverSwitch === "off" ? (
-                <input type="submit" onClick={this.checkAnswer} />
+                <input className="waves-effect waves-light btn submitBtn" type="submit" onClick={this.checkAnswer} />
               ) : (
                   ""
                 )}
@@ -139,13 +139,13 @@ class FlashCard extends Component {
           <div className="back">
             {this.state.onback &&
               <div>
-                <p>
+                <p className="fcMessage">
                   {this.props.hoverSwitch === "off" &&
                     (this.props.answer === this.state.selected
-                      ? "You were correct!"
+                      ? "You are correct!"
                       : "Sorry, that is incorrect!")}
                 </p>
-                <h6 className="fcQA">Answer: <code className="answerReveal">{this.props.answer}</code></h6>
+                <h6 className="fcA">Answer: <code className="answerReveal">{this.props.answer}</code></h6>
                 
                 {/* <p className="objective">
                   <i>Objective: {this.props.objective}</i>
@@ -155,7 +155,7 @@ class FlashCard extends Component {
                 </p> */}
                 {/* <p className="cpName">{this.props.cpName}</p> */}
                 {this.props.hoverSwitch === "off" ? (
-                  <input type="reset" onClick={this.checkAnswer} />
+                  <input className="waves-effect waves-light btn resetBtn" type="reset" onClick={this.checkAnswer} />
                 ) : (
                     ""
                   )}
