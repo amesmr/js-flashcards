@@ -3,7 +3,7 @@ const expect = require('chai').expect;
 const pretty = require('pretty-html');
 
 
-describe('JS-Flashcards', function() {
+describe('Deployed: JS-Flashcards', function() {
 
   this.timeout(30000);
 
@@ -16,6 +16,7 @@ describe('JS-Flashcards', function() {
       .evaluate(function() {
         return ('code.question');
       })
+      .end()
       .then(function(flashcard) {
         console.log(flashcard);
         expect(flashcard).to.not.equal(undefined);
@@ -29,7 +30,7 @@ describe('Check the flashcard functionality', function(done) {
   
 })
 
-describe('Take a quiz!', function() {
+describe('Deployed: Take a quiz!', function() {
   this.timeout(40000);
 
   it('Should take a quiz and present the correct results', function(done){
