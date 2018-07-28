@@ -10,7 +10,7 @@
     "build": "node scripts/build.js",
     "seed": "mongoimport --db flashcards --collection checkpoints --type json --file data.json",
     "test": "mocha test/flashcards.js && mocha test/deployed-flashcards.js",
-    "fixTestPage": "eslint --fix test/flashcards.js",
+    "fix": "eslint --fix .",
     "installDeps": "npm i && cd client && npm i",
     "heroku-postbuild": "cd client/ && npm install --only=dev && npm install && npm run build"
   },

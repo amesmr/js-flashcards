@@ -1,0 +1,1 @@
+// Will hold off on adding this schema till I take a look at firebase

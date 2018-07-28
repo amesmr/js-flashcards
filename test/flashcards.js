@@ -1,6 +1,6 @@
 const Nightmare = require('nightmare');
 const expect = require('chai').expect;
-const pretty = require('pretty-html');
+
 
 
 describe('JS-Flashcards', function() {
@@ -29,7 +29,7 @@ describe('JS-Flashcards', function() {
 describe('Check the flashcard functionality', function() {
   this.timeout(45000);
 
-  it("Should open the JavaScript flashcards, flip the card over and reveal the correct answer", function(done) {
+  it('Should open the JavaScript flashcards, flip the card over and reveal the correct answer', function(done) {
     Nightmare({ show: true })
       .goto('http://localhost:3000')
       .click('input[value=\'FlashCards\']')
@@ -52,12 +52,12 @@ describe('Check the flashcard functionality', function() {
       .end()
       .then(answer => {
         console.log(answer);
-        expect(answer).to.equal("quotes");
+        expect(answer).to.equal('quotes');
         done();
-      })
+      });
 
-  })
-})
+  });
+});
 
 describe('Take a quiz!', function() {
   this.timeout(40000);
@@ -102,12 +102,12 @@ describe('Take a quiz!', function() {
       .click('input[value="Submit"]')
       .wait('.score')
       .evaluate(function() {
-        return document.body.querySelector(".score").innerHTML;
+        return document.body.querySelector('.score').innerHTML;
       })
       .end()
       .then(function(quizresults) {
         console.log(quizresults);
-        expect(quizresults).to.equal("You scored 62%");
+        expect(quizresults).to.equal('You scored 62%');
         done();
       });
 

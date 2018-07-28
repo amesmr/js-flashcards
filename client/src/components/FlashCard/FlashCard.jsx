@@ -15,8 +15,6 @@ class FlashCard extends Component {
       onback: false,
     };
 
-    this.checkAnswer = this.checkAnswer.bind(this);
-    this.onAnswerSelected = this.onAnswerSelected.bind(this);
   }
 
   // On component mount (following API response) checks for the status of the card type switch and presents the appropriate card type
@@ -37,7 +35,7 @@ class FlashCard extends Component {
   }
 
   // Checks the user selection against answer if the user has chosen to use the quiz cards
-  checkAnswer(event) {
+  checkAnswer = (event) => {
     event.preventDefault();
 
     //console.log(this.state.selected)
@@ -61,7 +59,7 @@ class FlashCard extends Component {
   }
 
   // Stores the user's choice on quiz card in the state
-  onAnswerSelected(event) {
+  onAnswerSelected = (event) => {
     this.setState({
       selected: event.currentTarget.value
     });
@@ -81,7 +79,7 @@ class FlashCard extends Component {
     // newQuestion = newQuestion.replace(/(?:\r\n|\r|\n)/g, "<br>"); // the regex allows for global replacements
     newQuestion = newQuestion.replace(/(?:\t)/g, "    "); // grrrr
     // console.log("new question");
-    console.log(newQuestion);
+    // console.log(newQuestion);
     return newQuestion;
   };
 
