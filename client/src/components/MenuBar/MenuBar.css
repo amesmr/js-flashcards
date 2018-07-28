@@ -84,7 +84,8 @@
     background-position: bottom left;
     transition: all 0.25s ease-out;
     border: none;
-    color:#1de
+    color:#1de;
+    cursor: pointer
   }
    
   .menubtn:hover {
