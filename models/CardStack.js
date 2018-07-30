@@ -1,25 +1,25 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CardStackSchema = new Schema({
   title: {
     type: String,
-    required: true
+    required: true,
   },
 
   author: {
     type: Schema.Types.ObjectId,
-    ref: 'User'
+    ref: "User",
   },
 
   cards: [
     {
       type: Schema.Types.ObjectId,
-      ref: 'Flashcard'
-    }
-  ]
+      ref: "Flashcard",
+    },
+  ],
 });
 
-const CardStack = mongoose.model('CardStack', CardStackSchema);
+const CardStack = mongoose.model("CardStack", CardStackSchema);
 
 module.exports = CardStack;

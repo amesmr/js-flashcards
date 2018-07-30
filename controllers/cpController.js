@@ -1,5 +1,4 @@
-const db = require('../models');
-
+const db = require("../models");
 
 module.exports = {
   findAll: function(req, res) {
@@ -9,19 +8,19 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findByCpNum: function(req, res) {
-    let cpArray = req.params.number.split('+');
+    let cpArray = req.params.number.split("+");
     cpArray = cpArray.map(number => {
-      return {checkpoint: parseInt(number)};
+      return { checkpoint: parseInt(number), };
     });
     console.log(cpArray);
     db.Checkpoint
-      .find({$or:cpArray})
+      .find({ $or:cpArray, })
       .then(data => res.json(data))
       .catch(err => res.status(422).json(err));
 
   },
   findBySubject: function(req, res) {
-    let subjectArray = req.params.subject.split('+');
+    let subjectArray = req.params.subject.split("+");
 
     db.Checkpoint
       .find({})
@@ -35,7 +34,6 @@ module.exports = {
         // res.json(quizArray)
         let questionArray = [];
         quizArray.forEach(quiz => {
-
           quiz.forEach(question => {
             questionArray.push(question);
           });
@@ -54,14 +52,14 @@ module.exports = {
   },
 
   findBySubjectAndNum: function(req,res) {
-    let subjectArray = req.params.subject.split('+');
-    let cpArray = req.params.number.split('+');
+    let subjectArray = req.params.subject.split("+");
+    let cpArray = req.params.number.split("+");
     cpArray = cpArray.map(number => {
-      return {checkpoint: parseInt(number)};
+      return { checkpoint: parseInt(number), };
     });
     console.log(cpArray);
     db.Checkpoint
-      .find({$or:cpArray})
+      .find({ $or:cpArray, })
       .then(data => {
         let quizArray = [];
         data.forEach(checkpoint => {
@@ -70,7 +68,6 @@ module.exports = {
         // res.json(quizArray)
         let questionArray = [];
         quizArray.forEach(quiz => {
-
           quiz.forEach(question => {
             questionArray.push(question);
           });
@@ -101,7 +98,6 @@ module.exports = {
         // res.json(quizArray)
         let questionArray = [];
         quizArray.forEach(quiz => {
-
           quiz.forEach(question => {
             questionArray.push(question);
           });
@@ -113,25 +109,25 @@ module.exports = {
         });
         let subjectList = [];
         subjectArray.forEach(list => {
-          for(let i = 0; i < list.length; i++) {
+          for(let i = 0; i < list.length; i++) 
             // if(subjectList.indexOf(list[i]) < 0) {
             //     subjectList.push(list[i])
             // }
             subjectList.push(list[i]);
-          }
+          
         });
         let subjMap = {};
-        for (let subject of subjectList) {
+        for (let subject of subjectList) 
           subjMap[subject] = subjMap[subject] + 1 || 1;
-        }
+        
 
         // res.json(subjMap)
         let refinedSubjectList = [];
-        for (let subj in subjMap) {
-          if (subjMap[subj] > 1) {
-            refinedSubjectList.push(subj + ' ' + subjMap[subj]);
-          }
-        }
+        for (let subj in subjMap) 
+          if (subjMap[subj] > 1) 
+            refinedSubjectList.push(subj + " " + subjMap[subj]);
+          
+        
 
         res.json(refinedSubjectList);
       })
@@ -139,5 +135,5 @@ module.exports = {
         res.json(err);
       });
 
-  }
+  },
 };

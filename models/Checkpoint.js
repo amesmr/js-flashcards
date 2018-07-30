@@ -1,44 +1,44 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const CheckpointSchema = new Schema({
   welcome: {
-    String
+    String,
   },
   number: {
-    Number
+    Number,
   },
   quiz: {
     title: {
-      type: 'String'
+      type: "String",
     },
     questions: [{
       subjects: {
         type: [
-          String
-        ]
+          String,
+        ],
       },
       number: {
-        type: Number
+        type: Number,
       },
       objectives: {
-        type: String
+        type: String,
       },
       question: {
-        type: String
+        type: String,
       },
       answers: {
         type: [
-          String
-        ]
+          String,
+        ],
       },
       answer: {
-        type: Number
+        type: Number,
       },
-    }]
-  }
+    },],
+  },
 });
 
-const Checkpoint = mongoose.model('Checkpoint', CheckpointSchema);
+const Checkpoint = mongoose.model("Checkpoint", CheckpointSchema);
 
 module.exports = Checkpoint;

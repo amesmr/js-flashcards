@@ -1,28 +1,28 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const FlashcardSchema = new Schema({
   front: {
     type: String,
-    required: true
+    required: true,
   },
 
   back: {
     type: String,
-    required: true
+    required: true,
   },
 
   stack: {
     type: Schema.Types.ObjectId,
-    ref: 'CardStack'
+    ref: "CardStack",
   },
 
   author: {
     type: Schema.Types.ObjectId,
-    ref: 'User'
-  }
+    ref: "User",
+  },
 });
 
-const Flashcard = mongoose.model('Flashcard', FlashcardSchema);
+const Flashcard = mongoose.model("Flashcard", FlashcardSchema);
 
 module.exports - Flashcard;
