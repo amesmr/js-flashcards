@@ -12,7 +12,9 @@ const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost:27017/flashc
 
 mongoose.Promise = Promise;
 mongoose.connect(MONGODB_URI, function (err) {
-  if (err) throw err;
+  if (err) 
+    throw err;
+  
   console.log("Connected to mongo");
 });
 

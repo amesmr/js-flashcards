@@ -9,6 +9,9 @@
   "globals": {
     "document": false
   },
+  "parserOptions": {
+    "ecmaVersion": 6
+  },
   "rules": {
     "comma-dangle": [1, "always"],
     "no-cond-assign": [2, "except-parens"],
