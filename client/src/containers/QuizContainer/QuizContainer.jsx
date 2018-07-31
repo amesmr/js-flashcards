@@ -145,6 +145,25 @@ export default class QuizContainer extends Component {
     });
   }
 
+  transFormQuestion = question => {
+    let newQuestion = question;
+    // console.log("orig question");
+    newQuestion = newQuestion.replace(/[<]+/g, "&lt;"); // React is interpreting the < and > as tags
+    newQuestion = newQuestion.replace(/[>]+/g, "&gt;");
+    // console.log(question);
+    if (question.indexOf("```") >= 0) {
+      newQuestion = newQuestion.replace("```JavaScript", "<pre>"); // this will only replace the first occurance
+      newQuestion = newQuestion.replace("```", "</pre>");
+      newQuestion = newQuestion.replace(/[`]+/g, ""); // strip out any danglers
+      newQuestion = newQuestion.replace("\n", ""); // strip out first \n
+      newQuestion = newQuestion.slice(0, newQuestion.lastIndexOf("\n")); // then remove the last one
+    }
+    newQuestion = newQuestion.replace(/(?:\t)/g, "    "); // grrrr
+    // console.log("new question");
+    // console.log(newQuestion);
+    return newQuestion;
+  };
+
   render() {
     return (
       <div className="container">
@@ -181,8 +200,9 @@ export default class QuizContainer extends Component {
                   console.log(answer)
                   return (
                   <li key={iterator}>
-                    <p>{answer.number}. {answer.question}</p>
+                    <p>{answer.number}. {this.transFormQuestion(answer.question)}</p>
                     <p>The correct answer is: {answer.answers[answer.answer]}</p>
+                    <hr />
                   </li>
                 )
                 })}
