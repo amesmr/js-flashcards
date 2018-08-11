@@ -9,4 +9,9 @@
 
 .results {
     column-count: 1;
+    background-color: white;
+}
+
+.score {
+    background-color: white;
 }

@@ -1,6 +1,6 @@
 # js-flashcards
 
-Deployed at https://flashcards-and-quizes.herokuapp.com/
+Deployed at https://flashcards-and-quizzes.herokuapp.com/
 
 ## Installation
 
