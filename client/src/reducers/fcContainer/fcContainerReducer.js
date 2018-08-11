@@ -4,6 +4,8 @@ const initialState = {
     index: 0
 }
 
+
+
 const fcContainerReducer = (state = initialState, action) {
     switch (action.type) {
         case NEXT_FC_INDEX:

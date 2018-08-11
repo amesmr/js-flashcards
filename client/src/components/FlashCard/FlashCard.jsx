@@ -19,6 +19,8 @@ class FlashCard extends Component {
 
   // On component mount (following API response) checks for the status of the card type switch and presents the appropriate card type
   componentDidMount() {
+    console.log(this.props)
+    console.log(this.state)
     if (this.props.hoverSwitch === "off") {
       //console.log("This is working")
       this.refs.flipCardContainer.removeAttribute("id", "hoverSwitch");
